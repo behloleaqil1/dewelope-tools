@@ -1,0 +1,16 @@
+{
+  "name": "DeWelope Tools",
+  "short_name": "DeWelope",
+  "description": "Free online utility tools for developers and everyday use",
+  "theme_color": "#4f46e5",
+  "background_color": "#fafbfc",
+  "display": "standalone",
+  "start_url": "/",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64",
+      "type": "image/x-icon"
+    }
+  ]
+}

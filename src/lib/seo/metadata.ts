@@ -5,7 +5,7 @@ import { ToolConfig, CategoryConfig } from '@/types';
  * Base URL for the site, configurable via environment variable.
  * Defaults to 'https://dewelopetools.com' if not set.
  */
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://dewelopetools.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://tools.dewelope.com';
 
 /**
  * Generates Next.js Metadata object for a tool page.

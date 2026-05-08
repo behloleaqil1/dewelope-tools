@@ -16,8 +16,31 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'DeWelope Tools - Free Online Utility Tools',
-  description: 'Free online tools for developers and everyday use. Unit converters, text tools, calculators, developer utilities, and more.',
+  metadataBase: new URL('https://tools.dewelope.com'),
+  title: {
+    default: 'DeWelope Tools - Free Online Utility Tools',
+    template: '%s | DeWelope Tools',
+  },
+  description:
+    'Free online tools for developers and everyday use. Unit converters, text tools, calculators, developer utilities, and more.',
+  openGraph: {
+    siteName: 'DeWelope Tools',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+  },
+  verification: {
+    google: 'GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE',
+    other: {
+      'msvalidate.01': 'BING_WEBMASTER_VERIFICATION_CODE',
+    },
+  },
+  icons: {
+    icon: '/favicon.ico',
+  },
+  manifest: '/manifest.json',
 };
 
 export default function RootLayout({
@@ -28,6 +51,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        {/* Performance hints */}
+        <link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
+
         {/* Google AdSense */}
         <Script
           async

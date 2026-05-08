@@ -31,11 +31,29 @@ export function generateMetadata({ params }: CategoryPageProps): Metadata {
     };
   }
 
+  const title = `${category.name} - Free Online Tools`;
+  const description = category.description;
+  const tools = getToolsByCategory(category.id as CategoryId);
+  const keywords = tools.flatMap((t) => t.keywords).slice(0, 10);
+
   return {
-    title: `${category.name} - Free Online Tools`,
-    description: category.description,
+    title,
+    description,
+    keywords,
     alternates: {
       canonical: `/${category.slug}`,
+    },
+    openGraph: {
+      title,
+      description,
+      url: `/${category.slug}`,
+      siteName: 'DeWelope Tools',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
     },
   };
 }
@@ -60,12 +78,13 @@ export default function CategoryPage({ params }: CategoryPageProps) {
 
       <header className="mb-8">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 tracking-tight mb-2">
-          <span className="mr-2">{category.icon}</span>{category.name}
+          <span className="mr-2" aria-hidden="true">{category.icon}</span>{category.name}
         </h1>
         <p className="text-gray-500 leading-relaxed">{category.description}</p>
       </header>
 
       <section aria-label={`Tools in ${category.name}`}>
+        <h2 className="sr-only">Available Tools</h2>
         <ul className="space-y-3">
           {tools.map((tool) => (
             <li key={tool.id}>
@@ -73,17 +92,19 @@ export default function CategoryPage({ params }: CategoryPageProps) {
                 href={`/${category.slug}/${tool.slug}`}
                 className="card p-5 block group"
               >
-                <div className="flex items-center justify-between">
-                  <h2 className="text-base font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
-                    {tool.name}
-                  </h2>
-                  <svg className="w-4 h-4 text-gray-300 group-hover:text-indigo-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </div>
-                <p className="text-sm text-gray-500 mt-1">
-                  {tool.shortDescription}
-                </p>
+                <article>
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-base font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                      {tool.name}
+                    </h3>
+                    <svg className="w-4 h-4 text-gray-300 group-hover:text-indigo-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
+                  <p className="text-sm text-gray-500 mt-1">
+                    {tool.shortDescription}
+                  </p>
+                </article>
               </Link>
             </li>
           ))}

@@ -16,7 +16,7 @@ export interface BreadcrumbsProps {
  * Generates Home → Category → Tool path with JSON-LD structured data for SEO.
  */
 export default function Breadcrumbs({ category, tool }: BreadcrumbsProps) {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://dewelopetools.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://tools.dewelope.com';
 
   // Build breadcrumb items for structured data
   const items = [

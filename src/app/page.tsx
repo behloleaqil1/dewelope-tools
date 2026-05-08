@@ -7,20 +7,86 @@ import { CategoryId } from '@/types';
 
 export function generateMetadata(): Metadata {
   return {
-    title: 'DeWelope Tools - Free Online Utility Tools',
+    title: 'Free Online Tools - Unit Converters, Text Tools, Calculators | DeWelope Tools',
     description:
-      'Free online tools for developers and everyday use. Unit converters, text tools, calculators, developer utilities, image tools, and date-time tools.',
+      'Free online tools for developers and everyday use. Unit converters, text tools, calculators, developer utilities, image tools, and date-time tools. No sign-up required.',
     alternates: {
       canonical: '/',
     },
+    openGraph: {
+      title: 'Free Online Tools - Unit Converters, Text Tools, Calculators | DeWelope Tools',
+      description:
+        'Free online tools for developers and everyday use. Unit converters, text tools, calculators, developer utilities, image tools, and date-time tools.',
+      url: '/',
+      siteName: 'DeWelope Tools',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Free Online Tools - Unit Converters, Text Tools, Calculators | DeWelope Tools',
+      description:
+        'Free online tools for developers and everyday use. No sign-up required.',
+    },
+  };
+}
+
+/**
+ * FAQ structured data for the homepage.
+ * Provides answers to common questions for rich search results.
+ */
+function getFaqStructuredData() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What tools are available on DeWelope Tools?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'DeWelope Tools offers 41 free online tools organized into 6 categories: Unit Converters, Text Tools, Math and Calculators, Developer Tools, Image and Color Tools, and Date and Time Tools.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Are these tools free to use?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, all tools on DeWelope Tools are completely free to use with no limitations. There are no premium tiers or hidden costs.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do I need to create an account?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'No, you do not need to create an account or sign up. All tools are available instantly in your browser without any registration.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is my data safe when using these tools?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes, all processing happens entirely in your browser. No data is sent to any server. Your input never leaves your device.',
+        },
+      },
+    ],
   };
 }
 
 export default function HomePage() {
   const featuredTools = getFeaturedTools();
+  const faqStructuredData = getFaqStructuredData();
 
   return (
     <div className="max-w-6xl mx-auto">
+      {/* FAQ Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
+
       {/* Hero section */}
       <header className="text-center py-12 md:py-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
@@ -82,7 +148,7 @@ export default function HomePage() {
                   <h3 className="text-base font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
                     {tool.name}
                   </h3>
-                  <svg className="w-4 h-4 text-gray-300 group-hover:text-indigo-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4 text-gray-300 group-hover:text-indigo-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>

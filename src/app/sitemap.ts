@@ -8,7 +8,7 @@ import { categories } from '@/data/categories';
  */
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl =
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://dewelopetools.com';
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://tools.dewelope.com';
 
   const now = new Date().toISOString();
 

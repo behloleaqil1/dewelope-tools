@@ -3,8 +3,11 @@ import dynamic from 'next/dynamic';
 import { notFound } from 'next/navigation';
 import { categories } from '@/data/categories';
 import { getAllTools, getToolBySlug } from '@/data/tools-registry';
+import { generateToolStructuredData } from '@/lib/seo/structured-data';
 import Breadcrumbs from '@/components/navigation/Breadcrumbs';
 import ToolPageShell from '@/components/tools/ToolPageShell';
+import RelatedTools from '@/components/seo/RelatedTools';
+import { CategoryId } from '@/types';
 
 interface ToolPageProps {
   params: { category: string; tool: string };
@@ -88,11 +91,24 @@ export function generateStaticParams() {
 export function generateMetadata({ params }: ToolPageProps): Metadata {
   const tool = getToolBySlug(params.tool);
   if (!tool) return { title: 'Tool Not Found' };
+
   return {
     title: tool.metaTitle,
     description: tool.metaDescription,
     keywords: tool.keywords,
     alternates: { canonical: `/${tool.category}/${tool.slug}` },
+    openGraph: {
+      title: tool.metaTitle,
+      description: tool.metaDescription,
+      url: `/${tool.category}/${tool.slug}`,
+      siteName: 'DeWelope Tools',
+      type: 'website',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: tool.metaTitle,
+      description: tool.metaDescription,
+    },
   };
 }
 
@@ -104,11 +120,18 @@ export default function ToolPage({ params }: ToolPageProps) {
   if (!category) notFound();
 
   const ToolEngine = TOOL_COMPONENTS[tool.id] || FallbackComponent;
+  const structuredData = generateToolStructuredData(tool);
 
   return (
     <div className="max-w-7xl mx-auto">
+      {/* JSON-LD WebApplication structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       <div className="flex flex-col lg:flex-row lg:gap-8">
-        <div className="flex-1 min-w-0">
+        <article className="flex-1 min-w-0">
           <Breadcrumbs
             category={{ name: category.name, slug: category.slug }}
             tool={{ name: tool.name, slug: tool.slug }}
@@ -116,7 +139,14 @@ export default function ToolPage({ params }: ToolPageProps) {
           <ToolPageShell toolName={tool.name} description={tool.description}>
             <ToolEngine toolId={tool.id} toolName={tool.name} />
           </ToolPageShell>
-        </div>
+
+          {/* Related tools for internal linking */}
+          <RelatedTools
+            currentToolId={tool.id}
+            category={tool.category as CategoryId}
+            categorySlug={category.slug}
+          />
+        </article>
 
         <aside className="hidden lg:block w-72 flex-shrink-0" aria-label="Sidebar">
           <div className="sticky top-20">

@@ -5,7 +5,7 @@ import { WebApplicationSchema } from '@/types/seo';
  * Base URL for the site, configurable via environment variable.
  * Defaults to 'https://dewelopetools.com' if not set.
  */
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://dewelopetools.com';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://tools.dewelope.com';
 
 /**
  * Maps category IDs to human-readable application category names

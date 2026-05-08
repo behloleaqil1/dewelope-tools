@@ -1,0 +1,9 @@
+# robots.txt for DeWelope Tools
+User-agent: *
+Allow: /
+
+# Disallow API routes (if any)
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://tools.dewelope.com/sitemap.xml
