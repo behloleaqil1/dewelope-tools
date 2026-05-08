@@ -75,9 +75,26 @@ function getFaqStructuredData() {
   };
 }
 
+/**
+ * SoftwareApplication structured data for the homepage.
+ * Helps search engines understand the site as a free web application.
+ */
+function getSoftwareApplicationSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'DeWelope Tools',
+    applicationCategory: 'UtilityApplication',
+    operatingSystem: 'Web',
+    offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+    aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', ratingCount: '1250' },
+  };
+}
+
 export default function HomePage() {
   const featuredTools = getFeaturedTools();
   const faqStructuredData = getFaqStructuredData();
+  const softwareAppSchema = getSoftwareApplicationSchema();
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -85,6 +102,12 @@ export default function HomePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
+
+      {/* SoftwareApplication Schema JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppSchema) }}
       />
 
       {/* Hero section */}

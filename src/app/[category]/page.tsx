@@ -81,6 +81,11 @@ export default function CategoryPage({ params }: CategoryPageProps) {
           <span className="mr-2" aria-hidden="true">{category.icon}</span>{category.name}
         </h1>
         <p className="text-gray-500 leading-relaxed">{category.description}</p>
+        {category.seoDescription && (
+          <p className="text-sm text-gray-600 leading-relaxed mt-4">
+            {category.seoDescription}
+          </p>
+        )}
       </header>
 
       <section aria-label={`Tools in ${category.name}`}>

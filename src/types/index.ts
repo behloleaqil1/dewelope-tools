@@ -28,6 +28,8 @@ export interface ToolConfig {
   componentPath: string;         // Dynamic import path
   inputConfig: ToolInputConfig;  // Input configuration
   outputConfig: ToolOutputConfig; // Output configuration
+  howToUse?: string;             // 200-300 word SEO guide on how to use the tool
+  howToSteps?: string[];         // Step-by-step instructions for HowTo schema
 }
 
 /**
@@ -39,6 +41,7 @@ export interface CategoryConfig {
   slug: string;
   description: string;
   icon: string;
+  seoDescription?: string;       // 100-150 word keyword-rich intro for category page
 }
 
 /**

@@ -4,9 +4,12 @@ import { notFound } from 'next/navigation';
 import { categories } from '@/data/categories';
 import { getAllTools, getToolBySlug } from '@/data/tools-registry';
 import { generateToolStructuredData } from '@/lib/seo/structured-data';
+import { generateHowToSchema } from '@/lib/seo/howto-schema';
 import Breadcrumbs from '@/components/navigation/Breadcrumbs';
 import ToolPageShell from '@/components/tools/ToolPageShell';
 import RelatedTools from '@/components/seo/RelatedTools';
+import ToolSeoContent from '@/components/seo/ToolSeoContent';
+import CrossCategoryTools from '@/components/seo/CrossCategoryTools';
 import { CategoryId } from '@/types';
 
 interface ToolPageProps {
@@ -121,6 +124,7 @@ export default function ToolPage({ params }: ToolPageProps) {
 
   const ToolEngine = TOOL_COMPONENTS[tool.id] || FallbackComponent;
   const structuredData = generateToolStructuredData(tool);
+  const howToSchema = generateHowToSchema(tool);
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -129,6 +133,14 @@ export default function ToolPage({ params }: ToolPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+
+      {/* JSON-LD HowTo structured data */}
+      {howToSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+        />
+      )}
 
       <div className="flex flex-col lg:flex-row lg:gap-8">
         <article className="flex-1 min-w-0">
@@ -140,12 +152,22 @@ export default function ToolPage({ params }: ToolPageProps) {
             <ToolEngine toolId={tool.id} toolName={tool.name} />
           </ToolPageShell>
 
+          {/* SEO content section */}
+          <ToolSeoContent
+            toolName={tool.name}
+            howToUse={tool.howToUse}
+            howToSteps={tool.howToSteps}
+          />
+
           {/* Related tools for internal linking */}
           <RelatedTools
             currentToolId={tool.id}
             category={tool.category as CategoryId}
             categorySlug={category.slug}
           />
+
+          {/* Cross-category tools for broader internal linking */}
+          <CrossCategoryTools currentCategory={tool.category as CategoryId} />
         </article>
 
         <aside className="hidden lg:block w-72 flex-shrink-0" aria-label="Sidebar">

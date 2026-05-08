@@ -29,6 +29,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'number', copyable: true, showFormula: true },
+    howToUse: 'The Temperature Converter allows you to instantly convert temperatures between Celsius, Fahrenheit, Kelvin, and Rankine scales. Whether you are cooking with a recipe from another country, studying thermodynamics, or working with scientific data, this free online temperature conversion tool gives you accurate results in real-time. Simply enter your temperature value, select the source unit, choose your target unit, and the converted result appears instantly. The tool supports negative values and decimal precision up to 6 places, making it suitable for both everyday use and scientific calculations. No sign-up required — all conversions happen directly in your browser with zero data transmitted to any server.',
+    howToSteps: [
+      'Enter the temperature value you want to convert',
+      'Select the source temperature unit (Celsius, Fahrenheit, Kelvin, or Rankine)',
+      'Select the target temperature unit',
+      'View your converted result instantly — use the copy button to copy it',
+    ],
   },
   {
     id: 'length-converter',
@@ -51,6 +58,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'number', copyable: true, showFormula: true },
+    howToUse: 'The Length Converter is a free online tool that lets you convert distances and lengths between metric and imperial units instantly. Whether you need to convert meters to feet for a home improvement project, kilometers to miles for travel planning, or inches to centimeters for crafting, this tool handles it all with precision. It supports meters, kilometers, miles, feet, inches, centimeters, millimeters, yards, and nautical miles. The conversion happens in real-time as you type, showing the formula used so you can understand the math behind it. Perfect for students, engineers, architects, and anyone working across measurement systems. All calculations run in your browser with no data sent anywhere.',
+    howToSteps: [
+      'Enter the length or distance value you want to convert',
+      'Select the source unit (meters, kilometers, miles, feet, or inches)',
+      'Select the target unit you want to convert to',
+      'View the converted result and formula — click copy to save it',
+    ],
   },
   {
     id: 'weight-mass-converter',
@@ -73,6 +87,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'number', copyable: true, showFormula: true },
+    howToUse: 'The Weight and Mass Converter lets you instantly convert between kilograms, pounds, ounces, grams, milligrams, metric tons, and stones. This free online weight conversion tool is essential for cooking with international recipes, shipping packages, fitness tracking, or scientific work. Enter any weight value and convert between metric and imperial systems with precision up to 6 decimal places. The tool displays the conversion formula so you can verify the calculation. Whether you need to know how many pounds are in a kilogram or convert ounces to grams for a recipe, this converter delivers instant, accurate results right in your browser.',
+    howToSteps: [
+      'Enter the weight or mass value you want to convert',
+      'Select the source unit (kilograms, pounds, ounces, or grams)',
+      'Select the target unit for conversion',
+      'View the result instantly and copy it with one click',
+    ],
   },
   {
     id: 'speed-converter',
@@ -95,6 +116,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'number', copyable: true, showFormula: true },
+    howToUse: 'The Speed Converter is a free online tool for converting between different speed and velocity units. Convert kilometers per hour to miles per hour for understanding speed limits while traveling abroad, meters per second to km/h for physics problems, or knots to mph for aviation and maritime applications. This tool supports km/h, mph, m/s, knots, and feet per second with high precision. The conversion formula is displayed alongside results so you can understand the relationship between units. Ideal for travelers, pilots, sailors, students, and anyone who needs quick speed unit conversions without installing any software.',
+    howToSteps: [
+      'Enter the speed value you want to convert',
+      'Select the source speed unit (km/h, mph, m/s, or knots)',
+      'Select the target speed unit',
+      'Read your converted speed value and copy it if needed',
+    ],
   },
   {
     id: 'volume-converter',
@@ -117,6 +145,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'number', copyable: true, showFormula: true },
+    howToUse: 'The Volume Converter is a free online tool for converting between liquid and dry volume measurements. Convert liters to gallons for understanding fuel economy, milliliters to cups for cooking recipes, or cubic meters to liters for scientific calculations. This tool supports liters, gallons, milliliters, cubic meters, cups, fluid ounces, and tablespoons. Results appear instantly as you type with the conversion formula displayed for reference. Perfect for home cooks adapting international recipes, students solving chemistry problems, or anyone working with volume measurements across different systems. All processing happens in your browser.',
+    howToSteps: [
+      'Enter the volume value you want to convert',
+      'Select the source volume unit (liters, gallons, milliliters, or cups)',
+      'Select the target volume unit',
+      'View the converted result and copy it with the copy button',
+    ],
   },
   {
     id: 'area-converter',
@@ -139,6 +174,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'number', copyable: true, showFormula: true },
+    howToUse: 'The Area Converter is a free online tool for converting between different area measurement units. Whether you are comparing property sizes in square feet versus square meters, converting acres to hectares for agricultural planning, or working with square kilometers for geographic data, this tool provides instant accurate conversions. It supports square meters, square feet, acres, hectares, square kilometers, and square miles. The conversion formula is shown alongside results for transparency. Ideal for real estate professionals, farmers, architects, land surveyors, and students working with area calculations across metric and imperial systems.',
+    howToSteps: [
+      'Enter the area value you want to convert',
+      'Select the source area unit (square meters, square feet, acres, or hectares)',
+      'Select the target area unit',
+      'View the converted area value and copy it if needed',
+    ],
   },
   {
     id: 'data-storage-converter',
@@ -161,6 +203,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'number', copyable: true, showFormula: true },
+    howToUse: 'The Data Storage Converter is a free online tool for converting between digital storage units. Convert bytes to megabytes, gigabytes to terabytes, or any combination of data size units using either binary (1024-based) or decimal (1000-based) standards. This is essential for understanding file sizes, disk capacity, bandwidth requirements, and cloud storage plans. Whether you are a developer estimating database sizes, an IT professional planning storage infrastructure, or a user trying to understand how many photos fit on a drive, this tool gives you instant accurate conversions with the formula displayed.',
+    howToSteps: [
+      'Enter the data storage value you want to convert',
+      'Select the source unit (bytes, KB, MB, GB, or TB)',
+      'Select the target data storage unit',
+      'View the converted value instantly and copy it',
+    ],
   },
   {
     id: 'pressure-converter',
@@ -183,6 +232,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'number', copyable: true, showFormula: true },
+    howToUse: 'The Pressure Converter is a free online tool for converting between different pressure measurement units. Convert Pascal to PSI for tire pressure, bar to atmosphere for weather data, or torr to mmHg for medical applications. This tool supports Pascal, bar, PSI, atmosphere, torr, and millimeters of mercury. Results are calculated instantly with the conversion formula shown for verification. Essential for engineers working with hydraulic systems, meteorologists analyzing weather data, medical professionals reading blood pressure in different units, and automotive technicians checking tire pressures across different standards.',
+    howToSteps: [
+      'Enter the pressure value you want to convert',
+      'Select the source pressure unit (Pascal, bar, PSI, or atmosphere)',
+      'Select the target pressure unit',
+      'View the converted pressure value and copy it',
+    ],
   },
 
   // ============================================================
@@ -202,6 +258,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/text-tools/WordCounter',
     inputConfig: { type: 'text', maxLength: 100000 },
     outputConfig: { type: 'multi-value', copyable: true },
+    howToUse: 'The Word Counter is a free online tool that instantly analyzes your text to provide word count, character count, sentence count, paragraph count, and estimated reading time. Whether you are writing an essay with a word limit, crafting a tweet within character constraints, preparing content for SEO with specific word targets, or checking the length of your blog post, this tool gives you all the statistics you need in real-time. Simply paste or type your text and all metrics update automatically. The tool handles any language and works with up to 100,000 characters. No sign-up needed — your text never leaves your browser.',
+    howToSteps: [
+      'Paste or type your text into the input area',
+      'View the word count, character count, and other statistics instantly',
+      'Check the estimated reading time for your content',
+      'Use the copy button to copy any specific statistic',
+    ],
   },
   {
     id: 'character-counter',
@@ -217,6 +280,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/text-tools/CharacterCounter',
     inputConfig: { type: 'text', maxLength: 100000 },
     outputConfig: { type: 'multi-value', copyable: true },
+    howToUse: 'The Character Counter is a free online tool that counts characters in your text with and without spaces. It is perfect for checking character limits on social media platforms like Twitter (280 characters), Instagram bios (150 characters), meta descriptions (160 characters), and SMS messages (160 characters). The tool also provides character frequency analysis showing how often each letter appears. Simply paste your text and get instant character statistics. Whether you are a social media manager, SEO specialist, copywriter, or student working within strict character limits, this tool helps you stay within bounds without manual counting.',
+    howToSteps: [
+      'Paste or type your text into the input field',
+      'View the character count with spaces and without spaces',
+      'Check if your text fits within your target character limit',
+      'Review character frequency analysis for detailed breakdown',
+    ],
   },
   {
     id: 'case-converter',
@@ -232,6 +302,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/text-tools/CaseConverter',
     inputConfig: { type: 'text', maxLength: 100000 },
     outputConfig: { type: 'text', copyable: true },
+    howToUse: 'The Case Converter is a free online tool that transforms text between different letter cases instantly. Convert text to UPPERCASE for headings and emphasis, lowercase for normalizing data, Title Case for headlines and proper formatting, or Sentence case for standard paragraph text. This tool is invaluable for writers formatting article titles, developers normalizing string data, students fixing accidentally typed caps-lock text, and content creators preparing text for different platforms. Simply paste your text, select the desired case format, and copy the transformed result. Handles any length of text up to 100,000 characters with instant results.',
+    howToSteps: [
+      'Paste or type the text you want to convert',
+      'Select the target case format (uppercase, lowercase, title case, or sentence case)',
+      'View the converted text in the output area',
+      'Click the copy button to copy the result to your clipboard',
+    ],
   },
   {
     id: 'lorem-ipsum-generator',
@@ -247,6 +324,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/text-tools/LoremIpsumGenerator',
     inputConfig: { type: 'number', validRange: { min: 1, max: 50 } },
     outputConfig: { type: 'text', copyable: true },
+    howToUse: 'The Lorem Ipsum Generator is a free online tool that creates placeholder text for design mockups, website prototypes, and document layouts. Generate between 1 and 50 paragraphs of classic Lorem Ipsum text instantly. Designers use this tool to fill layouts with realistic-looking text before final copy is ready, developers use it to test text rendering in applications, and publishers use it to visualize page layouts. The generated text follows the traditional Lorem Ipsum format that has been the industry standard placeholder text since the 1500s. Simply choose how many paragraphs you need and copy the generated text.',
+    howToSteps: [
+      'Enter the number of paragraphs you want to generate (1 to 50)',
+      'Click generate to create the Lorem Ipsum text',
+      'Review the generated placeholder paragraphs',
+      'Copy the text to use in your design or project',
+    ],
   },
   {
     id: 'text-reverser',
@@ -262,6 +346,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/text-tools/TextReverser',
     inputConfig: { type: 'text', maxLength: 100000 },
     outputConfig: { type: 'text', copyable: true },
+    howToUse: 'The Text Reverser is a free online tool that reverses your text either character by character or word by word. Use it to create mirror text for creative projects, check if a word or phrase is a palindrome, generate backwards text for puzzles and games, or reverse the order of words in a sentence. The tool handles any text including special characters, numbers, and Unicode. Whether you are a puzzle creator, a student exploring string manipulation, or just having fun with backwards text, this tool delivers instant results. Paste any text up to 100,000 characters and get the reversed version immediately.',
+    howToSteps: [
+      'Paste or type the text you want to reverse',
+      'Choose whether to reverse by character or by word',
+      'View the reversed text in the output area',
+      'Copy the reversed text using the copy button',
+    ],
   },
   {
     id: 'remove-duplicate-lines',
@@ -277,6 +368,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/text-tools/RemoveDuplicateLines',
     inputConfig: { type: 'text', maxLength: 100000 },
     outputConfig: { type: 'text', copyable: true },
+    howToUse: 'The Remove Duplicate Lines tool is a free online utility that eliminates repeated lines from your text while preserving the original order of unique lines. It is perfect for cleaning up data exports, removing duplicate entries from lists, deduplicating email addresses, cleaning log files, or preparing unique keyword lists. Options include trimming whitespace before comparison and case-insensitive matching. Simply paste your text with duplicate lines and get a clean, deduplicated version instantly. Handles large texts up to 100,000 characters. Essential for data analysts, developers working with CSV files, and anyone who needs to quickly clean up repetitive text data.',
+    howToSteps: [
+      'Paste your text containing duplicate lines into the input area',
+      'Optionally enable case-insensitive matching or whitespace trimming',
+      'View the deduplicated text with only unique lines preserved',
+      'Copy the cleaned text using the copy button',
+    ],
   },
   {
     id: 'find-and-replace',
@@ -292,6 +390,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/text-tools/FindAndReplace',
     inputConfig: { type: 'text', maxLength: 100000 },
     outputConfig: { type: 'text', copyable: true },
+    howToUse: 'The Find and Replace tool is a free online text utility that lets you search for specific text patterns and replace them with new text. It supports plain text matching, case-sensitive search, and powerful regular expressions for advanced pattern matching. Preview all changes before applying them to ensure accuracy. Use it to bulk-rename variables in code, fix repeated typos in documents, reformat dates or phone numbers using regex patterns, or clean up text data. Whether you are a developer refactoring code, a writer fixing manuscript errors, or a data analyst transforming text formats, this tool handles it all in your browser.',
+    howToSteps: [
+      'Paste your text into the input area',
+      'Enter the text or pattern you want to find',
+      'Enter the replacement text',
+      'Toggle case-sensitive or regex mode if needed, then view and copy the result',
+    ],
   },
   {
     id: 'slug-generator',
@@ -307,6 +412,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/text-tools/SlugGenerator',
     inputConfig: { type: 'text', maxLength: 100000 },
     outputConfig: { type: 'text', copyable: true },
+    howToUse: 'The Slug Generator is a free online tool that converts any text into a URL-friendly slug. It transforms spaces into hyphens, removes special characters, converts everything to lowercase, and eliminates consecutive hyphens for clean, SEO-friendly URLs. Use it to create blog post permalinks, product page URLs, file names, or any identifier that needs to be URL-safe. The tool handles international characters, multiple spaces, and punctuation gracefully. Essential for web developers building CMS systems, bloggers creating post URLs, e-commerce managers setting up product pages, and anyone who needs clean, readable URLs for better SEO and user experience.',
+    howToSteps: [
+      'Enter or paste the text you want to convert to a slug',
+      'View the generated URL-friendly slug instantly',
+      'Copy the slug using the copy button',
+      'Use the slug in your URL, file name, or identifier',
+    ],
   },
 
   // ============================================================
@@ -332,6 +444,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'number', copyable: true, showFormula: true },
+    howToUse: 'The Percentage Calculator is a free online tool that helps you solve common percentage problems instantly. Calculate what percentage one number is of another, find a percentage of a value, determine percentage increase or decrease between two numbers, and compute percentage differences. Each calculation displays the formula used so you can understand and verify the math. Whether you are calculating sales tax, figuring out discounts, analyzing financial growth rates, computing grade percentages, or determining tip amounts, this calculator handles all percentage-related math. Results are precise and can be copied with one click.',
+    howToSteps: [
+      'Enter the base value for your percentage calculation',
+      'Enter the percentage value',
+      'View the calculated result with the formula shown',
+      'Copy the result using the copy button',
+    ],
   },
   {
     id: 'bmi-calculator',
@@ -353,6 +472,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'multi-value', copyable: true, showFormula: true },
+    howToUse: 'The BMI Calculator is a free online tool that calculates your Body Mass Index from your height and weight measurements. BMI is a widely used screening measure that indicates whether your weight is in a healthy range relative to your height. Enter your weight in kilograms and height in centimeters, and the calculator instantly shows your BMI value along with the corresponding category (underweight, normal weight, overweight, or obese). The formula used (weight divided by height squared) is displayed for transparency. While BMI is a useful general indicator, remember it does not account for muscle mass, bone density, or body composition.',
+    howToSteps: [
+      'Enter your weight in kilograms',
+      'Enter your height in centimeters',
+      'View your BMI value and health category instantly',
+      'Review the BMI formula shown below the result',
+    ],
   },
   {
     id: 'loan-mortgage-calculator',
@@ -375,6 +501,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'multi-value', copyable: true, showFormula: true },
+    howToUse: 'The Loan and Mortgage Calculator is a free online tool that helps you understand the true cost of borrowing. Enter your loan amount, annual interest rate, and loan term to instantly see your monthly payment, total interest paid over the life of the loan, and total amount repaid. The calculator uses the standard amortization formula and displays it for reference. Whether you are shopping for a home mortgage, comparing auto loan offers, evaluating personal loan options, or planning student loan repayment, this tool helps you make informed financial decisions by showing exactly what you will pay each month and in total.',
+    howToSteps: [
+      'Enter the loan principal amount',
+      'Enter the annual interest rate as a percentage',
+      'Enter the loan term in years',
+      'View monthly payment, total interest, and total cost',
+    ],
   },
   {
     id: 'tip-calculator',
@@ -397,6 +530,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'multi-value', copyable: true, showFormula: true },
+    howToUse: 'The Tip Calculator is a free online tool that calculates tip amounts and splits bills between multiple people. Enter your bill total, choose a tip percentage, and specify how many people are splitting the bill. The calculator instantly shows the tip amount, total bill with tip, and each person\'s share. Whether you are dining out with friends, splitting a group dinner, or calculating gratuity for delivery services, this tool eliminates the mental math. It supports any tip percentage and splits between up to 100 people. The formula is displayed so you can verify the calculation. Perfect for restaurants, bars, and any tipping situation.',
+    howToSteps: [
+      'Enter the total bill amount',
+      'Enter your desired tip percentage',
+      'Enter the number of people splitting the bill',
+      'View the tip amount, total, and per-person share',
+    ],
   },
   {
     id: 'discount-calculator',
@@ -418,6 +558,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'multi-value', copyable: true, showFormula: true },
+    howToUse: 'The Discount Calculator is a free online tool that helps you quickly determine sale prices and savings. Enter the original price and discount percentage to instantly see the discounted price, the amount you save, and the final price you pay. Whether you are shopping during sales events, comparing deals across stores, calculating employee discounts, or figuring out coupon savings, this tool gives you instant answers. The calculation formula is shown for transparency. Perfect for bargain hunters, retail workers, and anyone who wants to know exactly how much they save with a percentage discount applied to any price.',
+    howToSteps: [
+      'Enter the original price of the item',
+      'Enter the discount percentage',
+      'View the sale price, savings amount, and final price',
+      'Copy any value using the copy button',
+    ],
   },
   {
     id: 'age-calculator',
@@ -438,6 +585,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'multi-value', copyable: true },
+    howToUse: 'The Age Calculator is a free online tool that calculates your exact age from your date of birth. It shows your age broken down into years, months, and days, plus the total number of days you have lived and how many days until your next birthday. Whether you need your precise age for official documents, want to know exactly how old you are in days, or are curious about upcoming birthday milestones, this calculator provides instant accurate results. Simply select your birth date and the tool does all the date arithmetic for you. Works for any date from the past and accounts for leap years automatically.',
+    howToSteps: [
+      'Select or enter your date of birth',
+      'View your exact age in years, months, and days',
+      'Check the total number of days you have lived',
+      'See how many days remain until your next birthday',
+    ],
   },
   {
     id: 'number-base-converter',
@@ -459,6 +613,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'multi-value', copyable: true },
+    howToUse: 'The Number Base Converter is a free online tool that converts integers between binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16) number systems. Essential for computer science students learning about number representation, programmers working with memory addresses and bit manipulation, network engineers dealing with IP addresses, and anyone who needs to translate between number bases. Enter a number in any supported base and instantly see its representation in all other bases. Supports values from 0 to 2^64-1 for comprehensive coverage of common computing scenarios.',
+    howToSteps: [
+      'Enter the number you want to convert',
+      'Select the base of your input number (binary, octal, decimal, or hexadecimal)',
+      'View the number converted to all other bases simultaneously',
+      'Copy any converted value using the copy button',
+    ],
   },
 
   // ============================================================
@@ -472,12 +633,20 @@ export const toolsRegistry: ToolConfig[] = [
     category: 'developer-tools',
     slug: 'json-formatter',
     metaTitle: 'JSON Formatter and Validator - Online',
-    metaDescription: 'Format, validate, and pretty-print JSON data with syntax highlighting. Reports error positions. Free online JSON tool.',
+    metaDescription: 'Format, validate, and pretty-print JSON data with syntax highlighting and error reporting. Free online JSON formatter tool.',
     keywords: ['json formatter', 'json validator', 'json pretty print', 'json lint'],
     featured: true,
     componentPath: '@/components/tools/developer-tools/JsonFormatter',
     inputConfig: { type: 'text', maxLength: 1048576 },
     outputConfig: { type: 'formatted', copyable: true, syntaxHighlight: true },
+    howToUse: 'The JSON Formatter and Validator is a free online tool that formats, validates, and pretty-prints JSON data with syntax highlighting. Paste minified or messy JSON and get beautifully indented, color-coded output instantly. If your JSON contains errors, the tool reports the exact position of the problem so you can fix it quickly. Whether you are debugging API responses, formatting configuration files, validating webhook payloads, or cleaning up JSON data for documentation, this tool handles files up to 1 MB. Essential for web developers, backend engineers, QA testers, and anyone working with JSON APIs and data interchange formats.',
+    howToSteps: [
+      'Paste your JSON data into the input area',
+      'The tool automatically validates and formats the JSON',
+      'View the pretty-printed output with syntax highlighting',
+      'If errors exist, check the error message for the exact position to fix',
+      'Copy the formatted JSON using the copy button',
+    ],
   },
   {
     id: 'base64-encoder-decoder',
@@ -493,6 +662,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/developer-tools/Base64EncoderDecoder',
     inputConfig: { type: 'text', maxLength: 1048576 },
     outputConfig: { type: 'text', copyable: true },
+    howToUse: 'The Base64 Encoder and Decoder is a free online tool for encoding text to Base64 format or decoding Base64 strings back to readable text. Base64 encoding is commonly used for embedding binary data in text formats, sending data through URLs, encoding email attachments, and storing credentials in configuration files. This tool handles UTF-8 encoding properly, preserving international characters and special symbols. Whether you are a developer working with API authentication headers, embedding images in CSS, encoding data for data URIs, or debugging encoded strings, this tool provides instant bidirectional conversion with error handling.',
+    howToSteps: [
+      'Paste the text you want to encode or the Base64 string you want to decode',
+      'Select whether to encode (text to Base64) or decode (Base64 to text)',
+      'View the converted result instantly',
+      'Copy the output using the copy button',
+    ],
   },
   {
     id: 'url-encoder-decoder',
@@ -508,6 +684,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/developer-tools/UrlEncoderDecoder',
     inputConfig: { type: 'text', maxLength: 1048576 },
     outputConfig: { type: 'text', copyable: true },
+    howToUse: 'The URL Encoder and Decoder is a free online tool for encoding special characters in URLs or decoding percent-encoded URL strings. URLs cannot contain spaces or many special characters, so they must be encoded using percent-encoding (e.g., space becomes %20). This tool handles both full URL encoding and component encoding. Use it when building query strings with special characters, debugging encoded URLs from logs, preparing text for use in API parameters, or decoding URLs to read their original content. Supports all Unicode characters and provides instant results for strings up to 1 MB in length.',
+    howToSteps: [
+      'Paste the URL or text you want to encode or decode',
+      'Select encode mode (text to URL-safe) or decode mode (URL to readable text)',
+      'View the encoded or decoded result instantly',
+      'Copy the result for use in your application or browser',
+    ],
   },
   {
     id: 'html-entity-encoder-decoder',
@@ -523,6 +706,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/developer-tools/HtmlEntityEncoderDecoder',
     inputConfig: { type: 'text', maxLength: 1048576 },
     outputConfig: { type: 'text', copyable: true },
+    howToUse: 'The HTML Entity Encoder and Decoder is a free online tool for converting special characters to HTML entities and back. Characters like <, >, &, and quotes have special meaning in HTML and must be encoded as entities (e.g., &lt; &gt; &amp;) to display correctly on web pages. This tool supports both named entities and numeric entities. Use it to safely embed user content in HTML, prevent XSS vulnerabilities by encoding output, decode HTML source code to read the original text, or prepare content for HTML emails. Essential for web developers, content managers, and security professionals.',
+    howToSteps: [
+      'Paste the text containing special characters or HTML entities',
+      'Select encode (characters to entities) or decode (entities to characters)',
+      'View the converted output instantly',
+      'Copy the result for use in your HTML code or content',
+    ],
   },
   {
     id: 'regex-tester',
@@ -538,6 +728,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/developer-tools/RegexTester',
     inputConfig: { type: 'text', maxLength: 1048576 },
     outputConfig: { type: 'formatted', copyable: true, syntaxHighlight: true },
+    howToUse: 'The Regex Tester is a free online tool for testing regular expressions against sample text with real-time match highlighting. Write your regex pattern, enter test text, and instantly see all matches highlighted with capture group details. Supports all JavaScript regex flags including global (g), case-insensitive (i), multiline (m), and dotAll (s). Whether you are validating email formats, extracting data from log files, building input validation patterns, or learning regex syntax, this tool provides immediate visual feedback. Essential for developers, data engineers, and system administrators who work with pattern matching in code, scripts, and data processing.',
+    howToSteps: [
+      'Enter your regular expression pattern',
+      'Set any flags (global, case-insensitive, multiline)',
+      'Paste or type the test text to match against',
+      'View highlighted matches and capture group details in real-time',
+    ],
   },
   {
     id: 'uuid-generator',
@@ -553,6 +750,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/developer-tools/UuidGenerator',
     inputConfig: { type: 'number', validRange: { min: 1, max: 100 } },
     outputConfig: { type: 'text', copyable: true },
+    howToUse: 'The UUID Generator is a free online tool that creates random UUID v4 (Universally Unique Identifiers) instantly. UUIDs are 128-bit identifiers used as primary keys in databases, session tokens, correlation IDs in distributed systems, and unique file names. Generate one or up to 100 UUIDs at once for batch operations. Each UUID is cryptographically random using the Web Crypto API, ensuring uniqueness and unpredictability. Whether you are a developer seeding test databases, creating unique identifiers for API resources, generating session tokens, or need GUIDs for any purpose, this tool delivers instant results with one click.',
+    howToSteps: [
+      'Choose how many UUIDs to generate (1 to 100)',
+      'Click generate to create random UUID v4 identifiers',
+      'View the generated UUIDs in the output area',
+      'Copy individual UUIDs or all of them at once',
+    ],
   },
   {
     id: 'hash-generator',
@@ -568,6 +772,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/developer-tools/HashGenerator',
     inputConfig: { type: 'text', maxLength: 1048576 },
     outputConfig: { type: 'multi-value', copyable: true },
+    howToUse: 'The Hash Generator is a free online tool that creates MD5, SHA-1, and SHA-256 cryptographic hashes from any text input. Hashing is used for data integrity verification, password storage, digital signatures, and file checksums. Enter any text and instantly get its hash in all three algorithms simultaneously. SHA-256 and SHA-1 use the secure Web Crypto API built into your browser, while MD5 is computed using a pure JavaScript implementation. Whether you are verifying file integrity, generating checksums for data validation, creating hash-based identifiers, or learning about cryptographic hash functions, this tool provides instant results.',
+    howToSteps: [
+      'Enter or paste the text you want to hash',
+      'View MD5, SHA-1, and SHA-256 hashes generated simultaneously',
+      'Copy any individual hash value using its copy button',
+      'Use the hash for integrity verification, checksums, or identification',
+    ],
   },
   {
     id: 'color-code-converter',
@@ -583,6 +794,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/developer-tools/ColorCodeConverter',
     inputConfig: { type: 'text' },
     outputConfig: { type: 'multi-value', copyable: true },
+    howToUse: 'The Color Code Converter is a free online tool that converts color values between HEX, RGB, and HSL formats instantly. Enter a color in any supported format and see it converted to all other formats with a live color preview swatch. Whether you are a web developer converting design specs from HEX to RGB for CSS, a designer translating colors between tools that use different formats, or working with color values in JavaScript, this tool handles the conversion math for you. Validates input to ensure color values are within valid ranges and displays the exact color so you can visually confirm the conversion is correct.',
+    howToSteps: [
+      'Enter a color code in HEX (e.g., #FF5733), RGB (e.g., rgb(255,87,51)), or HSL format',
+      'View the color converted to all other formats simultaneously',
+      'Check the color preview swatch to visually verify the color',
+      'Copy any color format value using the copy button',
+    ],
   },
 
   // ============================================================
@@ -602,6 +820,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/image-color-tools/ColorPicker',
     inputConfig: { type: 'text' },
     outputConfig: { type: 'multi-value', copyable: true },
+    howToUse: 'The Color Picker is a free online tool that lets you select any color and instantly get its value in HEX, RGB, and HSL formats. Use the visual color picker to find the perfect shade, or enter a specific color code to see it in all formats. The tool displays a large color preview swatch so you can see exactly what the color looks like. Whether you are choosing colors for a website design, matching brand colors across different tools, finding the right shade for a presentation, or extracting color values for CSS code, this picker gives you all the information you need. Works entirely in your browser with no software to install.',
+    howToSteps: [
+      'Use the color picker to select your desired color visually',
+      'Or enter a specific color code in HEX, RGB, or HSL format',
+      'View the color in all formats (HEX, RGB, HSL) simultaneously',
+      'Copy any color value using the copy button next to it',
+    ],
   },
   {
     id: 'gradient-generator',
@@ -623,6 +848,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'visual', copyable: true },
+    howToUse: 'The Gradient Generator is a free online tool for creating beautiful CSS gradients with a live preview. Choose between linear and radial gradient types, set the direction or angle, and add up to 10 color stops to create complex gradient effects. The tool generates the CSS code you need to use the gradient in your web projects. Whether you are designing hero sections, button backgrounds, card overlays, or decorative elements, this generator lets you experiment with colors and see results in real-time. Copy the generated CSS gradient code directly into your stylesheet. Perfect for web designers and front-end developers.',
+    howToSteps: [
+      'Select the gradient type (linear or radial)',
+      'Set the gradient direction or angle',
+      'Choose your color stops and adjust their positions',
+      'Preview the gradient in real-time and copy the CSS code',
+    ],
   },
   {
     id: 'palette-generator',
@@ -638,6 +870,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/image-color-tools/PaletteGenerator',
     inputConfig: { type: 'text' },
     outputConfig: { type: 'visual', copyable: true },
+    howToUse: 'The Palette Generator is a free online tool that creates a harmonious color palette of 5 complementary colors from any base color you choose. Enter a color in HEX format and the tool generates colors that work well together based on color theory principles. Each generated color is displayed with its HEX and RGB values for easy use in your projects. Whether you are designing a website color scheme, creating brand guidelines, choosing colors for a presentation, or building a UI theme, this tool helps you find colors that complement each other. Perfect for designers, developers, and anyone who needs cohesive color combinations.',
+    howToSteps: [
+      'Enter a base color in HEX format (e.g., #3B82F6)',
+      'View the generated palette of 5 complementary colors',
+      'See each color displayed with its HEX and RGB values',
+      'Copy individual color values for use in your project',
+    ],
   },
   {
     id: 'image-to-base64',
@@ -653,6 +892,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/image-color-tools/ImageToBase64',
     inputConfig: { type: 'file', maxFileSize: 5242880, acceptedFormats: ['image/png', 'image/jpeg', 'image/gif', 'image/webp', 'image/svg+xml'] },
     outputConfig: { type: 'text', copyable: true },
+    howToUse: 'The Image to Base64 Converter is a free online tool that converts image files into Base64 encoded strings. Upload a PNG, JPEG, GIF, WEBP, or SVG image up to 5 MB and get the Base64 data URI string instantly. Base64 encoded images can be embedded directly in HTML, CSS, or JavaScript without requiring separate file requests, which can improve page load performance for small images. Use it for embedding icons in CSS, including images in email templates, storing images in JSON data, or reducing HTTP requests. All conversion happens in your browser — your images are never uploaded to any server.',
+    howToSteps: [
+      'Click to upload or drag and drop an image file (PNG, JPEG, GIF, WEBP, or SVG)',
+      'Wait for the image to be converted to Base64 format',
+      'View the Base64 encoded string in the output area',
+      'Copy the data URI string for use in your HTML, CSS, or JavaScript',
+    ],
   },
   {
     id: 'aspect-ratio-calculator',
@@ -674,6 +920,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'multi-value', copyable: true },
+    howToUse: 'The Aspect Ratio Calculator is a free online tool that calculates and simplifies aspect ratios from width and height dimensions. Enter any width and height values and get the simplified ratio (e.g., 1920x1080 becomes 16:9). The tool also shows common preset ratios like 4:3, 16:9, 21:9, and 1:1 for comparison. Whether you are resizing images while maintaining proportions, designing responsive layouts, choosing monitor or TV sizes, setting up video export dimensions, or calculating crop areas for photography, this tool gives you instant ratio calculations. Essential for designers, photographers, videographers, and web developers.',
+    howToSteps: [
+      'Enter the width dimension in pixels',
+      'Enter the height dimension in pixels',
+      'View the simplified aspect ratio and common ratio comparisons',
+      'Copy the ratio value for use in your project',
+    ],
   },
 
   // ============================================================
@@ -700,6 +953,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'text', copyable: true },
+    howToUse: 'The Timezone Converter is a free online tool that converts times between different timezones worldwide. Select a time, choose the source timezone, and pick the target timezone to see the converted time instantly. Whether you are scheduling meetings across time zones, coordinating with international teams, planning travel itineraries, or figuring out when a live event starts in your local time, this tool eliminates timezone math confusion. Supports major timezones including UTC, Eastern, Pacific, London, Tokyo, and more. Perfect for remote workers, international business professionals, travelers, and anyone who regularly works across multiple time zones.',
+    howToSteps: [
+      'Enter the time you want to convert',
+      'Select the source timezone (where the time is currently)',
+      'Select the target timezone (where you want to know the time)',
+      'View the converted time instantly and copy it',
+    ],
   },
   {
     id: 'unix-timestamp-converter',
@@ -721,6 +981,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'multi-value', copyable: true },
+    howToUse: 'The Unix Timestamp Converter is a free online tool for converting between Unix timestamps (epoch time) and human-readable date-time strings. Enter a Unix timestamp to see the corresponding date and time, or enter a date-time string in YYYY-MM-DD HH:mm:ss format to get the Unix timestamp. Unix timestamps represent seconds since January 1, 1970 and are widely used in programming, databases, APIs, and log files. Whether you are debugging server logs, working with API responses, analyzing database records, or converting timestamps in code, this bidirectional converter gives you instant results without writing any code.',
+    howToSteps: [
+      'Enter a Unix timestamp to convert to a readable date, or enter a date-time string',
+      'View the conversion result in both formats simultaneously',
+      'Copy the timestamp or date-time string you need',
+      'Use the converted value in your code, database, or documentation',
+    ],
   },
   {
     id: 'date-difference-calculator',
@@ -742,6 +1009,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'multi-value', copyable: true },
+    howToUse: 'The Date Difference Calculator is a free online tool that calculates the exact difference between two dates in years, months, days, hours, minutes, and seconds. Whether you need to know how many days until a deadline, calculate the duration of a project, find out how many days between two events, determine the length of a contract period, or count days for legal or financial calculations, this tool provides precise results instantly. Simply select your start and end dates and get the difference broken down into multiple time units. Accounts for leap years and varying month lengths automatically.',
+    howToSteps: [
+      'Select or enter the start date',
+      'Select or enter the end date',
+      'View the difference in years, months, days, hours, minutes, and seconds',
+      'Copy any specific value using the copy button',
+    ],
   },
   {
     id: 'countdown-timer',
@@ -764,6 +1038,13 @@ export const toolsRegistry: ToolConfig[] = [
       ],
     },
     outputConfig: { type: 'visual', copyable: false },
+    howToUse: 'The Countdown Timer is a free online tool that lets you set a timer with hours, minutes, and seconds. When the countdown reaches zero, a visual alert notifies you that time is up. Use it for cooking timers, study session pomodoros, meeting time limits, exercise intervals, presentation practice, or any situation where you need to track remaining time. The timer displays a clear, large countdown that is easy to read from a distance. Set up to 99 hours, 59 minutes, and 59 seconds. Start, pause, and reset the timer with simple controls. Runs entirely in your browser tab — no app installation needed.',
+    howToSteps: [
+      'Enter the hours, minutes, and seconds for your countdown',
+      'Click start to begin the countdown timer',
+      'Watch the timer count down with a clear visual display',
+      'Receive a visual alert when the countdown reaches zero',
+    ],
   },
   {
     id: 'stopwatch',
@@ -779,6 +1060,13 @@ export const toolsRegistry: ToolConfig[] = [
     componentPath: '@/components/tools/date-time-tools/Stopwatch',
     inputConfig: { type: 'composite', fields: [] },
     outputConfig: { type: 'visual', copyable: false },
+    howToUse: 'The Online Stopwatch is a free precision timing tool that tracks elapsed time with millisecond accuracy. Use the start, stop, and reset controls to measure the duration of any activity. Whether you are timing athletic performance, measuring how long a task takes, conducting experiments that require precise timing, practicing speeches or presentations, or tracking workout intervals, this stopwatch provides accurate measurements displayed in a clear, easy-to-read format. The large display shows hours, minutes, seconds, and milliseconds. Works entirely in your browser with no installation required. Simply click start and the stopwatch begins counting immediately.',
+    howToSteps: [
+      'Click the start button to begin timing',
+      'Watch the elapsed time display update in real-time with millisecond precision',
+      'Click stop to pause the timer and record the elapsed time',
+      'Click reset to clear the stopwatch and start over',
+    ],
   },
 ];
 

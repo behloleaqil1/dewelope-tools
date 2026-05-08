@@ -8,7 +8,8 @@ interface ToolPageShellProps {
 
 /**
  * ToolPageShell - Layout wrapper for tool pages.
- * Displays tool name, description, an ad slot placeholder, then children.
+ * Displays tool name, description, ad slots, then children.
+ * Ad positions: between description and input, and after tool output.
  */
 export default function ToolPageShell({ toolName, description, children }: ToolPageShellProps) {
   return (
@@ -20,7 +21,7 @@ export default function ToolPageShell({ toolName, description, children }: ToolP
         <p className="text-gray-500 leading-relaxed">{description}</p>
       </div>
 
-      {/* Ad slot placeholder */}
+      {/* Ad slot: between description and input */}
       <div
         className="w-full"
         aria-hidden="true"
@@ -30,6 +31,13 @@ export default function ToolPageShell({ toolName, description, children }: ToolP
       <div className="space-y-6">
         {children}
       </div>
+
+      {/* Ad slot: after tool output */}
+      <div
+        className="w-full"
+        aria-hidden="true"
+        data-ad-slot="after-output"
+      />
     </div>
   );
 }
