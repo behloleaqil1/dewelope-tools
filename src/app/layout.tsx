@@ -51,6 +51,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <meta name="google-adsense-account" content="ca-pub-7840391301182968" />
+
         {/* Performance hints */}
         <link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
