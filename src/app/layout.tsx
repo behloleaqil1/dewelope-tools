@@ -1,5 +1,4 @@
 import type { Metadata } from 'next';
-import Script from 'next/script';
 import localFont from 'next/font/local';
 import './globals.css';
 import LayoutShell from '@/components/layout/LayoutShell';
@@ -53,16 +52,13 @@ export default function RootLayout({
       <head>
         <meta name="google-adsense-account" content="ca-pub-7840391301182968" />
 
-        {/* Performance hints */}
         <link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
 
-        {/* Google AdSense */}
-        <Script
+        <script
           async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7840391301182968"
           crossOrigin="anonymous"
-          strategy="afterInteractive"
         />
       </head>
       <body
