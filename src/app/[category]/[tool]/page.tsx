@@ -321,6 +321,18 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'font-size-converter': dynamic(() => import('@/components/tools/unit-converters/FontSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'julian-date-converter': dynamic(() => import('@/components/tools/date-time-tools/JulianDateConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'time-zone-offset-calculator': dynamic(() => import('@/components/tools/date-time-tools/TimeZoneOffsetCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 22
+  'escape-unescape-json': dynamic(() => import('@/components/tools/developer-tools/EscapeUnescapeJson'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sitemap-generator': dynamic(() => import('@/components/tools/developer-tools/SitemapGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-animation-generator': dynamic(() => import('@/components/tools/developer-tools/CssAnimationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-superscript': dynamic(() => import('@/components/tools/text-tools/TextToSuperscript'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-subscript': dynamic(() => import('@/components/tools/text-tools/TextToSubscript'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'parallelogram-calculator': dynamic(() => import('@/components/tools/math-calculators/ParallelogramCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'percentage-of-percentage': dynamic(() => import('@/components/tools/math-calculators/PercentageOfPercentage'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-image-url': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromImageUrl'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'magnetic-field-converter': dynamic(() => import('@/components/tools/unit-converters/MagneticFieldConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sound-level-converter': dynamic(() => import('@/components/tools/unit-converters/SoundLevelConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'retirement-age-calculator': dynamic(() => import('@/components/tools/date-time-tools/RetirementAgeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
