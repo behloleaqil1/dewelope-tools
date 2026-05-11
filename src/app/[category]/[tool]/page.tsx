@@ -410,6 +410,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'wavelength-to-color': dynamic(() => import('@/components/tools/image-color-tools/WavelengthToColor'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'magnetic-flux-converter': dynamic(() => import('@/components/tools/unit-converters/MagneticFluxConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'day-of-year-calculator': dynamic(() => import('@/components/tools/date-time-tools/DayOfYearCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 30
+  'markdown-table-generator': dynamic(() => import('@/components/tools/developer-tools/MarkdownTableGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'json-diff-viewer': dynamic(() => import('@/components/tools/developer-tools/JsonDiffViewer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-wingdings': dynamic(() => import('@/components/tools/text-tools/TextToWingdings'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'consonant-cluster-finder': dynamic(() => import('@/components/tools/text-tools/ConsonantClusterFinder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'regular-polygon-calculator': dynamic(() => import('@/components/tools/math-calculators/RegularPolygonCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'car-loan-calculator': dynamic(() => import('@/components/tools/math-calculators/CarLoanCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-extractor': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteExtractor'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'specific-heat-converter': dynamic(() => import('@/components/tools/unit-converters/SpecificHeatConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'thermal-conductivity-converter': dynamic(() => import('@/components/tools/unit-converters/ThermalConductivityConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'century-calculator': dynamic(() => import('@/components/tools/date-time-tools/CenturyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
