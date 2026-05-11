@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { categories } from '@/data/categories';
-import { getFeaturedTools, getToolsByCategory } from '@/data/tools-registry';
+import { getFeaturedTools, getToolsByCategory, getAllTools } from '@/data/tools-registry';
 import SearchBar from '@/components/search/SearchBar';
 import AdUnit from '@/components/ads/AdUnit';
 import { CategoryId } from '@/types';
@@ -45,7 +45,7 @@ function getFaqStructuredData() {
         name: 'What tools are available on DeWelope Tools?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'DeWelope Tools offers 41 free online tools organized into 6 categories: Unit Converters, Text Tools, Math and Calculators, Developer Tools, Image and Color Tools, and Date and Time Tools.',
+          text: `DeWelope Tools offers ${getAllTools().length} free online tools organized into 6 categories: Unit Converters, Text Tools, Math and Calculators, Developer Tools, Image and Color Tools, and Date and Time Tools.`,
         },
       },
       {

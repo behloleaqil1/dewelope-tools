@@ -23,9 +23,8 @@ describe('Feature: online-tools-hub, Property 24: Sitemap Reflects Current Regis
         fc.constant(null),
         () => {
           const expectedCount = 1 + categories.length + allTools.length;
-          // 1 homepage + 6 categories + 41 tools = 48
+          // 1 homepage + 6 categories + N tools
           expect(sitemapEntries.length).toBe(expectedCount);
-          expect(sitemapEntries.length).toBe(48);
         }
       ),
       { numRuns: 100 }

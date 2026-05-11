@@ -73,7 +73,7 @@ export default function SearchBar() {
           type="search"
           value={query}
           onChange={handleInputChange}
-          placeholder="Search 41 tools..."
+          placeholder={`Search ${toolsRegistry.length} tools...`}
           aria-label="Search tools by name or description"
           className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-300 focus:bg-white transition-all min-h-[44px]"
         />

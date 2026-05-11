@@ -1,7 +1,7 @@
 import { ToolConfig, CategoryId } from '@/types';
 
 /**
- * Tool Registry - Single source of truth for all 41 tools.
+ * Tool Registry - Single source of truth for all tools.
  * All pages, navigation, SEO, and sitemap derive from this registry.
  */
 export const toolsRegistry: ToolConfig[] = [

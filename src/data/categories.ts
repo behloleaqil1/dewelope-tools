@@ -2,7 +2,7 @@ import { CategoryConfig } from '@/types';
 
 /**
  * Category configurations for the Online Tools Hub.
- * 6 categories organizing all 41 tools.
+ * 6 categories organizing all tools.
  */
 export const categories: CategoryConfig[] = [
   {

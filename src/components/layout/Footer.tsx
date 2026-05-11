@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { categories } from '@/data/categories';
+import { getAllTools } from '@/data/tools-registry';
 
 /**
  * Footer - Site-wide footer with keyword-rich about section and category links.
@@ -17,7 +18,7 @@ export default function Footer() {
             <div>
               <h2 className="text-sm font-semibold text-gray-900 mb-2">About DeWelope Tools</h2>
               <p className="text-xs text-gray-500 leading-relaxed">
-                DeWelope Tools is a collection of 41 free online tools for developers, designers, and everyday users. All tools run entirely in your browser — no data is sent to any server, ensuring complete privacy. From unit converters and text manipulation to developer utilities and color tools, everything works instantly with no sign-up required.
+                DeWelope Tools is a collection of {getAllTools().length} free online tools for developers, designers, and everyday users. All tools run entirely in your browser — no data is sent to any server, ensuring complete privacy. From unit converters and text manipulation to developer utilities and color tools, everything works instantly with no sign-up required.
               </p>
             </div>
             <div>
