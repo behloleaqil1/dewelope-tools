@@ -255,6 +255,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'luminance-calculator': dynamic(() => import('@/components/tools/image-color-tools/LuminanceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'flow-rate-converter': dynamic(() => import('@/components/tools/unit-converters/FlowRateConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'epoch-converter': dynamic(() => import('@/components/tools/date-time-tools/EpochConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 16
+  'atbash-cipher': dynamic(() => import('@/components/tools/developer-tools/AtbashCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-border-radius-generator': dynamic(() => import('@/components/tools/developer-tools/CssBorderRadiusGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'word-scrambler': dynamic(() => import('@/components/tools/text-tools/WordScrambler'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-title-case': dynamic(() => import('@/components/tools/text-tools/TextToTitleCase'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'lcm-gcd-calculator': dynamic(() => import('@/components/tools/math-calculators/LcmGcdCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'matrix-calculator': dynamic(() => import('@/components/tools/math-calculators/MatrixCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pantone-to-hex': dynamic(() => import('@/components/tools/image-color-tools/PantoneToHex'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'data-transfer-rate-converter': dynamic(() => import('@/components/tools/unit-converters/DataTransferRateConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'illuminance-converter': dynamic(() => import('@/components/tools/unit-converters/IlluminanceConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sunrise-sunset-calculator': dynamic(() => import('@/components/tools/date-time-tools/SunriseSunsetCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
