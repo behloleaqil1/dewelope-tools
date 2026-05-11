@@ -465,6 +465,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'wire-gauge-converter': dynamic(() => import('@/components/tools/unit-converters/WireGaugeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'ph-scale-calculator': dynamic(() => import('@/components/tools/unit-converters/PhScaleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'time-addition-calculator': dynamic(() => import('@/components/tools/date-time-tools/TimeAdditionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 35
+  'html-list-generator': dynamic(() => import('@/components/tools/developer-tools/HtmlListGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'json-to-xml': dynamic(() => import('@/components/tools/developer-tools/JsonToXml'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-constant-case': dynamic(() => import('@/components/tools/text-tools/TextToConstantCase'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-dot-case': dynamic(() => import('@/components/tools/text-tools/TextToDotCase'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'interest-rate-converter': dynamic(() => import('@/components/tools/math-calculators/InterestRateConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'calorie-burn-calculator': dynamic(() => import('@/components/tools/math-calculators/CalorieBurnCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-gradient-text-generator': dynamic(() => import('@/components/tools/image-color-tools/ColorGradientTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'density-altitude-calculator': dynamic(() => import('@/components/tools/unit-converters/DensityAltitudeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'unix-permission-converter': dynamic(() => import('@/components/tools/developer-tools/UnixPermissionConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'time-between-dates': dynamic(() => import('@/components/tools/date-time-tools/TimeBetweenDates'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
