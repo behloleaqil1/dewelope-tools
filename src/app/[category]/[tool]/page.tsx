@@ -200,6 +200,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'color-mixer': dynamic(() => import('@/components/tools/image-color-tools/ColorMixer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'cooking-converter': dynamic(() => import('@/components/tools/unit-converters/CookingConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'age-in-days-calculator': dynamic(() => import('@/components/tools/date-time-tools/AgeInDaysCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 11
+  'number-to-words': dynamic(() => import('@/components/tools/math-calculators/NumberToWords'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'roman-numeral-converter': dynamic(() => import('@/components/tools/math-calculators/RomanNumeralConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'binary-calculator': dynamic(() => import('@/components/tools/developer-tools/BinaryCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'json-to-typescript': dynamic(() => import('@/components/tools/developer-tools/JsonToTypescript'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-slug-advanced': dynamic(() => import('@/components/tools/text-tools/TextToSlugAdvanced'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'date-formatter': dynamic(() => import('@/components/tools/date-time-tools/DateFormatter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-name-finder': dynamic(() => import('@/components/tools/image-color-tools/ColorNameFinder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speed-distance-time-calculator': dynamic(() => import('@/components/tools/math-calculators/SpeedDistanceTimeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'number-sequence-generator': dynamic(() => import('@/components/tools/math-calculators/NumberSequenceGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-html-entities': dynamic(() => import('@/components/tools/developer-tools/TextToHtmlEntities'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
