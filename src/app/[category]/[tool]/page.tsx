@@ -443,6 +443,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'pressure-altitude-converter': dynamic(() => import('@/components/tools/unit-converters/PressureAltitudeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speed-of-sound-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeedOfSoundCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'event-countdown-creator': dynamic(() => import('@/components/tools/date-time-tools/EventCountdownCreator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 33
+  'css-variable-generator': dynamic(() => import('@/components/tools/developer-tools/CssVariableGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sql-insert-generator': dynamic(() => import('@/components/tools/developer-tools/SqlInsertGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-emoji-replace': dynamic(() => import('@/components/tools/text-tools/TextToEmojiReplace'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-line-reverser': dynamic(() => import('@/components/tools/text-tools/TextLineReverser'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wage-to-salary-converter': dynamic(() => import('@/components/tools/math-calculators/WageToSalaryConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'mortgage-extra-payment': dynamic(() => import('@/components/tools/math-calculators/MortgageExtraPayment'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-blending-modes': dynamic(() => import('@/components/tools/image-color-tools/ColorBlendingModes'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'mach-number-calculator': dynamic(() => import('@/components/tools/unit-converters/MachNumberCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'astronomical-unit-converter': dynamic(() => import('@/components/tools/unit-converters/AstronomicalUnitConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'date-range-generator': dynamic(() => import('@/components/tools/date-time-tools/DateRangeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
