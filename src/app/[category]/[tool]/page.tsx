@@ -310,6 +310,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'typography-scale-generator': dynamic(() => import('@/components/tools/image-color-tools/TypographyScaleGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'radioactivity-converter': dynamic(() => import('@/components/tools/unit-converters/RadioactivityConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'date-to-day-of-week': dynamic(() => import('@/components/tools/date-time-tools/DateToDayOfWeek'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 21
+  'punycode-converter': dynamic(() => import('@/components/tools/developer-tools/PunycodeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-clip-path-generator': dynamic(() => import('@/components/tools/developer-tools/CssClipPathGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-small-caps': dynamic(() => import('@/components/tools/text-tools/TextToSmallCaps'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'blank-line-remover': dynamic(() => import('@/components/tools/text-tools/BlankLineRemover'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'trapezoid-area-calculator': dynamic(() => import('@/components/tools/math-calculators/TrapezoidAreaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'logarithm-calculator': dynamic(() => import('@/components/tools/math-calculators/LogarithmCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-gradient-css-stops': dynamic(() => import('@/components/tools/image-color-tools/ColorGradientCssStops'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'font-size-converter': dynamic(() => import('@/components/tools/unit-converters/FontSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'julian-date-converter': dynamic(() => import('@/components/tools/date-time-tools/JulianDateConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'time-zone-offset-calculator': dynamic(() => import('@/components/tools/date-time-tools/TimeZoneOffsetCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
