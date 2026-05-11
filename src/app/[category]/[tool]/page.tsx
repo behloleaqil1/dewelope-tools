@@ -592,6 +592,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'bra-size-converter': dynamic(() => import('@/components/tools/unit-converters/BraSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'banner-size-reference': dynamic(() => import('@/components/tools/image-color-tools/BannerSizeReference'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'iso-week-date-converter': dynamic(() => import('@/components/tools/date-time-tools/IsoWeekDateConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 43
+  'json-to-sql-create': dynamic(() => import('@/components/tools/developer-tools/JsonToSqlCreate'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-contain-generator': dynamic(() => import('@/components/tools/developer-tools/CssContainGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-reverse-words': dynamic(() => import('@/components/tools/text-tools/TextToReverseWords'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-sentence-per-line': dynamic(() => import('@/components/tools/text-tools/TextToSentencePerLine'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'mulch-calculator': dynamic(() => import('@/components/tools/math-calculators/MulchCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wallpaper-calculator': dynamic(() => import('@/components/tools/math-calculators/WallpaperCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-to-filter-css': dynamic(() => import('@/components/tools/image-color-tools/ColorToFilterCss'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'hat-size-converter': dynamic(() => import('@/components/tools/unit-converters/HatSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'social-media-image-sizes': dynamic(() => import('@/components/tools/image-color-tools/SocialMediaImageSizes'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'unix-epoch-countdown': dynamic(() => import('@/components/tools/date-time-tools/UnixEpochCountdown'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
