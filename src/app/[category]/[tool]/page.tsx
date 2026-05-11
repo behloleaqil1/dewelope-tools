@@ -399,6 +399,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'frequency-to-wavelength': dynamic(() => import('@/components/tools/unit-converters/FrequencyToWavelength'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'temperature-to-color': dynamic(() => import('@/components/tools/image-color-tools/TemperatureToColor'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'moon-phase-calculator': dynamic(() => import('@/components/tools/date-time-tools/MoonPhaseCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 29
+  'html-to-markdown': dynamic(() => import('@/components/tools/developer-tools/HtmlToMarkdown'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'json-schema-generator': dynamic(() => import('@/components/tools/developer-tools/JsonSchemaGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-fullwidth': dynamic(() => import('@/components/tools/text-tools/TextToFullwidth'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'readability-score': dynamic(() => import('@/components/tools/text-tools/ReadabilityScore'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'decagon-calculator': dynamic(() => import('@/components/tools/math-calculators/DecagonCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'rent-vs-buy-calculator': dynamic(() => import('@/components/tools/math-calculators/RentVsBuyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-accessibility-checker': dynamic(() => import('@/components/tools/image-color-tools/ColorAccessibilityChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wavelength-to-color': dynamic(() => import('@/components/tools/image-color-tools/WavelengthToColor'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'magnetic-flux-converter': dynamic(() => import('@/components/tools/unit-converters/MagneticFluxConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'day-of-year-calculator': dynamic(() => import('@/components/tools/date-time-tools/DayOfYearCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
