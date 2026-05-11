@@ -377,6 +377,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'electrical-power-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricalPowerConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'capacitance-converter': dynamic(() => import('@/components/tools/unit-converters/CapacitanceConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'zodiac-sign-calculator': dynamic(() => import('@/components/tools/date-time-tools/ZodiacSignCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 27
+  'xpath-tester': dynamic(() => import('@/components/tools/developer-tools/XpathTester'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cors-header-generator': dynamic(() => import('@/components/tools/developer-tools/CorsHeaderGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-circled-unicode': dynamic(() => import('@/components/tools/text-tools/TextToCircledUnicode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'anagram-checker': dynamic(() => import('@/components/tools/text-tools/AnagramChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pentagon-calculator': dynamic(() => import('@/components/tools/math-calculators/PentagonCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'currency-exchange-calculator': dynamic(() => import('@/components/tools/math-calculators/CurrencyExchangeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-hue-rotator': dynamic(() => import('@/components/tools/image-color-tools/ColorHueRotator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'inductance-converter': dynamic(() => import('@/components/tools/unit-converters/InductanceConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'electric-current-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricCurrentConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'chinese-zodiac-calculator': dynamic(() => import('@/components/tools/date-time-tools/ChineseZodiacCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
