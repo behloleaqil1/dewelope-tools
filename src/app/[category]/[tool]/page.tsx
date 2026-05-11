@@ -581,6 +581,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'ring-size-converter': dynamic(() => import('@/components/tools/unit-converters/RingSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'photo-print-size-calculator': dynamic(() => import('@/components/tools/image-color-tools/PhotoPrintSizeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'date-pattern-generator': dynamic(() => import('@/components/tools/date-time-tools/DatePatternGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 42
+  'json-to-graphql-schema': dynamic(() => import('@/components/tools/developer-tools/JsonToGraphqlSchema'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-scroll-snap-generator': dynamic(() => import('@/components/tools/developer-tools/CssScrollSnapGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-emoji-art': dynamic(() => import('@/components/tools/text-tools/TextToEmojiArt'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-line-joiner': dynamic(() => import('@/components/tools/text-tools/TextLineJoiner'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'staircase-calculator': dynamic(() => import('@/components/tools/math-calculators/StaircaseCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fence-calculator': dynamic(() => import('@/components/tools/math-calculators/FenceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-to-hsb': dynamic(() => import('@/components/tools/image-color-tools/ColorToHsb'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'bra-size-converter': dynamic(() => import('@/components/tools/unit-converters/BraSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'banner-size-reference': dynamic(() => import('@/components/tools/image-color-tools/BannerSizeReference'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'iso-week-date-converter': dynamic(() => import('@/components/tools/date-time-tools/IsoWeekDateConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
