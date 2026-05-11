@@ -277,6 +277,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'fuel-consumption-tracker': dynamic(() => import('@/components/tools/math-calculators/FuelConsumptionTracker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'luminosity-converter': dynamic(() => import('@/components/tools/unit-converters/LuminosityConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'meeting-duration-calculator': dynamic(() => import('@/components/tools/date-time-tools/MeetingDurationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 18
+  'hex-dump-viewer': dynamic(() => import('@/components/tools/developer-tools/HexDumpViewer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nginx-config-generator': dynamic(() => import('@/components/tools/developer-tools/NginxConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-leetspeak': dynamic(() => import('@/components/tools/text-tools/TextToLeetspeak'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'line-number-adder': dynamic(() => import('@/components/tools/text-tools/LineNumberAdder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'circle-calculator': dynamic(() => import('@/components/tools/math-calculators/CircleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cylinder-volume-calculator': dynamic(() => import('@/components/tools/math-calculators/CylinderVolumeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'gradient-palette-generator': dynamic(() => import('@/components/tools/image-color-tools/GradientPaletteGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'bandwidth-calculator': dynamic(() => import('@/components/tools/math-calculators/BandwidthCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'acceleration-converter': dynamic(() => import('@/components/tools/unit-converters/AccelerationConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pregnancy-due-date-calculator': dynamic(() => import('@/components/tools/date-time-tools/PregnancyDueDateCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
