@@ -432,6 +432,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'angular-velocity-converter': dynamic(() => import('@/components/tools/unit-converters/AngularVelocityConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'electric-field-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricFieldConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'time-since-calculator': dynamic(() => import('@/components/tools/date-time-tools/TimeSinceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 32
+  'css-grid-generator': dynamic(() => import('@/components/tools/developer-tools/CssGridGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'package-json-generator': dynamic(() => import('@/components/tools/developer-tools/PackageJsonGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-morse-audio': dynamic(() => import('@/components/tools/text-tools/TextToMorseAudio'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-case-detector': dynamic(() => import('@/components/tools/text-tools/TextCaseDetector'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'volume-of-shapes': dynamic(() => import('@/components/tools/math-calculators/VolumeOfShapes'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'down-payment-calculator': dynamic(() => import('@/components/tools/math-calculators/DownPaymentCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-harmony-wheel': dynamic(() => import('@/components/tools/image-color-tools/ColorHarmonyWheel'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pressure-altitude-converter': dynamic(() => import('@/components/tools/unit-converters/PressureAltitudeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speed-of-sound-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeedOfSoundCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'event-countdown-creator': dynamic(() => import('@/components/tools/date-time-tools/EventCountdownCreator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
