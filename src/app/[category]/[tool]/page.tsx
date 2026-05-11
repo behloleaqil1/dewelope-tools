@@ -454,6 +454,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'mach-number-calculator': dynamic(() => import('@/components/tools/unit-converters/MachNumberCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'astronomical-unit-converter': dynamic(() => import('@/components/tools/unit-converters/AstronomicalUnitConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'date-range-generator': dynamic(() => import('@/components/tools/date-time-tools/DateRangeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 34
+  'tailwind-class-sorter': dynamic(() => import('@/components/tools/developer-tools/TailwindClassSorter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'http-header-parser': dynamic(() => import('@/components/tools/developer-tools/HttpHeaderParser'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-camel-case': dynamic(() => import('@/components/tools/text-tools/TextToCamelCase'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-snake-case': dynamic(() => import('@/components/tools/text-tools/TextToSnakeCase'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'area-under-curve-calculator': dynamic(() => import('@/components/tools/math-calculators/AreaUnderCurveCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sales-commission-calculator': dynamic(() => import('@/components/tools/math-calculators/SalesCommissionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-distance-calculator': dynamic(() => import('@/components/tools/image-color-tools/ColorDistanceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wire-gauge-converter': dynamic(() => import('@/components/tools/unit-converters/WireGaugeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ph-scale-calculator': dynamic(() => import('@/components/tools/unit-converters/PhScaleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'time-addition-calculator': dynamic(() => import('@/components/tools/date-time-tools/TimeAdditionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
