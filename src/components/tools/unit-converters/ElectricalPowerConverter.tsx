@@ -1,0 +1,126 @@
+'use client';
+
+import { useState } from 'react';
+import InputArea from '@/components/tools/InputArea';
+import OutputArea from '@/components/tools/OutputArea';
+import CopyToClipboard from '@/components/tools/CopyToClipboard';
+
+/**
+ * ElectricalPowerConverter - Convert between Watt, kW, HP, BTU/h, cal/s, VA, kVA, MW.
+ */
+export default function ElectricalPowerConverter({ toolId, toolName }: { toolId: string; toolName: string }) {
+  const [value, setValue] = useState('');
+  const [fromUnit, setFromUnit] = useState('watt');
+  const [toUnit, setToUnit] = useState('kilowatt');
+  const [result, setResult] = useState<string | null>(null);
+  const [error, setError] = useState<string | undefined>();
+
+  const UNITS = [
+    { value: 'watt', label: 'Watt (W)' },
+    { value: 'kilowatt', label: 'Kilowatt (kW)' },
+    { value: 'megawatt', label: 'Megawatt (MW)' },
+    { value: 'horsepower', label: 'Horsepower (HP)' },
+    { value: 'btu-h', label: 'BTU/hour' },
+    { value: 'cal-s', label: 'Calorie/second' },
+    { value: 'va', label: 'Volt-Ampere (VA)' },
+    { value: 'kva', label: 'Kilovolt-Ampere (kVA)' },
+    { value: 'milliwatt', label: 'Milliwatt (mW)' },
+    { value: 'ft-lbs', label: 'Foot-pound/second' },
+  ];
+
+  // Conversion factors to Watts
+  const TO_WATTS: Record<string, number> = {
+    'watt': 1,
+    'kilowatt': 1000,
+    'megawatt': 1000000,
+    'horsepower': 745.69987,
+    'btu-h': 0.29307107,
+    'cal-s': 4.184,
+    'va': 1, // VA = W for purely resistive loads
+    'kva': 1000,
+    'milliwatt': 0.001,
+    'ft-lbs': 1.35582,
+  };
+
+  function convert() {
+    setError(undefined);
+    setResult(null);
+
+    const num = parseFloat(value);
+    if (!value.trim() || isNaN(num)) {
+      setError('Please enter a valid number');
+      return;
+    }
+
+    const watts = num * TO_WATTS[fromUnit];
+    const converted = watts / TO_WATTS[toUnit];
+
+    let formatted: string;
+    if (Math.abs(converted) < 0.001 || Math.abs(converted) > 1e9) {
+      formatted = converted.toExponential(6);
+    } else {
+      formatted = converted.toLocaleString(undefined, { maximumFractionDigits: 6 });
+    }
+    setResult(formatted);
+  }
+
+  const fromLabel = UNITS.find(u => u.value === fromUnit)?.label || fromUnit;
+  const toLabel = UNITS.find(u => u.value === toUnit)?.label || toUnit;
+  const copyText = result ? `${value} ${fromLabel} = ${result} ${toLabel}` : '';
+
+  return (
+    <div className="space-y-4" data-tool-id={toolId}>
+      <InputArea error={error}>
+        <label htmlFor={`${toolId}-value`} className="block text-sm font-medium text-gray-700 mb-1">
+          Power value for {toolName}
+        </label>
+        <input
+          id={`${toolId}-value`}
+          type="text"
+          inputMode="decimal"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          placeholder="Enter power value"
+          aria-label="Power value to convert"
+          className="input-field"
+        />
+        <div className="grid grid-cols-2 gap-3 mt-3">
+          <div>
+            <label htmlFor={`${toolId}-from`} className="block text-xs text-gray-500 mb-1">From</label>
+            <select id={`${toolId}-from`} value={fromUnit} onChange={(e) => setFromUnit(e.target.value)} aria-label="Source power unit" className="input-field text-sm">
+              {UNITS.map(u => <option key={u.value} value={u.value}>{u.label}</option>)}
+            </select>
+          </div>
+          <div>
+            <label htmlFor={`${toolId}-to`} className="block text-xs text-gray-500 mb-1">To</label>
+            <select id={`${toolId}-to`} value={toUnit} onChange={(e) => setToUnit(e.target.value)} aria-label="Target power unit" className="input-field text-sm">
+              {UNITS.map(u => <option key={u.value} value={u.value}>{u.label}</option>)}
+            </select>
+          </div>
+        </div>
+        <div className="mt-3 text-xs text-gray-500 bg-yellow-50 p-2 rounded border border-yellow-200">
+          Note: VA and kVA equal Watts only for purely resistive loads (power factor = 1). For reactive loads, multiply by power factor.
+        </div>
+      </InputArea>
+
+      <button onClick={convert} aria-label="Convert power" className="btn-primary">
+        Convert
+      </button>
+
+      <OutputArea hasContent={result !== null}>
+        {result && (
+          <div className="space-y-3">
+            <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center">
+              <div className="text-2xl font-bold text-blue-600 font-mono break-all">{result}</div>
+              <div className="text-sm text-gray-500 mt-1">{toLabel}</div>
+            </div>
+            <div className="text-sm text-gray-600 bg-gray-50 p-3 rounded-lg border border-gray-200 font-mono text-center">
+              {value} {fromLabel} = {result} {toLabel}
+            </div>
+            <CopyToClipboard text={copyText} />
+          </div>
+        )}
+      </OutputArea>
+    </div>
+  );
+}

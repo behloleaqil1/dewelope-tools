@@ -366,6 +366,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'concentration-converter': dynamic(() => import('@/components/tools/unit-converters/ConcentrationConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'radiation-dose-converter': dynamic(() => import('@/components/tools/unit-converters/RadiationDoseConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'season-calculator': dynamic(() => import('@/components/tools/date-time-tools/SeasonCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 26
+  'graphql-query-builder': dynamic(() => import('@/components/tools/developer-tools/GraphqlQueryBuilder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'csp-header-generator': dynamic(() => import('@/components/tools/developer-tools/CspHeaderGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-double-struck': dynamic(() => import('@/components/tools/text-tools/TextToDoubleStruck'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'word-density-analyzer': dynamic(() => import('@/components/tools/text-tools/WordDensityAnalyzer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'hexagon-calculator': dynamic(() => import('@/components/tools/math-calculators/HexagonCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'investment-return-calculator': dynamic(() => import('@/components/tools/math-calculators/InvestmentReturnCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-brightness-adjuster': dynamic(() => import('@/components/tools/image-color-tools/ColorBrightnessAdjuster'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'electrical-power-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricalPowerConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'capacitance-converter': dynamic(() => import('@/components/tools/unit-converters/CapacitanceConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'zodiac-sign-calculator': dynamic(() => import('@/components/tools/date-time-tools/ZodiacSignCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
