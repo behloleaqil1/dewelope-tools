@@ -4,6 +4,7 @@ import { useState } from 'react';
 import InputArea from '@/components/tools/InputArea';
 import OutputArea from '@/components/tools/OutputArea';
 import CopyToClipboard from '@/components/tools/CopyToClipboard';
+import CodeEditor from '@/components/tools/CodeEditor';
 
 /**
  * JsonPathFinder - Navigate JSON data and find paths to specific values.
@@ -78,13 +79,14 @@ export default function JsonPathFinder({ toolId, toolName }: { toolId: string; t
         <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">
           JSON data for {toolName}
         </label>
-        <textarea
+        <CodeEditor
           id={`${toolId}-input`}
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={setInput}
+          language="json"
           placeholder={'{\n  "user": {\n    "name": "John",\n    "age": 30,\n    "hobbies": ["reading", "coding"]\n  }\n}'}
-          aria-label={`JSON input for ${toolName}`}
-          className="input-field h-40 resize-y font-mono text-sm"
+          ariaLabel={`JSON input for ${toolName}`}
+          height="h-40"
         />
       </InputArea>
 

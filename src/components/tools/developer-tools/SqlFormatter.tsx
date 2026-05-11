@@ -4,6 +4,7 @@ import { useState } from 'react';
 import InputArea from '@/components/tools/InputArea';
 import OutputArea from '@/components/tools/OutputArea';
 import CopyToClipboard from '@/components/tools/CopyToClipboard';
+import CodeEditor from '@/components/tools/CodeEditor';
 
 /**
  * SqlFormatter - Formats SQL queries with proper indentation and keyword capitalization.
@@ -99,13 +100,14 @@ export default function SqlFormatter({ toolId, toolName }: { toolId: string; too
         <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">
           SQL Query
         </label>
-        <textarea
+        <CodeEditor
           id={`${toolId}-input`}
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={setInput}
+          language="sql"
           placeholder="select id, name, email from users where active = 1 and role = 'admin' order by name asc limit 10"
-          aria-label={`SQL query input for ${toolName}`}
-          className="input-field h-48 resize-y font-mono text-sm"
+          ariaLabel={`SQL query input for ${toolName}`}
+          height="h-48"
         />
       </InputArea>
 
@@ -131,9 +133,13 @@ export default function SqlFormatter({ toolId, toolName }: { toolId: string; too
               <label className="block text-sm font-medium text-gray-700">Formatted SQL</label>
               <CopyToClipboard text={output} />
             </div>
-            <pre className="whitespace-pre-wrap text-sm font-mono text-gray-800 p-4 bg-gray-50 rounded-lg border border-gray-100 overflow-x-auto">
-              {output}
-            </pre>
+            <CodeEditor
+              value={output}
+              onChange={() => {}}
+              language="sql"
+              readOnly
+              height="h-64"
+            />
           </div>
         )}
       </OutputArea>

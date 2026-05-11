@@ -4,6 +4,7 @@ import { useState } from 'react';
 import InputArea from '@/components/tools/InputArea';
 import OutputArea from '@/components/tools/OutputArea';
 import CopyToClipboard from '@/components/tools/CopyToClipboard';
+import CodeEditor from '@/components/tools/CodeEditor';
 
 /**
  * XmlFormatter - Formats and beautifies XML with proper indentation.
@@ -97,13 +98,14 @@ export default function XmlFormatter({ toolId, toolName }: { toolId: string; too
         <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">
           XML input for {toolName}
         </label>
-        <textarea
+        <CodeEditor
           id={`${toolId}-input`}
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={setInput}
+          language="xml"
           placeholder='<root><item id="1"><name>Test</name><value>123</value></item></root>'
-          aria-label={`XML input for ${toolName}`}
-          className="input-field h-40 resize-y font-mono text-sm"
+          ariaLabel={`XML input for ${toolName}`}
+          height="h-40"
         />
         <div className="flex items-center gap-2 mt-2">
           <label htmlFor={`${toolId}-indent`} className="text-xs text-gray-500">Indent:</label>
@@ -133,9 +135,13 @@ export default function XmlFormatter({ toolId, toolName }: { toolId: string; too
               <label className="block text-sm font-medium text-gray-700">Formatted XML</label>
               <CopyToClipboard text={output} />
             </div>
-            <pre className="whitespace-pre-wrap text-sm font-mono text-gray-800 p-4 bg-gray-50 rounded-lg border border-gray-100 overflow-x-auto max-h-80 overflow-y-auto">
-              {output}
-            </pre>
+            <CodeEditor
+              value={output}
+              onChange={() => {}}
+              language="xml"
+              readOnly
+              height="h-64"
+            />
           </div>
         )}
       </OutputArea>

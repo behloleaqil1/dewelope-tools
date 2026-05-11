@@ -92,13 +92,14 @@ export default function JsonToCsv({ toolId, toolName: _toolName }: { toolId: str
         <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">
           JSON Array
         </label>
-        <textarea
+        <CodeEditor
           id={`${toolId}-input`}
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={setInput}
+          language="json"
           placeholder={'[\n  { "name": "Alice", "age": 30 },\n  { "name": "Bob", "age": 25 }\n]'}
-          aria-label="JSON array input for CSV conversion"
-          className="input-field h-48 resize-y font-mono text-sm"
+          ariaLabel="JSON array input for CSV conversion"
+          height="h-48"
         />
       </InputArea>
 

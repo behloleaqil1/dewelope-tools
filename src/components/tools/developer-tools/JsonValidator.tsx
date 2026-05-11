@@ -4,6 +4,7 @@ import { useState } from 'react';
 import InputArea from '@/components/tools/InputArea';
 import OutputArea from '@/components/tools/OutputArea';
 import CopyToClipboard from '@/components/tools/CopyToClipboard';
+import CodeEditor from '@/components/tools/CodeEditor';
 
 /**
  * JsonValidator - Validates JSON and reports errors with line/position info.
@@ -37,13 +38,14 @@ export default function JsonValidator({ toolId, toolName }: { toolId: string; to
         <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">
           JSON to validate for {toolName}
         </label>
-        <textarea
+        <CodeEditor
           id={`${toolId}-input`}
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={setInput}
+          language="json"
           placeholder='{"name": "test", "value": 123}'
-          aria-label={`JSON input for ${toolName}`}
-          className="input-field h-48 resize-y font-mono text-sm"
+          ariaLabel={`JSON input for ${toolName}`}
+          height="h-48"
         />
       </InputArea>
 
