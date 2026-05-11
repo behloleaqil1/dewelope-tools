@@ -5,6 +5,7 @@ import { ToolEngineProps } from '@/types';
 import InputArea from '@/components/tools/InputArea';
 import OutputArea from '@/components/tools/OutputArea';
 import CopyToClipboard from '@/components/tools/CopyToClipboard';
+import CodeEditor from '@/components/tools/CodeEditor';
 import { formatJson } from '@/lib/developer-tools';
 
 const MAX_LENGTH = 1048576; // 1MB
@@ -96,15 +97,16 @@ export default function JsonFormatter({ toolId }: ToolEngineProps) {
         <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">
           Enter JSON
         </label>
-        <textarea
+        <CodeEditor
           id={`${toolId}-input`}
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={setInput}
+          language="json"
           placeholder='Paste your JSON here, e.g. {"key": "value"}'
-          aria-label="JSON input for formatting and validation"
-          className="w-full h-56 p-3 border border-gray-300 rounded-lg resize-y font-mono text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+          ariaLabel="JSON input for formatting and validation"
+          height="h-56"
         />
-        <div className="text-xs text-gray-500 text-right">
+        <div className="text-xs text-gray-500 text-right mt-1">
           {input.length.toLocaleString()} / {MAX_LENGTH.toLocaleString()} characters
         </div>
       </InputArea>

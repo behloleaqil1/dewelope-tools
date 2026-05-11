@@ -4,6 +4,7 @@ import { useState } from 'react';
 import InputArea from '@/components/tools/InputArea';
 import OutputArea from '@/components/tools/OutputArea';
 import CopyToClipboard from '@/components/tools/CopyToClipboard';
+import CodeEditor from '@/components/tools/CodeEditor';
 
 /**
  * JsonToCsv - Convert a JSON array of objects into CSV format.

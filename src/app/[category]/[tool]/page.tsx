@@ -476,6 +476,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'density-altitude-calculator': dynamic(() => import('@/components/tools/unit-converters/DensityAltitudeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'unix-permission-converter': dynamic(() => import('@/components/tools/developer-tools/UnixPermissionConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'time-between-dates': dynamic(() => import('@/components/tools/date-time-tools/TimeBetweenDates'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 36
+  'xml-to-json': dynamic(() => import('@/components/tools/developer-tools/XmlToJson'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-transform-generator': dynamic(() => import('@/components/tools/developer-tools/CssTransformGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-path-case': dynamic(() => import('@/components/tools/text-tools/TextToPathCase'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-header-case': dynamic(() => import('@/components/tools/text-tools/TextToHeaderCase'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'net-salary-calculator': dynamic(() => import('@/components/tools/math-calculators/NetSalaryCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'body-fat-calculator': dynamic(() => import('@/components/tools/math-calculators/BodyFatCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-hex': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromHex'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cooking-temperature-converter': dynamic(() => import('@/components/tools/unit-converters/CookingTemperatureConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'aspect-ratio-resizer': dynamic(() => import('@/components/tools/image-color-tools/AspectRatioResizer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'recurring-date-calculator': dynamic(() => import('@/components/tools/date-time-tools/RecurringDateCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });

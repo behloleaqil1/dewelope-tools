@@ -4,6 +4,7 @@ import { useState } from 'react';
 import InputArea from '@/components/tools/InputArea';
 import OutputArea from '@/components/tools/OutputArea';
 import CopyToClipboard from '@/components/tools/CopyToClipboard';
+import CodeEditor from '@/components/tools/CodeEditor';
 
 /**
  * YamlToJson - Converts YAML-like text to JSON format.
@@ -74,7 +75,6 @@ export default function YamlToJson({ toolId, toolName }: { toolId: string; toolN
     if (value === 'null' || value === 'Null' || value === 'NULL' || value === '~') return null;
     if (/^-?\d+$/.test(value)) return parseInt(value, 10);
     if (/^-?\d+\.\d+$/.test(value)) return parseFloat(value);
-    // Remove surrounding quotes
     if ((value.startsWith('"') && value.endsWith('"')) || (value.startsWith("'") && value.endsWith("'"))) {
       return value.slice(1, -1);
     }
@@ -102,16 +102,17 @@ export default function YamlToJson({ toolId, toolName }: { toolId: string; toolN
   return (
     <div className="space-y-4" data-tool-id={toolId}>
       <InputArea error={error}>
-        <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">
+        <label className="block text-sm font-medium text-gray-700 mb-1">
           YAML Input
         </label>
-        <textarea
+        <CodeEditor
           id={`${toolId}-input`}
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={setInput}
+          language="yaml"
           placeholder={'name: John Doe\nage: 30\nhobbies:\n  - reading\n  - coding\naddress:\n  city: New York\n  zip: "10001"'}
-          aria-label={`YAML input for ${toolName}`}
-          className="input-field h-48 resize-y font-mono text-sm"
+          ariaLabel={`YAML input for ${toolName}`}
+          height="h-48"
         />
       </InputArea>
 
@@ -126,9 +127,13 @@ export default function YamlToJson({ toolId, toolName }: { toolId: string; toolN
               <label className="block text-sm font-medium text-gray-700">JSON Output</label>
               <CopyToClipboard text={output} />
             </div>
-            <pre className="whitespace-pre-wrap text-sm font-mono text-gray-800 p-4 bg-gray-50 rounded-lg border border-gray-100 overflow-x-auto">
-              {output}
-            </pre>
+            <CodeEditor
+              value={output}
+              onChange={() => {}}
+              language="json"
+              readOnly
+              height="h-64"
+            />
           </div>
         )}
       </OutputArea>

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import InputArea from '@/components/tools/InputArea';
 import OutputArea from '@/components/tools/OutputArea';
 import CopyToClipboard from '@/components/tools/CopyToClipboard';
+import CodeEditor from '@/components/tools/CodeEditor';
 
 /**
  * JsonToYaml - Converts JSON input to YAML format.
@@ -35,34 +36,16 @@ export default function JsonToYaml({ toolId, toolName }: { toolId: string; toolN
   const jsonToYaml = (value: unknown, indent: number): string => {
     const prefix = '  '.repeat(indent);
 
-    if (value === null) {
-      return 'null';
-    }
-
-    if (value === undefined) {
-      return '~';
-    }
-
-    if (typeof value === 'boolean') {
-      return value ? 'true' : 'false';
-    }
-
-    if (typeof value === 'number') {
-      return String(value);
-    }
+    if (value === null) return 'null';
+    if (value === undefined) return '~';
+    if (typeof value === 'boolean') return value ? 'true' : 'false';
+    if (typeof value === 'number') return String(value);
 
     if (typeof value === 'string') {
       if (
-        value.includes('\n') ||
-        value.includes(':') ||
-        value.includes('#') ||
-        value.startsWith(' ') ||
-        value.endsWith(' ') ||
-        value === '' ||
-        value === 'true' ||
-        value === 'false' ||
-        value === 'null' ||
-        !isNaN(Number(value))
+        value.includes('\n') || value.includes(':') || value.includes('#') ||
+        value.startsWith(' ') || value.endsWith(' ') || value === '' ||
+        value === 'true' || value === 'false' || value === 'null' || !isNaN(Number(value))
       ) {
         return `"${value.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n')}"`;
       }
@@ -70,9 +53,7 @@ export default function JsonToYaml({ toolId, toolName }: { toolId: string; toolN
     }
 
     if (Array.isArray(value)) {
-      if (value.length === 0) {
-        return '[]';
-      }
+      if (value.length === 0) return '[]';
       const lines: string[] = [];
       for (const item of value) {
         if (typeof item === 'object' && item !== null && !Array.isArray(item)) {
@@ -91,9 +72,7 @@ export default function JsonToYaml({ toolId, toolName }: { toolId: string; toolN
 
     if (typeof value === 'object') {
       const entries = Object.entries(value as Record<string, unknown>);
-      if (entries.length === 0) {
-        return '{}';
-      }
+      if (entries.length === 0) return '{}';
       const lines: string[] = [];
       for (const [key, val] of entries) {
         const safeKey = key.includes(':') || key.includes(' ') || key === '' ? `"${key}"` : key;
@@ -104,8 +83,7 @@ export default function JsonToYaml({ toolId, toolName }: { toolId: string; toolN
             lines.push(`${prefix}${safeKey}: {}`);
           } else {
             lines.push(`${prefix}${safeKey}:`);
-            const nested = jsonToYaml(val, indent + 1);
-            lines.push(nested);
+            lines.push(jsonToYaml(val, indent + 1));
           }
         } else {
           lines.push(`${prefix}${safeKey}: ${jsonToYaml(val, indent + 1)}`);
@@ -121,16 +99,17 @@ export default function JsonToYaml({ toolId, toolName }: { toolId: string; toolN
     <div className="space-y-6" data-tool-id={toolId}>
       <div className="space-y-4">
         <InputArea error={error}>
-          <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700">
+          <label className="block text-sm font-medium text-gray-700 mb-1">
             JSON Input
           </label>
-          <textarea
+          <CodeEditor
             id={`${toolId}-input`}
             value={input}
-            onChange={(e) => setInput(e.target.value)}
+            onChange={setInput}
+            language="json"
             placeholder={'{\n  "name": "example",\n  "items": [1, 2, 3]\n}'}
-            aria-label={`JSON input for ${toolName}`}
-            className="input-field h-48 resize-y font-mono text-sm"
+            ariaLabel={`JSON input for ${toolName}`}
+            height="h-48"
           />
         </InputArea>
 
@@ -142,11 +121,17 @@ export default function JsonToYaml({ toolId, toolName }: { toolId: string; toolN
       <OutputArea hasContent={!!output}>
         {output && (
           <div className="space-y-3">
-            <h3 className="text-sm font-medium text-gray-700">YAML Output</h3>
-            <pre className="whitespace-pre-wrap text-sm font-mono text-gray-800 bg-gray-50 p-4 rounded-lg border border-gray-200 max-h-64 overflow-y-auto">
-              {output}
-            </pre>
-            <CopyToClipboard text={output} />
+            <div className="flex items-center justify-between">
+              <h3 className="text-sm font-medium text-gray-700">YAML Output</h3>
+              <CopyToClipboard text={output} />
+            </div>
+            <CodeEditor
+              value={output}
+              onChange={() => {}}
+              language="yaml"
+              readOnly
+              height="h-64"
+            />
           </div>
         )}
       </OutputArea>
