@@ -487,6 +487,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'cooking-temperature-converter': dynamic(() => import('@/components/tools/unit-converters/CookingTemperatureConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'aspect-ratio-resizer': dynamic(() => import('@/components/tools/image-color-tools/AspectRatioResizer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'recurring-date-calculator': dynamic(() => import('@/components/tools/date-time-tools/RecurringDateCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 37
+  'ini-to-json': dynamic(() => import('@/components/tools/developer-tools/IniToJson'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-transition-generator': dynamic(() => import('@/components/tools/developer-tools/CssTransitionGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-train-case': dynamic(() => import('@/components/tools/text-tools/TextToTrainCase'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-character-replacer': dynamic(() => import('@/components/tools/text-tools/TextCharacterReplacer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'waist-to-hip-ratio': dynamic(() => import('@/components/tools/math-calculators/WaistToHipRatio'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'unit-rate-calculator': dynamic(() => import('@/components/tools/math-calculators/UnitRateCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-temperature-to-rgb': dynamic(() => import('@/components/tools/image-color-tools/ColorTemperatureToRgb'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'paper-weight-converter': dynamic(() => import('@/components/tools/unit-converters/PaperWeightConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'screen-ppi-calculator': dynamic(() => import('@/components/tools/image-color-tools/ScreenPpiCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'workday-counter': dynamic(() => import('@/components/tools/date-time-tools/WorkdayCounter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
