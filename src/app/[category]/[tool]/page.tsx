@@ -211,6 +211,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'speed-distance-time-calculator': dynamic(() => import('@/components/tools/math-calculators/SpeedDistanceTimeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'number-sequence-generator': dynamic(() => import('@/components/tools/math-calculators/NumberSequenceGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'text-to-html-entities': dynamic(() => import('@/components/tools/developer-tools/TextToHtmlEntities'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 12
+  'string-length-calculator': dynamic(() => import('@/components/tools/text-tools/StringLengthCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-ascii-art': dynamic(() => import('@/components/tools/text-tools/TextToAsciiArt'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ip-to-binary': dynamic(() => import('@/components/tools/developer-tools/IpToBinary'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'regex-escape': dynamic(() => import('@/components/tools/developer-tools/RegexEscape'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'loan-payoff-calculator': dynamic(() => import('@/components/tools/math-calculators/LoanPayoffCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'inflation-calculator': dynamic(() => import('@/components/tools/math-calculators/InflationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'hsl-to-hex-converter': dynamic(() => import('@/components/tools/image-color-tools/HslToHexConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fuel-efficiency-converter': dynamic(() => import('@/components/tools/unit-converters/FuelEfficiencyConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'shoe-size-converter': dynamic(() => import('@/components/tools/unit-converters/ShoeSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'business-days-calculator': dynamic(() => import('@/components/tools/date-time-tools/BusinessDaysCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
