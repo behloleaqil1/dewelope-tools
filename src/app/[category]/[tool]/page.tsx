@@ -498,6 +498,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'paper-weight-converter': dynamic(() => import('@/components/tools/unit-converters/PaperWeightConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'screen-ppi-calculator': dynamic(() => import('@/components/tools/image-color-tools/ScreenPpiCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'workday-counter': dynamic(() => import('@/components/tools/date-time-tools/WorkdayCounter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 38
+  'properties-to-json': dynamic(() => import('@/components/tools/developer-tools/PropertiesToJson'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-aspect-ratio-generator': dynamic(() => import('@/components/tools/developer-tools/CssAspectRatioGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-spongebob-case': dynamic(() => import('@/components/tools/text-tools/TextToSpongebobCase'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-prefix-suffix-adder': dynamic(() => import('@/components/tools/text-tools/TextPrefixSuffixAdder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ideal-weight-calculator': dynamic(() => import('@/components/tools/math-calculators/IdealWeightCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'markup-to-selling-price': dynamic(() => import('@/components/tools/math-calculators/MarkupToSellingPrice'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-channel-separator': dynamic(() => import('@/components/tools/image-color-tools/ColorChannelSeparator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'dpi-calculator': dynamic(() => import('@/components/tools/image-color-tools/DpiCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nautical-converter': dynamic(() => import('@/components/tools/unit-converters/NauticalConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'age-difference-calculator': dynamic(() => import('@/components/tools/date-time-tools/AgeDifferenceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
