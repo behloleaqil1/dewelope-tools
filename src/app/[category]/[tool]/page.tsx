@@ -233,6 +233,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'clothing-size-converter': dynamic(() => import('@/components/tools/unit-converters/ClothingSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'timezone-meeting-planner': dynamic(() => import('@/components/tools/date-time-tools/TimezoneMeetingPlanner'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'leap-year-checker': dynamic(() => import('@/components/tools/date-time-tools/LeapYearChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 14
+  'caesar-cipher': dynamic(() => import('@/components/tools/developer-tools/CaesarCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'html-table-generator': dynamic(() => import('@/components/tools/developer-tools/HtmlTableGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sentence-case-converter': dynamic(() => import('@/components/tools/text-tools/SentenceCaseConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-number-list': dynamic(() => import('@/components/tools/text-tools/TextToNumberList'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'prime-number-checker': dynamic(() => import('@/components/tools/math-calculators/PrimeNumberChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fibonacci-calculator': dynamic(() => import('@/components/tools/math-calculators/FibonacciCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'svg-to-css-background': dynamic(() => import('@/components/tools/image-color-tools/SvgToCssBackground'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'blood-type-compatibility': dynamic(() => import('@/components/tools/math-calculators/BloodTypeCompatibility'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'electric-vehicle-range': dynamic(() => import('@/components/tools/math-calculators/ElectricVehicleRange'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'world-clock': dynamic(() => import('@/components/tools/date-time-tools/WorldClock'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
