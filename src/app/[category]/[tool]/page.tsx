@@ -299,6 +299,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'paper-size-reference': dynamic(() => import('@/components/tools/unit-converters/PaperSizeReference'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'timezone-abbreviation-lookup': dynamic(() => import('@/components/tools/date-time-tools/TimezoneAbbreviationLookup'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'sleep-cycle-calculator': dynamic(() => import('@/components/tools/date-time-tools/SleepCycleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 20
+  'toml-to-json': dynamic(() => import('@/components/tools/developer-tools/TomlToJson'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-filter-generator': dynamic(() => import('@/components/tools/developer-tools/CssFilterGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-zalgo': dynamic(() => import('@/components/tools/text-tools/TextToZalgo'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'duplicate-word-finder': dynamic(() => import('@/components/tools/text-tools/DuplicateWordFinder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'area-of-polygon-calculator': dynamic(() => import('@/components/tools/math-calculators/AreaOfPolygonCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'exponent-calculator': dynamic(() => import('@/components/tools/math-calculators/ExponentCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-opacity-converter': dynamic(() => import('@/components/tools/image-color-tools/ColorOpacityConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'typography-scale-generator': dynamic(() => import('@/components/tools/image-color-tools/TypographyScaleGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'radioactivity-converter': dynamic(() => import('@/components/tools/unit-converters/RadioactivityConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'date-to-day-of-week': dynamic(() => import('@/components/tools/date-time-tools/DateToDayOfWeek'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
