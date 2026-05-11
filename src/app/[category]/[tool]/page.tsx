@@ -333,6 +333,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'magnetic-field-converter': dynamic(() => import('@/components/tools/unit-converters/MagneticFieldConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'sound-level-converter': dynamic(() => import('@/components/tools/unit-converters/SoundLevelConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'retirement-age-calculator': dynamic(() => import('@/components/tools/date-time-tools/RetirementAgeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 23
+  'json-minifier': dynamic(() => import('@/components/tools/developer-tools/JsonMinifier'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'robots-txt-generator': dynamic(() => import('@/components/tools/developer-tools/RobotsTxtGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-strikethrough': dynamic(() => import('@/components/tools/text-tools/TextToStrikethrough'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-bold-unicode': dynamic(() => import('@/components/tools/text-tools/TextToBoldUnicode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'rectangle-calculator': dynamic(() => import('@/components/tools/math-calculators/RectangleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'simple-interest-calculator': dynamic(() => import('@/components/tools/math-calculators/SimpleInterestCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-to-grayscale': dynamic(() => import('@/components/tools/image-color-tools/ColorToGrayscale'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'electric-charge-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricChargeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'voltage-converter': dynamic(() => import('@/components/tools/unit-converters/VoltageConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'quarter-calculator': dynamic(() => import('@/components/tools/date-time-tools/QuarterCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
