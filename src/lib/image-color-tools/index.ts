@@ -409,3 +409,51 @@ export function gcd(a: number, b: number): number {
   }
   return a;
 }
+
+
+// ─── RGB to Hex Converter (standalone) ───────────────────────────────────────
+
+/**
+ * Convert individual R, G, B values to a hex color string.
+ *
+ * @param r - Red value (0-255)
+ * @param g - Green value (0-255)
+ * @param b - Blue value (0-255)
+ * @returns Hex color string (e.g., "#FF5733") or error message
+ */
+export function rgbValuesToHex(r: number, g: number, b: number): { hex: string; valid: boolean; error?: string } {
+  if (r < 0 || r > 255 || g < 0 || g > 255 || b < 0 || b > 255) {
+    return { hex: '', valid: false, error: 'RGB values must be between 0 and 255' };
+  }
+  if (!Number.isInteger(r) || !Number.isInteger(g) || !Number.isInteger(b)) {
+    return { hex: '', valid: false, error: 'RGB values must be integers' };
+  }
+  const hex = rgbToHex(r, g, b);
+  return { hex, valid: true };
+}
+
+// ─── Image Info ──────────────────────────────────────────────────────────────
+
+export interface ImageInfoResult {
+  width: number;
+  height: number;
+  fileSize: number;
+  fileSizeFormatted: string;
+  type: string;
+  aspectRatio: string;
+  name: string;
+}
+
+/**
+ * Format a file size in bytes to a human-readable string.
+ *
+ * @param bytes - File size in bytes
+ * @returns Formatted string (e.g., "1.5 MB")
+ */
+export function formatFileSize(bytes: number): string {
+  if (bytes === 0) return '0 Bytes';
+  const units = ['Bytes', 'KB', 'MB', 'GB'];
+  const i = Math.floor(Math.log(bytes) / Math.log(1024));
+  const size = bytes / Math.pow(1024, i);
+  return `${size.toFixed(2)} ${units[i]}`;
+}

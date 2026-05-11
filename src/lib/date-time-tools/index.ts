@@ -340,3 +340,141 @@ export function formatElapsedTime(milliseconds: number): ElapsedTime {
     milliseconds: ms.toString().padStart(3, '0'),
   };
 }
+
+
+// ─── Relative Time Calculator ────────────────────────────────────────────────
+
+/**
+ * Convert a date to a relative time string (e.g., "2 hours ago", "in 3 days").
+ *
+ * @param date - The date to convert
+ * @param now - Reference date (defaults to current time)
+ * @returns Human-readable relative time string
+ */
+export function getRelativeTime(date: Date, now: Date = new Date()): string {
+  const diffMs = now.getTime() - date.getTime();
+  const absDiff = Math.abs(diffMs);
+  const isPast = diffMs > 0;
+
+  const seconds = Math.floor(absDiff / 1000);
+  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(minutes / 60);
+  const days = Math.floor(hours / 24);
+  const weeks = Math.floor(days / 7);
+  const months = Math.floor(days / 30);
+  const years = Math.floor(days / 365);
+
+  let timeStr: string;
+
+  if (seconds < 60) {
+    timeStr = seconds <= 1 ? '1 second' : `${seconds} seconds`;
+  } else if (minutes < 60) {
+    timeStr = minutes === 1 ? '1 minute' : `${minutes} minutes`;
+  } else if (hours < 24) {
+    timeStr = hours === 1 ? '1 hour' : `${hours} hours`;
+  } else if (days < 7) {
+    timeStr = days === 1 ? '1 day' : `${days} days`;
+  } else if (weeks < 5) {
+    timeStr = weeks === 1 ? '1 week' : `${weeks} weeks`;
+  } else if (months < 12) {
+    timeStr = months === 1 ? '1 month' : `${months} months`;
+  } else {
+    timeStr = years === 1 ? '1 year' : `${years} years`;
+  }
+
+  return isPast ? `${timeStr} ago` : `in ${timeStr}`;
+}
+
+// ─── Week Number Calculator ──────────────────────────────────────────────────
+
+/**
+ * Calculate the ISO 8601 week number for a given date.
+ *
+ * @param date - The date to calculate the week number for
+ * @returns Object with week number and year
+ */
+export function getISOWeekNumber(date: Date): { week: number; year: number } {
+  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  // Set to nearest Thursday: current date + 4 - current day number (Monday=1, Sunday=7)
+  const dayNum = d.getUTCDay() || 7;
+  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
+  // Get first day of year
+  const yearStart = new Date(Date.UTC(d.getUTCFullYear(), 0, 1));
+  // Calculate full weeks to nearest Thursday
+  const week = Math.ceil(((d.getTime() - yearStart.getTime()) / 86400000 + 1) / 7);
+  return { week, year: d.getUTCFullYear() };
+}
+
+// ─── Time Duration Calculator ────────────────────────────────────────────────
+
+export interface TimeDuration {
+  hours: number;
+  minutes: number;
+  seconds: number;
+}
+
+/**
+ * Add or subtract a duration from a base time.
+ *
+ * @param baseTime - Base time as {hours, minutes, seconds}
+ * @param duration - Duration to add/subtract as {hours, minutes, seconds}
+ * @param operation - 'add' or 'subtract'
+ * @returns Resulting time as {hours, minutes, seconds}
+ */
+export function calculateTimeDuration(
+  baseTime: TimeDuration,
+  duration: TimeDuration,
+  operation: 'add' | 'subtract'
+): TimeDuration {
+  let totalSeconds = baseTime.hours * 3600 + baseTime.minutes * 60 + baseTime.seconds;
+  const durationSeconds = duration.hours * 3600 + duration.minutes * 60 + duration.seconds;
+
+  if (operation === 'add') {
+    totalSeconds += durationSeconds;
+  } else {
+    totalSeconds -= durationSeconds;
+  }
+
+  // Handle negative values (wrap around 24 hours)
+  while (totalSeconds < 0) {
+    totalSeconds += 86400;
+  }
+  totalSeconds = totalSeconds % 86400;
+
+  const hours = Math.floor(totalSeconds / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  return { hours, minutes, seconds };
+}
+
+// ─── Days Until Calculator ───────────────────────────────────────────────────
+
+export interface DaysUntilResult {
+  days: number;
+  hours: number;
+  minutes: number;
+  seconds: number;
+  isPast: boolean;
+}
+
+/**
+ * Calculate the number of days until a target date.
+ *
+ * @param targetDate - The future target date
+ * @param now - Reference date (defaults to current time)
+ * @returns Object with days, hours, minutes, seconds until target, and whether it's past
+ */
+export function calculateDaysUntil(targetDate: Date, now: Date = new Date()): DaysUntilResult {
+  const diffMs = targetDate.getTime() - now.getTime();
+  const isPast = diffMs < 0;
+  const absDiff = Math.abs(diffMs);
+
+  const totalSeconds = Math.floor(absDiff / 1000);
+  const days = Math.floor(totalSeconds / 86400);
+  const hours = Math.floor((totalSeconds % 86400) / 3600);
+  const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = totalSeconds % 60;
+
+  return { days, hours, minutes, seconds, isPast };
+}

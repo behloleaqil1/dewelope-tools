@@ -936,3 +936,346 @@ function hueToRgb(p: number, q: number, t: number): number {
   if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
   return p;
 }
+
+
+// ─── Password Generator ──────────────────────────────────────────────────────
+
+export interface PasswordOptions {
+  length: number;
+  uppercase: boolean;
+  lowercase: boolean;
+  numbers: boolean;
+  symbols: boolean;
+}
+
+/**
+ * Generate a random password with configurable options.
+ *
+ * @param options - Password generation options (length, character sets)
+ * @returns Generated password string
+ */
+export function generatePassword(options: PasswordOptions): string {
+  const { length, uppercase, lowercase, numbers, symbols } = options;
+
+  let charset = '';
+  if (uppercase) charset += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  if (lowercase) charset += 'abcdefghijklmnopqrstuvwxyz';
+  if (numbers) charset += '0123456789';
+  if (symbols) charset += '!@#$%^&*()_+-=[]{}|;:,.<>?';
+
+  if (charset.length === 0) {
+    return '';
+  }
+
+  const validLength = Math.max(8, Math.min(128, length));
+  let password = '';
+
+  // Use crypto.getRandomValues for secure randomness
+  const randomValues = new Uint32Array(validLength);
+  if (typeof crypto !== 'undefined' && crypto.getRandomValues) {
+    crypto.getRandomValues(randomValues);
+  } else {
+    for (let i = 0; i < validLength; i++) {
+      randomValues[i] = Math.floor(Math.random() * 4294967296);
+    }
+  }
+
+  for (let i = 0; i < validLength; i++) {
+    password += charset[randomValues[i] % charset.length];
+  }
+
+  return password;
+}
+
+// ─── Markdown to HTML Converter ──────────────────────────────────────────────
+
+/**
+ * Convert a simple Markdown string to HTML.
+ * Supports headings, bold, italic, links, unordered lists, code blocks, inline code, and paragraphs.
+ *
+ * @param markdown - Markdown text to convert
+ * @returns HTML string
+ */
+export function markdownToHtml(markdown: string): string {
+  if (!markdown) return '';
+
+  let html = markdown;
+
+  // Code blocks (``` ... ```)
+  html = html.replace(/```(\w*)\n([\s\S]*?)```/g, (_match, _lang, code) => {
+    return `<pre><code>${escapeHtml(code.trim())}</code></pre>`;
+  });
+
+  // Headings (# to ######)
+  html = html.replace(/^######\s+(.+)$/gm, '<h6>$1</h6>');
+  html = html.replace(/^#####\s+(.+)$/gm, '<h5>$1</h5>');
+  html = html.replace(/^####\s+(.+)$/gm, '<h4>$1</h4>');
+  html = html.replace(/^###\s+(.+)$/gm, '<h3>$1</h3>');
+  html = html.replace(/^##\s+(.+)$/gm, '<h2>$1</h2>');
+  html = html.replace(/^#\s+(.+)$/gm, '<h1>$1</h1>');
+
+  // Bold (**text** or __text__)
+  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+  html = html.replace(/__(.+?)__/g, '<strong>$1</strong>');
+
+  // Italic (*text* or _text_)
+  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+  html = html.replace(/_(.+?)_/g, '<em>$1</em>');
+
+  // Inline code (`code`)
+  html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+
+  // Links [text](url)
+  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2">$1</a>');
+
+  // Unordered lists (- item or * item)
+  html = html.replace(/^[\s]*[-*]\s+(.+)$/gm, '<li>$1</li>');
+  html = html.replace(/((?:<li>.*<\/li>\n?)+)/g, '<ul>$1</ul>');
+
+  // Horizontal rule (--- or ***)
+  html = html.replace(/^(---|\*\*\*)$/gm, '<hr>');
+
+  // Paragraphs: wrap remaining lines that aren't already wrapped in tags
+  const lines = html.split('\n');
+  const result: string[] = [];
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (trimmed === '') {
+      result.push('');
+    } else if (/^<(h[1-6]|ul|ol|li|pre|hr|blockquote)/.test(trimmed)) {
+      result.push(trimmed);
+    } else {
+      result.push(`<p>${trimmed}</p>`);
+    }
+  }
+
+  return result.filter(l => l !== '').join('\n');
+}
+
+/**
+ * Escape HTML special characters.
+ */
+function escapeHtml(text: string): string {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+// ─── JWT Decoder ─────────────────────────────────────────────────────────────
+
+export interface JwtDecodeResult {
+  header: Record<string, unknown> | null;
+  payload: Record<string, unknown> | null;
+  signature: string;
+  valid: boolean;
+  error?: string;
+}
+
+/**
+ * Decode a JWT token into its header, payload, and signature parts.
+ *
+ * @param token - JWT token string
+ * @returns Decoded header, payload, signature, and validity
+ */
+export function decodeJwt(token: string): JwtDecodeResult {
+  if (!token || token.trim().length === 0) {
+    return { header: null, payload: null, signature: '', valid: false, error: 'Token is empty' };
+  }
+
+  const parts = token.trim().split('.');
+  if (parts.length !== 3) {
+    return { header: null, payload: null, signature: '', valid: false, error: 'Invalid JWT format. Expected 3 parts separated by dots.' };
+  }
+
+  try {
+    const header = JSON.parse(base64UrlDecode(parts[0]));
+    const payload = JSON.parse(base64UrlDecode(parts[1]));
+    const signature = parts[2];
+
+    return { header, payload, signature, valid: true };
+  } catch {
+    return { header: null, payload: null, signature: '', valid: false, error: 'Failed to decode JWT. Invalid Base64URL encoding.' };
+  }
+}
+
+/**
+ * Decode a Base64URL encoded string.
+ */
+function base64UrlDecode(str: string): string {
+  // Replace URL-safe characters
+  let base64 = str.replace(/-/g, '+').replace(/_/g, '/');
+  // Add padding
+  while (base64.length % 4 !== 0) {
+    base64 += '=';
+  }
+  const binary = atob(base64);
+  const bytes = new Uint8Array(binary.length);
+  for (let i = 0; i < binary.length; i++) {
+    bytes[i] = binary.charCodeAt(i);
+  }
+  return new TextDecoder().decode(bytes);
+}
+
+// ─── CSS Minifier ────────────────────────────────────────────────────────────
+
+/**
+ * Minify CSS by removing comments, extra whitespace, and newlines.
+ *
+ * @param css - CSS source code to minify
+ * @returns Minified CSS string
+ */
+export function minifyCss(css: string): string {
+  if (!css) return '';
+
+  let result = css;
+  // Remove comments
+  result = result.replace(/\/\*[\s\S]*?\*\//g, '');
+  // Remove newlines and extra whitespace
+  result = result.replace(/\s+/g, ' ');
+  // Remove spaces around special characters
+  result = result.replace(/\s*([{}:;,>~+])\s*/g, '$1');
+  // Remove trailing semicolons before closing braces
+  result = result.replace(/;}/g, '}');
+  // Trim
+  result = result.trim();
+
+  return result;
+}
+
+// ─── HTML Minifier ───────────────────────────────────────────────────────────
+
+/**
+ * Minify HTML by removing comments, extra whitespace, and newlines.
+ *
+ * @param html - HTML source code to minify
+ * @returns Minified HTML string
+ */
+export function minifyHtml(html: string): string {
+  if (!html) return '';
+
+  let result = html;
+  // Remove HTML comments
+  result = result.replace(/<!--[\s\S]*?-->/g, '');
+  // Remove whitespace between tags
+  result = result.replace(/>\s+</g, '><');
+  // Collapse multiple whitespace to single space
+  result = result.replace(/\s+/g, ' ');
+  // Trim
+  result = result.trim();
+
+  return result;
+}
+
+// ─── JavaScript Minifier ─────────────────────────────────────────────────────
+
+/**
+ * Basic JavaScript minification: remove comments and extra whitespace.
+ * Note: This is a simple minifier and may not handle all edge cases.
+ *
+ * @param js - JavaScript source code to minify
+ * @returns Minified JavaScript string
+ */
+export function minifyJs(js: string): string {
+  if (!js) return '';
+
+  let result = js;
+  // Remove single-line comments (but not URLs with //)
+  result = result.replace(/(?<![:"'])\/\/.*$/gm, '');
+  // Remove multi-line comments
+  result = result.replace(/\/\*[\s\S]*?\*\//g, '');
+  // Collapse multiple whitespace/newlines to single space
+  result = result.replace(/\s+/g, ' ');
+  // Remove spaces around operators (basic)
+  result = result.replace(/\s*([{}();,=+\-<>!&|])\s*/g, '$1');
+  // Trim
+  result = result.trim();
+
+  return result;
+}
+
+// ─── Cron Expression Generator ───────────────────────────────────────────────
+
+export interface CronParts {
+  minute: string;
+  hour: string;
+  dayOfMonth: string;
+  month: string;
+  dayOfWeek: string;
+}
+
+/**
+ * Build a cron expression from individual parts and return a human-readable description.
+ *
+ * @param parts - Cron expression parts (minute, hour, dayOfMonth, month, dayOfWeek)
+ * @returns Object with the cron expression string and human-readable description
+ */
+export function buildCronExpression(parts: CronParts): { expression: string; description: string } {
+  const { minute, hour, dayOfMonth, month, dayOfWeek } = parts;
+  const expression = `${minute} ${hour} ${dayOfMonth} ${month} ${dayOfWeek}`;
+
+  const description = describeCron(parts);
+
+  return { expression, description };
+}
+
+/**
+ * Generate a human-readable description of a cron expression.
+ */
+function describeCron(parts: CronParts): string {
+  const { minute, hour, dayOfMonth, month, dayOfWeek } = parts;
+  const segments: string[] = [];
+
+  // Minute
+  if (minute === '*') {
+    segments.push('Every minute');
+  } else if (minute.startsWith('*/')) {
+    segments.push(`Every ${minute.slice(2)} minutes`);
+  } else {
+    segments.push(`At minute ${minute}`);
+  }
+
+  // Hour
+  if (hour === '*') {
+    segments.push('of every hour');
+  } else if (hour.startsWith('*/')) {
+    segments.push(`every ${hour.slice(2)} hours`);
+  } else {
+    segments.push(`at hour ${hour}`);
+  }
+
+  // Day of month
+  if (dayOfMonth !== '*') {
+    if (dayOfMonth.startsWith('*/')) {
+      segments.push(`every ${dayOfMonth.slice(2)} days`);
+    } else {
+      segments.push(`on day ${dayOfMonth}`);
+    }
+  }
+
+  // Month
+  if (month !== '*') {
+    const monthNames = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const monthNum = parseInt(month, 10);
+    if (monthNum >= 1 && monthNum <= 12) {
+      segments.push(`in ${monthNames[monthNum]}`);
+    } else {
+      segments.push(`in month ${month}`);
+    }
+  }
+
+  // Day of week
+  if (dayOfWeek !== '*') {
+    const dayNames = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    const dayNum = parseInt(dayOfWeek, 10);
+    if (dayNum >= 0 && dayNum <= 6) {
+      segments.push(`on ${dayNames[dayNum]}`);
+    } else {
+      segments.push(`on weekday ${dayOfWeek}`);
+    }
+  }
+
+  return segments.join(' ');
+}

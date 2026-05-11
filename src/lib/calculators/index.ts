@@ -255,3 +255,57 @@ function parseBigIntFromBase(str: string, base: number): bigint {
 
   return result;
 }
+
+
+// ─── Pixel to REM Converter ──────────────────────────────────────────────────
+
+/**
+ * Convert pixels to rem units.
+ *
+ * @param px - Pixel value to convert
+ * @param baseFontSize - Base font size in pixels (default 16)
+ * @returns REM value
+ */
+export function pxToRem(px: number, baseFontSize: number = 16): number {
+  if (baseFontSize <= 0) return 0;
+  return parseFloat((px / baseFontSize).toFixed(4));
+}
+
+/**
+ * Convert rem units to pixels.
+ *
+ * @param rem - REM value to convert
+ * @param baseFontSize - Base font size in pixels (default 16)
+ * @returns Pixel value
+ */
+export function remToPx(rem: number, baseFontSize: number = 16): number {
+  return parseFloat((rem * baseFontSize).toFixed(4));
+}
+
+// ─── Hex to Decimal Converter ────────────────────────────────────────────────
+
+/**
+ * Convert a hexadecimal string to decimal.
+ *
+ * @param hex - Hexadecimal string (with or without 0x prefix)
+ * @returns Decimal number as string
+ */
+export function hexToDecimal(hex: string): string {
+  if (!hex) return '';
+  const cleaned = hex.trim().replace(/^0x/i, '');
+  if (!/^[0-9a-fA-F]+$/.test(cleaned)) return 'Invalid hex value';
+  return parseInt(cleaned, 16).toString(10);
+}
+
+/**
+ * Convert a decimal number to hexadecimal.
+ *
+ * @param decimal - Decimal number string
+ * @returns Hexadecimal string (uppercase)
+ */
+export function decimalToHex(decimal: string): string {
+  if (!decimal) return '';
+  const num = parseInt(decimal.trim(), 10);
+  if (isNaN(num) || num < 0) return 'Invalid decimal value';
+  return num.toString(16).toUpperCase();
+}

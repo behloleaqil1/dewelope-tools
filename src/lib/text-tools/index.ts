@@ -292,3 +292,142 @@ export function generateSlugFromText(text: string): string {
 
   return generateSlug(text);
 }
+
+
+// ─── Password Strength Checker ───────────────────────────────────────────────
+
+export interface PasswordStrengthResult {
+  score: number; // 0-100
+  level: 'Very Weak' | 'Weak' | 'Fair' | 'Strong' | 'Very Strong';
+  feedback: string[];
+}
+
+/**
+ * Analyze password strength based on length, character variety, and common patterns.
+ *
+ * @param password - Password string to analyze
+ * @returns Strength score (0-100), level, and feedback suggestions
+ */
+export function checkPasswordStrength(password: string): PasswordStrengthResult {
+  if (!password) {
+    return { score: 0, level: 'Very Weak', feedback: ['Password is empty'] };
+  }
+
+  let score = 0;
+  const feedback: string[] = [];
+
+  // Length scoring
+  if (password.length >= 8) score += 10;
+  if (password.length >= 12) score += 10;
+  if (password.length >= 16) score += 10;
+  if (password.length >= 20) score += 5;
+  if (password.length < 8) feedback.push('Use at least 8 characters');
+
+  // Character variety
+  const hasLower = /[a-z]/.test(password);
+  const hasUpper = /[A-Z]/.test(password);
+  const hasNumbers = /\d/.test(password);
+  const hasSymbols = /[^a-zA-Z0-9]/.test(password);
+
+  if (hasLower) score += 10;
+  if (hasUpper) score += 15;
+  if (hasNumbers) score += 15;
+  if (hasSymbols) score += 20;
+
+  if (!hasUpper) feedback.push('Add uppercase letters');
+  if (!hasLower) feedback.push('Add lowercase letters');
+  if (!hasNumbers) feedback.push('Add numbers');
+  if (!hasSymbols) feedback.push('Add special characters');
+
+  // Variety bonus
+  const varietyCount = [hasLower, hasUpper, hasNumbers, hasSymbols].filter(Boolean).length;
+  if (varietyCount >= 3) score += 5;
+  if (varietyCount === 4) score += 5;
+
+  // Penalize common patterns
+  if (/^[a-zA-Z]+$/.test(password)) { score -= 10; feedback.push('Avoid using only letters'); }
+  if (/^[0-9]+$/.test(password)) { score -= 15; feedback.push('Avoid using only numbers'); }
+  if (/(.)\1{2,}/.test(password)) { score -= 10; feedback.push('Avoid repeated characters'); }
+  if (/^(123|abc|qwerty|password|admin)/i.test(password)) { score -= 20; feedback.push('Avoid common patterns'); }
+
+  // Clamp score
+  score = Math.max(0, Math.min(100, score));
+
+  let level: PasswordStrengthResult['level'];
+  if (score < 20) level = 'Very Weak';
+  else if (score < 40) level = 'Weak';
+  else if (score < 60) level = 'Fair';
+  else if (score < 80) level = 'Strong';
+  else level = 'Very Strong';
+
+  return { score, level, feedback };
+}
+
+// ─── Text to Binary Converter ────────────────────────────────────────────────
+
+/**
+ * Convert text to binary representation (space-separated 8-bit bytes).
+ *
+ * @param text - Input text to convert
+ * @returns Binary string representation
+ */
+export function textToBinary(text: string): string {
+  if (!text) return '';
+  return text
+    .split('')
+    .map(char => char.charCodeAt(0).toString(2).padStart(8, '0'))
+    .join(' ');
+}
+
+/**
+ * Convert binary representation back to text.
+ *
+ * @param binary - Binary string (space-separated 8-bit bytes)
+ * @returns Decoded text string
+ */
+export function binaryToText(binary: string): string {
+  if (!binary) return '';
+  const cleaned = binary.trim().replace(/\s+/g, ' ');
+  return cleaned
+    .split(' ')
+    .map(byte => {
+      const num = parseInt(byte, 2);
+      if (isNaN(num)) return '';
+      return String.fromCharCode(num);
+    })
+    .join('');
+}
+
+// ─── Random Number Generator ─────────────────────────────────────────────────
+
+export interface RandomNumberOptions {
+  min: number;
+  max: number;
+  count: number;
+  decimals: number; // 0 for integers
+}
+
+/**
+ * Generate random numbers within a specified range.
+ *
+ * @param options - Configuration for random number generation
+ * @returns Array of random numbers
+ */
+export function generateRandomNumbers(options: RandomNumberOptions): number[] {
+  const { min, max, count, decimals } = options;
+  const validCount = Math.max(1, Math.min(100, count));
+  const results: number[] = [];
+
+  for (let i = 0; i < validCount; i++) {
+    let num: number;
+    if (decimals === 0) {
+      num = Math.floor(Math.random() * (max - min + 1)) + min;
+    } else {
+      num = Math.random() * (max - min) + min;
+      num = parseFloat(num.toFixed(decimals));
+    }
+    results.push(num);
+  }
+
+  return results;
+}
