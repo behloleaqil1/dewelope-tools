@@ -266,6 +266,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'data-transfer-rate-converter': dynamic(() => import('@/components/tools/unit-converters/DataTransferRateConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'illuminance-converter': dynamic(() => import('@/components/tools/unit-converters/IlluminanceConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'sunrise-sunset-calculator': dynamic(() => import('@/components/tools/date-time-tools/SunriseSunsetCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 17
+  'base32-encoder-decoder': dynamic(() => import('@/components/tools/developer-tools/Base32EncoderDecoder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-text-shadow-generator': dynamic(() => import('@/components/tools/developer-tools/CssTextShadowGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-braille': dynamic(() => import('@/components/tools/text-tools/TextToBraille'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-indent-converter': dynamic(() => import('@/components/tools/text-tools/TextIndentConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'standard-deviation-calculator': dynamic(() => import('@/components/tools/math-calculators/StandardDeviationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'triangle-area-calculator': dynamic(() => import('@/components/tools/math-calculators/TriangleAreaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-wheel-generator': dynamic(() => import('@/components/tools/image-color-tools/ColorWheelGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fuel-consumption-tracker': dynamic(() => import('@/components/tools/math-calculators/FuelConsumptionTracker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'luminosity-converter': dynamic(() => import('@/components/tools/unit-converters/LuminosityConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'meeting-duration-calculator': dynamic(() => import('@/components/tools/date-time-tools/MeetingDurationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
