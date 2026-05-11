@@ -603,6 +603,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'hat-size-converter': dynamic(() => import('@/components/tools/unit-converters/HatSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'social-media-image-sizes': dynamic(() => import('@/components/tools/image-color-tools/SocialMediaImageSizes'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'unix-epoch-countdown': dynamic(() => import('@/components/tools/date-time-tools/UnixEpochCountdown'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 44
+  'json-to-env': dynamic(() => import('@/components/tools/developer-tools/JsonToEnv'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-backdrop-filter-generator': dynamic(() => import('@/components/tools/developer-tools/CssBackdropFilterGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-pig-latin-advanced': dynamic(() => import('@/components/tools/text-tools/TextToPigLatinAdvanced'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-csv-columns': dynamic(() => import('@/components/tools/text-tools/TextToCsvColumns'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'deck-stain-calculator': dynamic(() => import('@/components/tools/math-calculators/DeckStainCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'drywall-calculator': dynamic(() => import('@/components/tools/math-calculators/DrywallCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-to-android-hex': dynamic(() => import('@/components/tools/image-color-tools/ColorToAndroidHex'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'glove-size-converter': dynamic(() => import('@/components/tools/unit-converters/GloveSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'favicon-size-reference': dynamic(() => import('@/components/tools/image-color-tools/FaviconSizeReference'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'time-zone-map-viewer': dynamic(() => import('@/components/tools/date-time-tools/TimeZoneMapViewer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
