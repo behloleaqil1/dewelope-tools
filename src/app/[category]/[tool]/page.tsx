@@ -222,6 +222,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'fuel-efficiency-converter': dynamic(() => import('@/components/tools/unit-converters/FuelEfficiencyConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'shoe-size-converter': dynamic(() => import('@/components/tools/unit-converters/ShoeSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'business-days-calculator': dynamic(() => import('@/components/tools/date-time-tools/BusinessDaysCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 13
+  'palindrome-checker': dynamic(() => import('@/components/tools/text-tools/PalindromeChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-pig-latin': dynamic(() => import('@/components/tools/text-tools/TextToPigLatin'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'docker-run-generator': dynamic(() => import('@/components/tools/developer-tools/DockerRunGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'htaccess-redirect-generator': dynamic(() => import('@/components/tools/developer-tools/HtaccessRedirectGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'monthly-budget-calculator': dynamic(() => import('@/components/tools/math-calculators/MonthlyBudgetCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'tip-split-calculator': dynamic(() => import('@/components/tools/math-calculators/TipSplitCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-temperature-picker': dynamic(() => import('@/components/tools/image-color-tools/ColorTemperaturePicker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'clothing-size-converter': dynamic(() => import('@/components/tools/unit-converters/ClothingSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'timezone-meeting-planner': dynamic(() => import('@/components/tools/date-time-tools/TimezoneMeetingPlanner'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'leap-year-checker': dynamic(() => import('@/components/tools/date-time-tools/LeapYearChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
