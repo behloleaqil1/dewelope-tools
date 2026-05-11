@@ -388,6 +388,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'inductance-converter': dynamic(() => import('@/components/tools/unit-converters/InductanceConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'electric-current-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricCurrentConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'chinese-zodiac-calculator': dynamic(() => import('@/components/tools/date-time-tools/ChineseZodiacCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 28
+  'jwt-generator': dynamic(() => import('@/components/tools/developer-tools/JwtGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'api-response-formatter': dynamic(() => import('@/components/tools/developer-tools/ApiResponseFormatter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-squared-unicode': dynamic(() => import('@/components/tools/text-tools/TextToSquaredUnicode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'syllable-counter': dynamic(() => import('@/components/tools/text-tools/SyllableCounter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'octagon-calculator': dynamic(() => import('@/components/tools/math-calculators/OctagonCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'paycheck-calculator': dynamic(() => import('@/components/tools/math-calculators/PaycheckCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-to-tailwind': dynamic(() => import('@/components/tools/image-color-tools/ColorToTailwind'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'frequency-to-wavelength': dynamic(() => import('@/components/tools/unit-converters/FrequencyToWavelength'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'temperature-to-color': dynamic(() => import('@/components/tools/image-color-tools/TemperatureToColor'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'moon-phase-calculator': dynamic(() => import('@/components/tools/date-time-tools/MoonPhaseCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
