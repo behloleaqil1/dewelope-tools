@@ -244,6 +244,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'blood-type-compatibility': dynamic(() => import('@/components/tools/math-calculators/BloodTypeCompatibility'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'electric-vehicle-range': dynamic(() => import('@/components/tools/math-calculators/ElectricVehicleRange'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'world-clock': dynamic(() => import('@/components/tools/date-time-tools/WorldClock'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 15
+  'vigenere-cipher': dynamic(() => import('@/components/tools/developer-tools/VigenereCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-box-shadow-generator': dynamic(() => import('@/components/tools/developer-tools/CssBoxShadowGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'acronym-generator': dynamic(() => import('@/components/tools/text-tools/AcronymGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-statistics': dynamic(() => import('@/components/tools/text-tools/TextStatistics'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'factorial-calculator': dynamic(() => import('@/components/tools/math-calculators/FactorialCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'permutation-combination-calculator': dynamic(() => import('@/components/tools/math-calculators/PermutationCombinationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cmyk-to-rgb-converter': dynamic(() => import('@/components/tools/image-color-tools/CmykToRgbConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'luminance-calculator': dynamic(() => import('@/components/tools/image-color-tools/LuminanceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'flow-rate-converter': dynamic(() => import('@/components/tools/unit-converters/FlowRateConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'epoch-converter': dynamic(() => import('@/components/tools/date-time-tools/EpochConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
