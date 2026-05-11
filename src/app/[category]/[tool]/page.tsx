@@ -190,6 +190,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'work-hours-calculator': dynamic(() => import('@/components/tools/date-time-tools/WorkHoursCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'text-columnizer': dynamic(() => import('@/components/tools/text-tools/TextColumnizer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'css-gradient-code-generator': dynamic(() => import('@/components/tools/developer-tools/CssGradientGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 10
+  'json-validator': dynamic(() => import('@/components/tools/developer-tools/JsonValidator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-unit-converter': dynamic(() => import('@/components/tools/developer-tools/CssUnitConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-truncator': dynamic(() => import('@/components/tools/text-tools/TextTruncator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'vowel-counter': dynamic(() => import('@/components/tools/text-tools/VowelCounter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'tax-calculator': dynamic(() => import('@/components/tools/math-calculators/TaxCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'margin-calculator': dynamic(() => import('@/components/tools/math-calculators/MarginCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-mixer': dynamic(() => import('@/components/tools/image-color-tools/ColorMixer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cooking-converter': dynamic(() => import('@/components/tools/unit-converters/CookingConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'age-in-days-calculator': dynamic(() => import('@/components/tools/date-time-tools/AgeInDaysCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
