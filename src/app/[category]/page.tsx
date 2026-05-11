@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { categories, getCategoryBySlug } from '@/data/categories';
 import { getToolsByCategory } from '@/data/tools-registry';
 import Breadcrumbs from '@/components/navigation/Breadcrumbs';
+import AdUnit from '@/components/ads/AdUnit';
 import { CategoryId } from '@/types';
 
 interface CategoryPageProps {
@@ -88,6 +89,9 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         )}
       </header>
 
+      {/* Ad: top of category page */}
+      <AdUnit position="leaderboard" size="responsive" className="mb-6" />
+
       <section aria-label={`Tools in ${category.name}`}>
         <h2 className="sr-only">Available Tools</h2>
         <ul className="space-y-3">
@@ -115,6 +119,9 @@ export default function CategoryPage({ params }: CategoryPageProps) {
           ))}
         </ul>
       </section>
+
+      {/* Ad: bottom of category page */}
+      <AdUnit position="in-content" size="responsive" className="mt-8" />
     </div>
   );
 }

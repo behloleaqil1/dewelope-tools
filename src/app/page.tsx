@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { categories } from '@/data/categories';
 import { getFeaturedTools, getToolsByCategory } from '@/data/tools-registry';
 import SearchBar from '@/components/search/SearchBar';
+import AdUnit from '@/components/ads/AdUnit';
 import { CategoryId } from '@/types';
 
 export function generateMetadata(): Metadata {
@@ -161,6 +162,9 @@ export default function HomePage() {
       {/* Featured tools */}
       <section className="mb-16" aria-label="Featured tools">
         <h2 className="section-title mb-6">Featured Tools</h2>
+
+        {/* Ad: between categories and featured tools */}
+        <AdUnit position="leaderboard" size="responsive" className="mb-6" />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {featuredTools.map((tool) => {
             const category = categories.find((c) => c.id === tool.category);

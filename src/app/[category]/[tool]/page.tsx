@@ -10,6 +10,7 @@ import ToolPageShell from '@/components/tools/ToolPageShell';
 import RelatedTools from '@/components/seo/RelatedTools';
 import ToolSeoContent from '@/components/seo/ToolSeoContent';
 import CrossCategoryTools from '@/components/seo/CrossCategoryTools';
+import AdUnit from '@/components/ads/AdUnit';
 import { CategoryId } from '@/types';
 
 interface ToolPageProps {
@@ -236,11 +237,7 @@ export default function ToolPage({ params }: ToolPageProps) {
 
         <aside className="hidden lg:block w-72 flex-shrink-0" aria-label="Sidebar">
           <div className="sticky top-20">
-            <div
-              className="w-full min-h-[250px]"
-              aria-hidden="true"
-              data-ad-slot="sidebar"
-            />
+            <AdUnit position="sidebar" size="300x250" />
           </div>
         </aside>
       </div>
