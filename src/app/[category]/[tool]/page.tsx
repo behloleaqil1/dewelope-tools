@@ -355,6 +355,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'viscosity-converter': dynamic(() => import('@/components/tools/unit-converters/ViscosityConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'electrical-resistance-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricalResistanceConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'holiday-countdown': dynamic(() => import('@/components/tools/date-time-tools/HolidayCountdown'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 25
+  'sql-to-mongodb': dynamic(() => import('@/components/tools/developer-tools/SqlToMongodb'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'env-file-generator': dynamic(() => import('@/components/tools/developer-tools/EnvFileGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-monospace-unicode': dynamic(() => import('@/components/tools/text-tools/TextToMonospaceUnicode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'paragraph-counter': dynamic(() => import('@/components/tools/text-tools/ParagraphCounter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ellipse-calculator': dynamic(() => import('@/components/tools/math-calculators/EllipseCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'debt-payoff-calculator': dynamic(() => import('@/components/tools/math-calculators/DebtPayoffCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-saturation-adjuster': dynamic(() => import('@/components/tools/image-color-tools/ColorSaturationAdjuster'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'concentration-converter': dynamic(() => import('@/components/tools/unit-converters/ConcentrationConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'radiation-dose-converter': dynamic(() => import('@/components/tools/unit-converters/RadiationDoseConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'season-calculator': dynamic(() => import('@/components/tools/date-time-tools/SeasonCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
