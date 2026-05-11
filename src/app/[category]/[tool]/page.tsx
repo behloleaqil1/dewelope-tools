@@ -570,6 +570,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'shoe-size-to-foot-length': dynamic(() => import('@/components/tools/unit-converters/ShoeSizeToFootLength'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'image-crop-calculator': dynamic(() => import('@/components/tools/image-color-tools/ImageCropCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'daylight-saving-checker': dynamic(() => import('@/components/tools/date-time-tools/DaylightSavingChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 41
+  'json-to-form-data': dynamic(() => import('@/components/tools/developer-tools/JsonToFormData'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-will-change-generator': dynamic(() => import('@/components/tools/developer-tools/CssWillChangeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-title-slug': dynamic(() => import('@/components/tools/text-tools/TextToTitleSlug'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-mirror': dynamic(() => import('@/components/tools/text-tools/TextMirror'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'paint-calculator': dynamic(() => import('@/components/tools/math-calculators/PaintCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'tile-calculator': dynamic(() => import('@/components/tools/math-calculators/TileCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-to-rgba-string': dynamic(() => import('@/components/tools/image-color-tools/ColorToRgbaString'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ring-size-converter': dynamic(() => import('@/components/tools/unit-converters/RingSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'photo-print-size-calculator': dynamic(() => import('@/components/tools/image-color-tools/PhotoPrintSizeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'date-pattern-generator': dynamic(() => import('@/components/tools/date-time-tools/DatePatternGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
