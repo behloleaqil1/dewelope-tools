@@ -344,6 +344,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'electric-charge-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricChargeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'voltage-converter': dynamic(() => import('@/components/tools/unit-converters/VoltageConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'quarter-calculator': dynamic(() => import('@/components/tools/date-time-tools/QuarterCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 24
+  'yaml-validator': dynamic(() => import('@/components/tools/developer-tools/YamlValidator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'favicon-generator-code': dynamic(() => import('@/components/tools/developer-tools/FaviconGeneratorCode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-italic-unicode': dynamic(() => import('@/components/tools/text-tools/TextToItalicUnicode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sentence-splitter': dynamic(() => import('@/components/tools/text-tools/SentenceSplitter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'rhombus-calculator': dynamic(() => import('@/components/tools/math-calculators/RhombusCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'weighted-average-calculator': dynamic(() => import('@/components/tools/math-calculators/WeightedAverageCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-inversion-tool': dynamic(() => import('@/components/tools/image-color-tools/ColorInversionTool'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'viscosity-converter': dynamic(() => import('@/components/tools/unit-converters/ViscosityConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'electrical-resistance-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricalResistanceConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'holiday-countdown': dynamic(() => import('@/components/tools/date-time-tools/HolidayCountdown'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
