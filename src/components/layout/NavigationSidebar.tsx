@@ -44,10 +44,19 @@ export default function NavigationSidebar({ isOpen, onClose }: NavigationSidebar
             Categories
           </h2>
           <nav>
-            <ul className="space-y-1">
+            <ul className="space-y-1.5">
               {categories.map((category) => {
                 const toolCount = getToolCountByCategory(category.id);
                 const isActive = pathname === `/${category.slug}` || pathname.startsWith(`/${category.slug}/`);
+
+                const _colorMap: Record<string, string> = {
+                  'unit-converters': 'bg-cyan-500',
+                  'text-tools': 'bg-pink-500',
+                  'math-calculators': 'bg-orange-500',
+                  'developer-tools': 'bg-indigo-500',
+                  'image-color-tools': 'bg-purple-500',
+                  'date-time-tools': 'bg-emerald-500',
+                };
 
                 return (
                   <li key={category.id}>
@@ -55,8 +64,8 @@ export default function NavigationSidebar({ isOpen, onClose }: NavigationSidebar
                       href={`/${category.slug}`}
                       onClick={onClose}
                       className={`
-                        flex items-center justify-between px-3 py-2.5 rounded-lg text-sm
-                        transition-all duration-150 min-h-[44px]
+                        flex items-center justify-between px-3 py-2.5 rounded-xl text-sm
+                        transition-all duration-200 min-h-[44px] group
                         ${isActive
                           ? 'bg-indigo-50 text-indigo-700 font-semibold shadow-sm'
                           : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'

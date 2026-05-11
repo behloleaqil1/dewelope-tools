@@ -4,24 +4,18 @@
 
 @layer base {
   :root {
-    --background: #fafbfc;
-    --foreground: #1a1a2e;
-    --card: #ffffff;
-    --card-border: #e8ecf0;
-    --card-hover: #f0f4f8;
-    --primary: #4f46e5;
+    --background: #fefefe;
+    --foreground: #1e1e2f;
+    --primary: #6366f1;
     --primary-light: #eef2ff;
-    --primary-hover: #4338ca;
-    --accent: #06b6d4;
-    --muted: #64748b;
-    --muted-light: #94a3b8;
-    --success: #10b981;
-    --error: #ef4444;
-    --border: #e2e8f0;
-    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.03), 0 1px 3px 0 rgb(0 0 0 / 0.04);
-    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.04);
-    --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.06), 0 4px 6px -4px rgb(0 0 0 / 0.04);
-    --radius: 12px;
+    --accent-pink: #ec4899;
+    --accent-orange: #f97316;
+    --accent-cyan: #06b6d4;
+    --accent-green: #10b981;
+    --accent-purple: #8b5cf6;
+    --accent-yellow: #eab308;
+    --border: #e5e7eb;
+    --radius: 16px;
   }
 
   * {
@@ -37,43 +31,145 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    letter-spacing: -0.025em;
-    font-weight: 700;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+  }
+
+  /* Fix date/time inputs to show proper pickers */
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"] {
+    -webkit-appearance: none;
+    appearance: none;
+    position: relative;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator,
+  input[type="time"]::-webkit-calendar-picker-indicator,
+  input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator:hover,
+  input[type="time"]::-webkit-calendar-picker-indicator:hover,
+  input[type="datetime-local"]::-webkit-calendar-picker-indicator:hover {
+    background-color: #eef2ff;
   }
 }
 
 @layer components {
   .card {
-    @apply bg-white rounded-xl border border-gray-100 shadow-sm transition-all duration-200;
+    @apply bg-white rounded-2xl border border-gray-100 shadow-sm transition-all duration-300 ease-out;
   }
 
   .card:hover {
-    @apply shadow-md border-indigo-100 -translate-y-0.5;
+    @apply shadow-lg -translate-y-1 border-transparent;
+    box-shadow: 0 12px 24px -8px rgb(99 102 241 / 0.15), 0 4px 8px -4px rgb(0 0 0 / 0.04);
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-150 min-h-[44px] shadow-sm hover:shadow-md;
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-bold text-white rounded-xl transition-all duration-200 min-h-[44px] shadow-md hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-offset-2 active:translate-y-0 active:shadow-sm;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  }
+
+  .btn-primary:focus {
+    @apply ring-indigo-500;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-200 rounded-lg hover:bg-gray-50 hover:border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-150 min-h-[44px];
+    @apply inline-flex items-center justify-center px-5 py-2.5 text-sm font-semibold text-gray-700 bg-white border-2 border-gray-200 rounded-xl hover:bg-gray-50 hover:border-indigo-200 hover:text-indigo-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-200 min-h-[44px];
   }
 
   .input-field {
-    @apply w-full px-4 py-3 text-sm bg-white border border-gray-200 rounded-lg placeholder-gray-400 transition-all duration-150 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-300 hover:border-gray-300 min-h-[44px];
+    @apply w-full px-4 py-3 text-sm bg-gray-50 border-2 border-gray-200 rounded-xl placeholder-gray-400 transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-300 focus:bg-white hover:border-gray-300 hover:bg-white min-h-[44px];
   }
 
   .section-title {
-    @apply text-xl font-bold text-gray-900 tracking-tight;
+    @apply text-2xl font-extrabold text-gray-900 tracking-tight;
   }
 
   .badge {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-50 text-indigo-700;
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-bold;
+  }
+
+  .badge-indigo {
+    @apply bg-indigo-100 text-indigo-700;
+  }
+
+  .badge-pink {
+    @apply bg-pink-100 text-pink-700;
+  }
+
+  .badge-cyan {
+    @apply bg-cyan-100 text-cyan-700;
+  }
+
+  .badge-green {
+    @apply bg-emerald-100 text-emerald-700;
+  }
+
+  .badge-orange {
+    @apply bg-orange-100 text-orange-700;
+  }
+
+  .badge-purple {
+    @apply bg-purple-100 text-purple-700;
+  }
+
+  /* Category-specific card hover colors */
+  .card-unit-converters:hover {
+    border-color: #06b6d4;
+    box-shadow: 0 12px 24px -8px rgb(6 182 212 / 0.15);
+  }
+
+  .card-text-tools:hover {
+    border-color: #ec4899;
+    box-shadow: 0 12px 24px -8px rgb(236 72 153 / 0.15);
+  }
+
+  .card-math-calculators:hover {
+    border-color: #f97316;
+    box-shadow: 0 12px 24px -8px rgb(249 115 22 / 0.15);
+  }
+
+  .card-developer-tools:hover {
+    border-color: #6366f1;
+    box-shadow: 0 12px 24px -8px rgb(99 102 241 / 0.15);
+  }
+
+  .card-image-color-tools:hover {
+    border-color: #8b5cf6;
+    box-shadow: 0 12px 24px -8px rgb(139 92 246 / 0.15);
+  }
+
+  .card-date-time-tools:hover {
+    border-color: #10b981;
+    box-shadow: 0 12px 24px -8px rgb(16 185 129 / 0.15);
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, #6366f1 0%, #ec4899 50%, #f97316 100%);
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-6px); }
   }
 }

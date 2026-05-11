@@ -41,6 +41,7 @@ export interface CategoryConfig {
   slug: string;
   description: string;
   icon: string;
+  color?: string;                // Category accent color (hex)
   seoDescription?: string;       // 100-150 word keyword-rich intro for category page
 }
 

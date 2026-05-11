@@ -15,13 +15,14 @@ export default function OutputArea({ children, className = '', hasContent }: Out
     <div
       aria-live="polite"
       aria-atomic="true"
-      className={`rounded-xl border border-gray-100 bg-white p-5 shadow-sm ${className}`}
+      className={`rounded-2xl border-2 border-dashed border-gray-200 bg-gray-50/50 p-5 transition-all duration-300 ${hasContent ? 'border-solid border-indigo-100 bg-white shadow-sm' : ''} ${className}`}
     >
       {hasContent ? (
         children
       ) : (
-        <div className="flex items-center justify-center py-8">
-          <p className="text-gray-300 text-sm italic">Results will appear here</p>
+        <div className="flex flex-col items-center justify-center py-8 gap-2">
+          <span className="text-2xl">✨</span>
+          <p className="text-gray-400 text-sm font-medium">Results will appear here</p>
         </div>
       )}
     </div>

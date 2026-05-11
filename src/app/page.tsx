@@ -112,11 +112,14 @@ export default function HomePage() {
 
       {/* Hero section */}
       <header className="text-center py-12 md:py-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight mb-4">
-          Free Online Tools
+        <div className="inline-block mb-4 px-4 py-1.5 bg-indigo-50 rounded-full border border-indigo-100">
+          <span className="text-sm font-bold text-indigo-600">✨ 100% Free • No Sign-up • Client-side</span>
+        </div>
+        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">
+          <span className="gradient-text">Free Online Tools</span>
         </h1>
         <p className="text-lg text-gray-500 max-w-lg mx-auto mb-8">
-          Browser-based utility tools for developers and everyday tasks. No installs, no sign-ups.
+          90+ browser-based utility tools for developers and everyday tasks. No installs, no sign-ups, no data leaves your device.
         </p>
         <div className="max-w-xl mx-auto">
           <SearchBar />
