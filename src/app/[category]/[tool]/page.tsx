@@ -509,6 +509,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'dpi-calculator': dynamic(() => import('@/components/tools/image-color-tools/DpiCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'nautical-converter': dynamic(() => import('@/components/tools/unit-converters/NauticalConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'age-difference-calculator': dynamic(() => import('@/components/tools/date-time-tools/AgeDifferenceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 39
+  'csv-column-extractor': dynamic(() => import('@/components/tools/developer-tools/CsvColumnExtractor'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'html-entity-reference': dynamic(() => import('@/components/tools/developer-tools/HtmlEntityReference'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-reverse-case': dynamic(() => import('@/components/tools/text-tools/TextToReverseCase'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-numbering-tool': dynamic(() => import('@/components/tools/text-tools/TextNumberingTool'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pace-calculator': dynamic(() => import('@/components/tools/math-calculators/PaceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'concrete-calculator': dynamic(() => import('@/components/tools/math-calculators/ConcreteCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-to-css-filter': dynamic(() => import('@/components/tools/image-color-tools/ColorToCssFilter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'resolution-converter': dynamic(() => import('@/components/tools/unit-converters/ResolutionConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'image-dimension-calculator': dynamic(() => import('@/components/tools/image-color-tools/ImageDimensionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'timezone-converter-multi': dynamic(() => import('@/components/tools/date-time-tools/TimezoneConverterMulti'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });

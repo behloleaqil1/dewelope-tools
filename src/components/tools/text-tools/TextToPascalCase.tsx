@@ -5,10 +5,6 @@ import InputArea from '@/components/tools/InputArea';
 import OutputArea from '@/components/tools/OutputArea';
 import CopyToClipboard from '@/components/tools/CopyToClipboard';
 
-/**
- * TextToPascalCase - Convert any text to PascalCase format.
- * Handles spaces, hyphens, underscores, camelCase, and mixed separators.
- */
 export default function TextToPascalCase({ toolId, toolName }: { toolId: string; toolName: string }) {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
@@ -16,60 +12,22 @@ export default function TextToPascalCase({ toolId, toolName }: { toolId: string;
 
   useEffect(() => {
     if (debounceRef.current) clearTimeout(debounceRef.current);
-
-    if (!input.trim()) {
-      setOutput('');
-      return;
-    }
-
+    if (!input) { setOutput(''); return; }
     debounceRef.current = setTimeout(() => {
-      const lines = input.split('\n');
-      const converted = lines.map((line) => {
-        if (!line.trim()) return '';
-        // Insert separator before uppercase letters (for camelCase)
-        const expanded = line.replace(/([a-z0-9])([A-Z])/g, '$1 $2');
-        // Split on non-alphanumeric characters
-        const words = expanded.split(/[^a-zA-Z0-9]+/).filter(Boolean);
-        if (words.length === 0) return '';
-        return words
-          .map((word) => {
-            const lower = word.toLowerCase();
-            return lower.charAt(0).toUpperCase() + lower.slice(1);
-          })
-          .join('');
-      });
-      setOutput(converted.join('\n'));
-    }, 300);
-
-    return () => {
-      if (debounceRef.current) clearTimeout(debounceRef.current);
-    };
+      const result = input.replace(/([a-z])([A-Z])/g, '$1 $2').split(/[\s_\-]+/).map(w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join('');
+      setOutput(result);
+    }, 200);
+    return () => { if (debounceRef.current) clearTimeout(debounceRef.current); };
   }, [input]);
 
   return (
     <div className="space-y-4" data-tool-id={toolId}>
       <InputArea>
-        <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">
-          Enter text to convert to PascalCase
-        </label>
-        <textarea
-          id={`${toolId}-input`}
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder={'e.g. hello world\nmy-variable-name\nsome_function_name'}
-          aria-label={`Text input for ${toolName}`}
-          className="input-field h-48 resize-y font-mono"
-        />
+        <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">Enter Text</label>
+        <textarea id={`${toolId}-input`} value={input} onChange={(e) => setInput(e.target.value)} placeholder="hello world or hello-world" aria-label={`Input for ${toolName}`} className="input-field h-32 resize-y font-mono" />
       </InputArea>
-
       <OutputArea hasContent={!!output}>
-        {output && (
-          <div className="space-y-2">
-            <label className="block text-sm font-medium text-gray-700">PascalCase Result</label>
-            <pre className="whitespace-pre-wrap text-sm font-mono text-gray-800 break-all">{output}</pre>
-            <CopyToClipboard text={output} />
-          </div>
-        )}
+        {output && (<div className="space-y-2"><pre className="whitespace-pre-wrap text-sm font-mono text-gray-800">{output}</pre><CopyToClipboard text={output} /></div>)}
       </OutputArea>
     </div>
   );

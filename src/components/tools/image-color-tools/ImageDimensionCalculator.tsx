@@ -5,66 +5,34 @@ import InputArea from '@/components/tools/InputArea';
 import OutputArea from '@/components/tools/OutputArea';
 import CopyToClipboard from '@/components/tools/CopyToClipboard';
 
+const RATIOS = [
+  { name: '16:9', w: 16, h: 9 }, { name: '4:3', w: 4, h: 3 }, { name: '1:1', w: 1, h: 1 },
+  { name: '21:9', w: 21, h: 9 }, { name: '3:2', w: 3, h: 2 }, { name: '9:16', w: 9, h: 16 },
+];
+
 export default function ImageDimensionCalculator({ toolId, toolName }: { toolId: string; toolName: string }) {
-  const [origW, setOrigW] = useState('');
-  const [origH, setOrigH] = useState('');
-  const [targetW, setTargetW] = useState('');
-  const [targetH, setTargetH] = useState('');
-  const [result, setResult] = useState('');
+  const [width, setWidth] = useState('1920');
+  const [output, setOutput] = useState('');
 
   const calculate = () => {
-    const ow = parseFloat(origW);
-    const oh = parseFloat(origH);
-    if (isNaN(ow) || isNaN(oh) || ow === 0 || oh === 0) return;
-    const ratio = ow / oh;
-    let nw: number, nh: number;
-    if (targetW && !targetH) {
-      nw = parseFloat(targetW);
-      nh = nw / ratio;
-    } else if (targetH && !targetW) {
-      nh = parseFloat(targetH);
-      nw = nh * ratio;
-    } else if (targetW && targetH) {
-      nw = parseFloat(targetW);
-      nh = parseFloat(targetH);
-    } else return;
-    if (isNaN(nw!) || isNaN(nh!)) return;
-    const scale = (nw! / ow * 100).toFixed(1);
-    setResult(`Original: ${ow} × ${oh}\nNew: ${Math.round(nw!)} × ${Math.round(nh!)}\nAspect Ratio: ${ratio.toFixed(4)} (${Math.round(ow / gcd(ow, oh))}:${Math.round(oh / gcd(ow, oh))})\nScale: ${scale}%`);
+    const w = parseInt(width);
+    if (isNaN(w) || w <= 0) { setOutput('Enter a valid width.'); return; }
+    const results = RATIOS.map(r => {
+      const h = Math.round(w * r.h / r.w);
+      return `${r.name}: ${w} × ${h}px`;
+    });
+    setOutput(`Width: ${w}px\n\n${results.join('\n')}`);
   };
-
-  const gcd = (a: number, b: number): number => b === 0 ? a : gcd(b, a % b);
 
   return (
     <div className="space-y-4" data-tool-id={toolId}>
-      <div className="grid grid-cols-2 gap-4">
-        <InputArea>
-          <label htmlFor={`${toolId}-ow`} className="block text-sm font-medium text-gray-700 mb-1">Original Width</label>
-          <input id={`${toolId}-ow`} type="text" inputMode="decimal" value={origW} onChange={(e) => setOrigW(e.target.value)} placeholder="1920" aria-label={`Original width for ${toolName}`} className="input-field" />
-        </InputArea>
-        <InputArea>
-          <label htmlFor={`${toolId}-oh`} className="block text-sm font-medium text-gray-700 mb-1">Original Height</label>
-          <input id={`${toolId}-oh`} type="text" inputMode="decimal" value={origH} onChange={(e) => setOrigH(e.target.value)} placeholder="1080" aria-label={`Original height for ${toolName}`} className="input-field" />
-        </InputArea>
-      </div>
-      <div className="grid grid-cols-2 gap-4">
-        <InputArea>
-          <label htmlFor={`${toolId}-tw`} className="block text-sm font-medium text-gray-700 mb-1">New Width (or leave empty)</label>
-          <input id={`${toolId}-tw`} type="text" inputMode="decimal" value={targetW} onChange={(e) => setTargetW(e.target.value)} placeholder="800" aria-label={`Target width for ${toolName}`} className="input-field" />
-        </InputArea>
-        <InputArea>
-          <label htmlFor={`${toolId}-th`} className="block text-sm font-medium text-gray-700 mb-1">New Height (or leave empty)</label>
-          <input id={`${toolId}-th`} type="text" inputMode="decimal" value={targetH} onChange={(e) => setTargetH(e.target.value)} placeholder="" aria-label={`Target height for ${toolName}`} className="input-field" />
-        </InputArea>
-      </div>
-      <button onClick={calculate} className="btn-primary" aria-label="Calculate dimensions">Calculate</button>
-      <OutputArea hasContent={!!result}>
-        {result && (
-          <div className="space-y-2">
-            <pre className="whitespace-pre-wrap text-sm font-mono text-gray-800">{result}</pre>
-            <CopyToClipboard text={result} />
-          </div>
-        )}
+      <InputArea>
+        <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">Width (px)</label>
+        <input id={`${toolId}-input`} type="number" min="1" value={width} onChange={(e) => setWidth(e.target.value)} aria-label={`Input for ${toolName}`} className="input-field" />
+      </InputArea>
+      <button onClick={calculate} className="btn-primary">Calculate Dimensions</button>
+      <OutputArea hasContent={!!output}>
+        {output && (<div className="space-y-2"><pre className="whitespace-pre-wrap text-sm font-mono text-gray-800">{output}</pre><CopyToClipboard text={output} /></div>)}
       </OutputArea>
     </div>
   );
