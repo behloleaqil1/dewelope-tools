@@ -288,6 +288,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'bandwidth-calculator': dynamic(() => import('@/components/tools/math-calculators/BandwidthCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'acceleration-converter': dynamic(() => import('@/components/tools/unit-converters/AccelerationConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'pregnancy-due-date-calculator': dynamic(() => import('@/components/tools/date-time-tools/PregnancyDueDateCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 19
+  'url-parser': dynamic(() => import('@/components/tools/developer-tools/UrlParser'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'git-command-generator': dynamic(() => import('@/components/tools/developer-tools/GitCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-upside-down': dynamic(() => import('@/components/tools/text-tools/TextToUpsideDown'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-wrap-formatter': dynamic(() => import('@/components/tools/text-tools/TextWrapFormatter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sphere-calculator': dynamic(() => import('@/components/tools/math-calculators/SphereCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cone-calculator': dynamic(() => import('@/components/tools/math-calculators/ConeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-harmonizer': dynamic(() => import('@/components/tools/image-color-tools/ColorHarmonizer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'paper-size-reference': dynamic(() => import('@/components/tools/unit-converters/PaperSizeReference'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'timezone-abbreviation-lookup': dynamic(() => import('@/components/tools/date-time-tools/TimezoneAbbreviationLookup'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sleep-cycle-calculator': dynamic(() => import('@/components/tools/date-time-tools/SleepCycleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
