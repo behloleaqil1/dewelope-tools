@@ -16,7 +16,7 @@ export default function HtpasswdGenerator({ toolId, toolName }: { toolId: string
     const encoder = new TextEncoder();
     const data = encoder.encode(password);
     const hashArray = Array.from(data).map(b => b.toString(16).padStart(2, '0')).join('');
-    const encoded = btoa(hashArray).replace(/=+$/, '');
+    const _encoded = btoa(hashArray).replace(/=+$/, '');
     setOutput(`${username}:{SHA}${btoa(String.fromCharCode(...data))}`);
   };
 

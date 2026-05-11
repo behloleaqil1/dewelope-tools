@@ -13,7 +13,7 @@ export default function TypescriptEnumGenerator({ toolId, toolName }: { toolId: 
   const generate = () => {
     if (!enumName.trim() || !values.trim()) return;
     const lines = values.split('\n').filter(l => l.trim());
-    const members = lines.map((line, i) => {
+    const members = lines.map((line, _i) => {
       const parts = line.split(/[=,]/).map(p => p.trim());
       const name = parts[0].replace(/[^a-zA-Z0-9_]/g, '').replace(/^(\d)/, '_$1');
       const val = parts[1];

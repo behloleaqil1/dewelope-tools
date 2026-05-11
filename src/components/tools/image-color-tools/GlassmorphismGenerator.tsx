@@ -9,7 +9,7 @@ export default function GlassmorphismGenerator({ toolId, toolName }: { toolId: s
   const [blur, setBlur] = useState('10');
   const [opacity, setOpacity] = useState('0.25');
   const [color, setColor] = useState('#ffffff');
-  const [border, setBorder] = useState('1');
+  const [border, _setBorder] = useState('1');
   const [output, setOutput] = useState('');
 
   const generate = () => {

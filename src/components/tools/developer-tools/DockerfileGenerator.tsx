@@ -8,8 +8,8 @@ import CopyToClipboard from '@/components/tools/CopyToClipboard';
 export default function DockerfileGenerator({ toolId, toolName }: { toolId: string; toolName: string }) {
   const [baseImage, setBaseImage] = useState('node:18-alpine');
   const [workdir, setWorkdir] = useState('/app');
-  const [copyFiles, setCopyFiles] = useState('package*.json');
-  const [runCmd, setRunCmd] = useState('npm install');
+  const [copyFiles, _setCopyFiles] = useState('package*.json');
+  const [runCmd, _setRunCmd] = useState('npm install');
   const [exposePort, setExposePort] = useState('3000');
   const [startCmd, setStartCmd] = useState('npm start');
   const [output, setOutput] = useState('');

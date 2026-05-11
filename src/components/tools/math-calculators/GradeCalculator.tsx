@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import InputArea from '@/components/tools/InputArea';
+import _InputArea from '@/components/tools/InputArea';
 import OutputArea from '@/components/tools/OutputArea';
 import CopyToClipboard from '@/components/tools/CopyToClipboard';
 
