@@ -421,6 +421,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'specific-heat-converter': dynamic(() => import('@/components/tools/unit-converters/SpecificHeatConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'thermal-conductivity-converter': dynamic(() => import('@/components/tools/unit-converters/ThermalConductivityConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'century-calculator': dynamic(() => import('@/components/tools/date-time-tools/CenturyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 31
+  'typescript-to-json': dynamic(() => import('@/components/tools/developer-tools/TypescriptToJson'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-flexbox-generator': dynamic(() => import('@/components/tools/developer-tools/CssFlexboxGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-bubble-letters': dynamic(() => import('@/components/tools/text-tools/TextToBubbleLetters'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'word-boundary-splitter': dynamic(() => import('@/components/tools/text-tools/WordBoundarySplitter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'surface-area-calculator': dynamic(() => import('@/components/tools/math-calculators/SurfaceAreaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'tip-percentage-calculator': dynamic(() => import('@/components/tools/math-calculators/TipPercentageCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-space-converter': dynamic(() => import('@/components/tools/image-color-tools/ColorSpaceConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'angular-velocity-converter': dynamic(() => import('@/components/tools/unit-converters/AngularVelocityConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'electric-field-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricFieldConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'time-since-calculator': dynamic(() => import('@/components/tools/date-time-tools/TimeSinceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
