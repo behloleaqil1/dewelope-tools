@@ -1101,6 +1101,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-tooltip-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTooltipGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'battery-capacity-converter': dynamic(() => import('@/components/tools/unit-converters/BatteryCapacityConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'bengali-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/BengaliCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'r-dataframe-generator': dynamic(() => import('@/components/tools/developer-tools/RDataframeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'matlab-struct-generator': dynamic(() => import('@/components/tools/developer-tools/MatlabStructGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-pigpen-variant': dynamic(() => import('@/components/tools/text-tools/TextToPigpenVariant'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-dancing-men': dynamic(() => import('@/components/tools/text-tools/TextToDancingMen'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'reorder-point-calculator': dynamic(() => import('@/components/tools/math-calculators/ReorderPointCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'break-even-units-calculator': dynamic(() => import('@/components/tools/math-calculators/BreakEvenUnitsCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-biome': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromBiome'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-card-generator': dynamic(() => import('@/components/tools/image-color-tools/CssCardGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'paper-gsm-to-lb-converter': dynamic(() => import('@/components/tools/unit-converters/PaperGsmToLbConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'tibetan-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/TibetanCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
