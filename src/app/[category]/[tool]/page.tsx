@@ -721,6 +721,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'earth-tone-generator': dynamic(() => import('@/components/tools/image-color-tools/EarthToneGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'jewel-tone-generator': dynamic(() => import('@/components/tools/image-color-tools/JewelToneGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'iso-week-calculator': dynamic(() => import('@/components/tools/date-time-tools/IsoWeekCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 45 (new unique)
+  'terraform-variable-generator': dynamic(() => import('@/components/tools/developer-tools/TerraformVariableGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'github-actions-yaml-generator': dynamic(() => import('@/components/tools/developer-tools/GithubActionsYamlGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-binary-art': dynamic(() => import('@/components/tools/text-tools/TextToBinaryArt'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-palindrome-generator': dynamic(() => import('@/components/tools/text-tools/TextPalindromeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'matrix-inverse-calculator': dynamic(() => import('@/components/tools/math-calculators/MatrixInverseCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'vector-normalize-calculator': dynamic(() => import('@/components/tools/math-calculators/VectorNormalizeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'vintage-color-generator': dynamic(() => import('@/components/tools/image-color-tools/VintageColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'material-design-colors': dynamic(() => import('@/components/tools/image-color-tools/MaterialDesignColors'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nautical-distance-converter': dynamic(() => import('@/components/tools/unit-converters/NauticalDistanceConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'work-week-calculator': dynamic(() => import('@/components/tools/date-time-tools/WorkWeekCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
