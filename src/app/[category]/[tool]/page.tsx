@@ -1324,6 +1324,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-stepper-generator': dynamic(() => import('@/components/tools/image-color-tools/CssStepperGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'note-to-frequency-converter': dynamic(() => import('@/components/tools/unit-converters/NoteToFrequencyConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'sundial-time-calculator': dynamic(() => import('@/components/tools/date-time-tools/SundialTimeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 101
+  'nimble-file-generator': dynamic(() => import('@/components/tools/developer-tools/NimbleFileGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'spago-dhall-generator': dynamic(() => import('@/components/tools/developer-tools/SpagoDhallGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-wavy-unicode': dynamic(() => import('@/components/tools/text-tools/TextToWavyUnicode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-strikethrough-double': dynamic(() => import('@/components/tools/text-tools/TextToStrikethroughDouble'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'impedance-matching-calculator': dynamic(() => import('@/components/tools/math-calculators/ImpedanceMatchingCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'transmission-line-calculator': dynamic(() => import('@/components/tools/math-calculators/TransmissionLineCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-ice-cream': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromIceCream'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-timeline-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTimelineGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'audio-sample-rate-converter': dynamic(() => import('@/components/tools/unit-converters/AudioSampleRateConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'water-clock-calculator': dynamic(() => import('@/components/tools/date-time-tools/WaterClockCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
