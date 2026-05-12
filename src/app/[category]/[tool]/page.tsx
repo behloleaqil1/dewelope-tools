@@ -1153,6 +1153,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-progress-bar-generator': dynamic(() => import('@/components/tools/image-color-tools/CssProgressBarGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'chain-size-converter': dynamic(() => import('@/components/tools/unit-converters/ChainSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'dreamspell-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/DreamspellCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 85
+  'nix-derivation-generator': dynamic(() => import('@/components/tools/developer-tools/NixDerivationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'bazel-build-generator': dynamic(() => import('@/components/tools/developer-tools/BazelBuildGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-substitution-cipher': dynamic(() => import('@/components/tools/text-tools/TextToSubstitutionCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-keyword-cipher': dynamic(() => import('@/components/tools/text-tools/TextToKeywordCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pulley-system-calculator': dynamic(() => import('@/components/tools/math-calculators/PulleySystemCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'lever-calculator': dynamic(() => import('@/components/tools/math-calculators/LeverCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-flower': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromFlower'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-switch-toggle-generator': dynamic(() => import('@/components/tools/image-color-tools/CssSwitchToggleGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fastener-torque-spec-lookup': dynamic(() => import('@/components/tools/unit-converters/FastenerTorqueSpecLookup'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'world-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/WorldCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
