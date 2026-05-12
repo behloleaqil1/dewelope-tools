@@ -1228,6 +1228,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-breadcrumb-generator': dynamic(() => import('@/components/tools/image-color-tools/CssBreadcrumbGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'motor-hp-to-kw-converter': dynamic(() => import('@/components/tools/unit-converters/MotorHpToKwConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'julian-day-calculator': dynamic(() => import('@/components/tools/date-time-tools/JulianDayCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 92
+  'poetry-toml-generator': dynamic(() => import('@/components/tools/developer-tools/PoetryTomlGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pipenv-generator': dynamic(() => import('@/components/tools/developer-tools/PipenvGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-wingdings-arrows': dynamic(() => import('@/components/tools/text-tools/TextToWingdingsArrows'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-enclosed-alphanumerics': dynamic(() => import('@/components/tools/text-tools/TextToEnclosedAlphanumerics'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'resistor-color-code-calculator': dynamic(() => import('@/components/tools/math-calculators/ResistorColorCodeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'led-resistor-calculator': dynamic(() => import('@/components/tools/math-calculators/LedResistorCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-cocktail': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromCocktail'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-pagination-generator': dynamic(() => import('@/components/tools/image-color-tools/CssPaginationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'electrical-wire-ampacity': dynamic(() => import('@/components/tools/unit-converters/ElectricalWireAmpacity'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'atomic-clock-display': dynamic(() => import('@/components/tools/date-time-tools/AtomicClockDisplay'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
