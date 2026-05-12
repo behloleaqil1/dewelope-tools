@@ -1197,6 +1197,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-checkbox-generator': dynamic(() => import('@/components/tools/image-color-tools/CssCheckboxGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'hydraulic-cylinder-calculator': dynamic(() => import('@/components/tools/unit-converters/HydraulicCylinderCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'network-time-protocol-viewer': dynamic(() => import('@/components/tools/date-time-tools/NetworkTimeProtocolViewer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'waf-build-generator': dynamic(() => import('@/components/tools/developer-tools/WafBuildGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'premake-generator': dynamic(() => import('@/components/tools/developer-tools/PremakeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-grid-cipher': dynamic(() => import('@/components/tools/text-tools/TextToGridCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-zigzag-cipher': dynamic(() => import('@/components/tools/text-tools/TextToZigzagCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'doppler-effect-calculator': dynamic(() => import('@/components/tools/math-calculators/DopplerEffectCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'buoyancy-calculator': dynamic(() => import('@/components/tools/math-calculators/BuoyancyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-landscape': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromLandscape'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-radio-button-generator': dynamic(() => import('@/components/tools/image-color-tools/CssRadioButtonGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pneumatic-cylinder-calculator': dynamic(() => import('@/components/tools/unit-converters/PneumaticCylinderCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'tai-time-converter': dynamic(() => import('@/components/tools/date-time-tools/TaiTimeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
