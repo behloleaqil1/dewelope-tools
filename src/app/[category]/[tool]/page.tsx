@@ -1111,6 +1111,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-card-generator': dynamic(() => import('@/components/tools/image-color-tools/CssCardGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'paper-gsm-to-lb-converter': dynamic(() => import('@/components/tools/unit-converters/PaperGsmToLbConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'tibetan-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/TibetanCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sas-dataset-generator': dynamic(() => import('@/components/tools/developer-tools/SasDatasetGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'terraform-output-generator': dynamic(() => import('@/components/tools/developer-tools/TerraformOutputGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-pigpen-cross': dynamic(() => import('@/components/tools/text-tools/TextToPigpenCross'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-chaocipher': dynamic(() => import('@/components/tools/text-tools/TextToChaocipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'safety-factor-calculator': dynamic(() => import('@/components/tools/math-calculators/SafetyFactorCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'material-strength-calculator': dynamic(() => import('@/components/tools/math-calculators/MaterialStrengthCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-weather': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromWeather'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-button-generator': dynamic(() => import('@/components/tools/image-color-tools/CssButtonGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'thread-pitch-converter': dynamic(() => import('@/components/tools/unit-converters/ThreadPitchConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'balinese-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/BalineseCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
