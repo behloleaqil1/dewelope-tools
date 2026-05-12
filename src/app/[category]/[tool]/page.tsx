@@ -1272,6 +1272,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-sidebar-generator': dynamic(() => import('@/components/tools/image-color-tools/CssSidebarGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'earthquake-magnitude-converter': dynamic(() => import('@/components/tools/unit-converters/EarthquakeMagnitudeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'light-travel-time-calculator': dynamic(() => import('@/components/tools/date-time-tools/LightTravelTimeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 96
+  'swift-package-generator': dynamic(() => import('@/components/tools/developer-tools/SwiftPackageGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nuget-csproj-generator': dynamic(() => import('@/components/tools/developer-tools/NugetCsprojGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-circled-numbers': dynamic(() => import('@/components/tools/text-tools/TextToCircledNumbers'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-roman-numeral-text': dynamic(() => import('@/components/tools/text-tools/TextToRomanNumeralText'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'signal-to-noise-calculator': dynamic(() => import('@/components/tools/math-calculators/SignalToNoiseCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'antenna-gain-calculator': dynamic(() => import('@/components/tools/math-calculators/AntennaGainCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-metal': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromMetal'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-hero-section-generator': dynamic(() => import('@/components/tools/image-color-tools/CssHeroSectionGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sound-frequency-to-note': dynamic(() => import('@/components/tools/unit-converters/SoundFrequencyToNote'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cosmic-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/CosmicCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
