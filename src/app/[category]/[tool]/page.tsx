@@ -879,6 +879,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'rustic-color-generator': dynamic(() => import('@/components/tools/image-color-tools/RusticColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'belt-size-converter': dynamic(() => import('@/components/tools/unit-converters/BeltSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'dst-transition-checker': dynamic(() => import('@/components/tools/date-time-tools/DstTransitionChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 60
+  'class-validator-generator': dynamic(() => import('@/components/tools/developer-tools/ClassValidatorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fastify-route-generator': dynamic(() => import('@/components/tools/developer-tools/FastifyRouteGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-morse-binary': dynamic(() => import('@/components/tools/text-tools/TextToMorseBinary'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-nato-numbers': dynamic(() => import('@/components/tools/text-tools/TextToNatoNumbers'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'binomial-distribution-calculator': dynamic(() => import('@/components/tools/math-calculators/BinomialDistributionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'compound-growth-calculator': dynamic(() => import('@/components/tools/math-calculators/CompoundGrowthCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'kawaii-color-generator': dynamic(() => import('@/components/tools/image-color-tools/KawaiiColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'brutalist-color-generator': dynamic(() => import('@/components/tools/image-color-tools/BrutalistColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'watch-band-size-converter': dynamic(() => import('@/components/tools/unit-converters/WatchBandSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'lunar-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/LunarCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
