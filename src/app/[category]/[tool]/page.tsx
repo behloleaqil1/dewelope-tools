@@ -753,6 +753,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'forest-color-generator': dynamic(() => import('@/components/tools/image-color-tools/ForestColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'sunset-color-generator': dynamic(() => import('@/components/tools/image-color-tools/SunsetColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'fiscal-year-calculator': dynamic(() => import('@/components/tools/date-time-tools/FiscalYearCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 48
+  'docker-compose-generator': dynamic(() => import('@/components/tools/developer-tools/DockerComposeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nginx-location-generator': dynamic(() => import('@/components/tools/developer-tools/NginxLocationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-ascii-binary': dynamic(() => import('@/components/tools/text-tools/TextToAsciiBinary'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-word-wrapper': dynamic(() => import('@/components/tools/text-tools/TextWordWrapper'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'quadratic-formula-solver': dynamic(() => import('@/components/tools/math-calculators/QuadraticFormulaSolver'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'arithmetic-sequence-sum': dynamic(() => import('@/components/tools/math-calculators/ArithmeticSequenceSum'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'autumn-color-generator': dynamic(() => import('@/components/tools/image-color-tools/AutumnColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'spring-color-generator': dynamic(() => import('@/components/tools/image-color-tools/SpringColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'metric-prefix-converter': dynamic(() => import('@/components/tools/unit-converters/MetricPrefixConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'academic-year-calculator': dynamic(() => import('@/components/tools/date-time-tools/AcademicYearCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
