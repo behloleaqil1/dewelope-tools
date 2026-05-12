@@ -901,6 +901,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'dark-academia-color-generator': dynamic(() => import('@/components/tools/image-color-tools/DarkAcademiaColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'helmet-size-converter': dynamic(() => import('@/components/tools/unit-converters/HelmetSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'mercury-retrograde-checker': dynamic(() => import('@/components/tools/date-time-tools/MercuryRetrogradeChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 62
+  'next-api-route-generator': dynamic(() => import('@/components/tools/developer-tools/NextApiRouteGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sveltekit-endpoint-generator': dynamic(() => import('@/components/tools/developer-tools/SvelteKitEndpointGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-boxed-unicode': dynamic(() => import('@/components/tools/text-tools/TextToBoxedUnicode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-negative-circled': dynamic(() => import('@/components/tools/text-tools/TextToNegativeCircled'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  't-test-calculator': dynamic(() => import('@/components/tools/math-calculators/TTestCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'anova-calculator': dynamic(() => import('@/components/tools/math-calculators/AnovaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'memphis-design-color-generator': dynamic(() => import('@/components/tools/image-color-tools/MemphisDesignColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'coastal-color-generator': dynamic(() => import('@/components/tools/image-color-tools/CoastalColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'bicycle-frame-size-converter': dynamic(() => import('@/components/tools/unit-converters/BicycleFrameSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'solar-eclipse-calculator': dynamic(() => import('@/components/tools/date-time-tools/SolarEclipseCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
