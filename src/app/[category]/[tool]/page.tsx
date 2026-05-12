@@ -732,6 +732,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'material-design-colors': dynamic(() => import('@/components/tools/image-color-tools/MaterialDesignColors'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'nautical-distance-converter': dynamic(() => import('@/components/tools/unit-converters/NauticalDistanceConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'work-week-calculator': dynamic(() => import('@/components/tools/date-time-tools/WorkWeekCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 46
+  'kubernetes-yaml-generator': dynamic(() => import('@/components/tools/developer-tools/KubernetesYamlGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'aws-policy-generator': dynamic(() => import('@/components/tools/developer-tools/AwsPolicyGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-leet-advanced': dynamic(() => import('@/components/tools/text-tools/TextToLeetAdvanced'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-cipher-decoder': dynamic(() => import('@/components/tools/text-tools/TextCipherDecoder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'matrix-multiplication-calculator': dynamic(() => import('@/components/tools/math-calculators/MatrixMultiplicationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'vector-angle-calculator': dynamic(() => import('@/components/tools/math-calculators/VectorAngleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cyberpunk-color-generator': dynamic(() => import('@/components/tools/image-color-tools/CyberpunkColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ocean-color-generator': dynamic(() => import('@/components/tools/image-color-tools/OceanColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'astronomical-time-converter': dynamic(() => import('@/components/tools/unit-converters/AstronomicalTimeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'payroll-date-calculator': dynamic(() => import('@/components/tools/date-time-tools/PayrollDateCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
