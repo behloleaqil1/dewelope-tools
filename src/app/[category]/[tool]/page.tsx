@@ -796,6 +796,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'nordic-color-generator': dynamic(() => import('@/components/tools/image-color-tools/NordicColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'shoe-size-width-converter': dynamic(() => import('@/components/tools/unit-converters/ShoeSizeWidthConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'school-year-progress': dynamic(() => import('@/components/tools/date-time-tools/SchoolYearProgress'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 52
+  'caddy-config-generator': dynamic(() => import('@/components/tools/developer-tools/CaddyConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'haproxy-config-generator': dynamic(() => import('@/components/tools/developer-tools/HaproxyConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-morse-flashcard': dynamic(() => import('@/components/tools/text-tools/TextToMorseFlashcard'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-phonetic-ipa': dynamic(() => import('@/components/tools/text-tools/TextToPhoneticIpa'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'derivative-calculator': dynamic(() => import('@/components/tools/math-calculators/DerivativeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'limit-calculator': dynamic(() => import('@/components/tools/math-calculators/LimitCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'art-deco-color-generator': dynamic(() => import('@/components/tools/image-color-tools/ArtDecoColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'minimalist-color-generator': dynamic(() => import('@/components/tools/image-color-tools/MinimalistColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'clothing-measurement-converter': dynamic(() => import('@/components/tools/unit-converters/ClothingMeasurementConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
