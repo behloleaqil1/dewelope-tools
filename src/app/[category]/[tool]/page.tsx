@@ -634,6 +634,15 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'csv-to-tsv': dynamic(() => import('@/components/tools/text-tools/CsvToTsv'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'tsv-to-csv': dynamic(() => import('@/components/tools/text-tools/TsvToCsv'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'nth-root-calculator': dynamic(() => import('@/components/tools/math-calculators/NthRootCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 38
+  'kotlin-data-class-generator': dynamic(() => import('@/components/tools/developer-tools/KotlinDataClassGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'swift-struct-generator': dynamic(() => import('@/components/tools/developer-tools/SwiftStructGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'json-to-rust-struct': dynamic(() => import('@/components/tools/developer-tools/JsonToRustStruct'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-double-spaced': dynamic(() => import('@/components/tools/text-tools/TextToDoubleSpaced'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'proportion-solver': dynamic(() => import('@/components/tools/math-calculators/ProportionSolver'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'power-of-two-checker': dynamic(() => import('@/components/tools/math-calculators/PowerOfTwoChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'complementary-color-finder': dynamic(() => import('@/components/tools/image-color-tools/ComplementaryColorFinder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'image-aspect-ratio-resizer': dynamic(() => import('@/components/tools/image-color-tools/ImageAspectRatioResizer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
