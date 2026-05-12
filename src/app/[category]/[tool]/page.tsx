@@ -1335,6 +1335,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-timeline-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTimelineGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'audio-sample-rate-converter': dynamic(() => import('@/components/tools/unit-converters/AudioSampleRateConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'water-clock-calculator': dynamic(() => import('@/components/tools/date-time-tools/WaterClockCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 102
+  'gleam-toml-generator': dynamic(() => import('@/components/tools/developer-tools/GleamTomlGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'esy-json-generator': dynamic(() => import('@/components/tools/developer-tools/EsyJsonGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-underline-unicode': dynamic(() => import('@/components/tools/text-tools/TextToUnderlineUnicode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-overline-unicode': dynamic(() => import('@/components/tools/text-tools/TextToOverlineUnicode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'smith-chart-calculator': dynamic(() => import('@/components/tools/math-calculators/SmithChartCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'vswr-calculator': dynamic(() => import('@/components/tools/math-calculators/VswrCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-sunset-type': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromSunsetType'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-toast-notification-generator': dynamic(() => import('@/components/tools/image-color-tools/CssToastNotificationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'audio-bit-depth-converter': dynamic(() => import('@/components/tools/unit-converters/AudioBitDepthConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'hourglass-calculator': dynamic(() => import('@/components/tools/date-time-tools/HourglassCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
