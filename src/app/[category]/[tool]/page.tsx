@@ -978,6 +978,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'glassmorphism-generator': dynamic(() => import('@/components/tools/image-color-tools/GlassmorphismGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'lumber-dimension-converter': dynamic(() => import('@/components/tools/unit-converters/LumberDimensionConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'hebrew-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/HebrewCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 69
+  'mithril-component-generator': dynamic(() => import('@/components/tools/developer-tools/MithrilComponentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ember-component-generator': dynamic(() => import('@/components/tools/developer-tools/EmberComponentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-rail-fence-cipher': dynamic(() => import('@/components/tools/text-tools/TextToRailFenceCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-columnar-cipher': dynamic(() => import('@/components/tools/text-tools/TextToColumnarCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'histogram-calculator': dynamic(() => import('@/components/tools/math-calculators/HistogramCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'scatter-plot-data-generator': dynamic(() => import('@/components/tools/math-calculators/ScatterPlotDataGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'neumorphism-generator': dynamic(() => import('@/components/tools/image-color-tools/NeumorphismGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'claymorphism-generator': dynamic(() => import('@/components/tools/image-color-tools/ClaymorphismGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pipe-size-converter': dynamic(() => import('@/components/tools/unit-converters/PipeSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'islamic-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/IslamicCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
