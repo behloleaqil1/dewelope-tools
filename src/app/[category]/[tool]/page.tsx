@@ -923,6 +923,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'pixel-art-color-generator': dynamic(() => import('@/components/tools/image-color-tools/PixelArtColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'ski-boot-size-converter': dynamic(() => import('@/components/tools/unit-converters/SkiBootSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'planetary-alignment-checker': dynamic(() => import('@/components/tools/date-time-tools/PlanetaryAlignmentChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 64
+  'astro-component-generator': dynamic(() => import('@/components/tools/developer-tools/AstroComponentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'solid-component-generator': dynamic(() => import('@/components/tools/developer-tools/SolidComponentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-braille-grade2': dynamic(() => import('@/components/tools/text-tools/TextToBrailleGrade2'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-semaphore': dynamic(() => import('@/components/tools/text-tools/TextToSemaphore'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wilcoxon-test-calculator': dynamic(() => import('@/components/tools/math-calculators/WilcoxonTestCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'kruskal-wallis-calculator': dynamic(() => import('@/components/tools/math-calculators/KruskalWallisCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'impressionist-color-generator': dynamic(() => import('@/components/tools/image-color-tools/ImpressionistColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cyberpunk-neon-generator': dynamic(() => import('@/components/tools/image-color-tools/CyberpunkNeonGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fishing-line-weight-converter': dynamic(() => import('@/components/tools/unit-converters/FishingLineWeightConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'biorhythm-calculator': dynamic(() => import('@/components/tools/date-time-tools/BiorhythmCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
