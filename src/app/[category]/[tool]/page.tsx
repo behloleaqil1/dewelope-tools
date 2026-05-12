@@ -643,6 +643,14 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'power-of-two-checker': dynamic(() => import('@/components/tools/math-calculators/PowerOfTwoChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'complementary-color-finder': dynamic(() => import('@/components/tools/image-color-tools/ComplementaryColorFinder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'image-aspect-ratio-resizer': dynamic(() => import('@/components/tools/image-color-tools/ImageAspectRatioResizer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 39
+  'dart-class-generator': dynamic(() => import('@/components/tools/developer-tools/DartClassGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'csharp-class-generator': dynamic(() => import('@/components/tools/developer-tools/CsharpClassGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'greatest-common-divisor': dynamic(() => import('@/components/tools/math-calculators/GreatestCommonDivisor'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'least-common-multiple': dynamic(() => import('@/components/tools/math-calculators/LeastCommonMultiple'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'analogous-color-generator': dynamic(() => import('@/components/tools/image-color-tools/AnalogousColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'triadic-color-generator': dynamic(() => import('@/components/tools/image-color-tools/TriadicColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'unix-to-date': dynamic(() => import('@/components/tools/date-time-tools/UnixToDate'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
