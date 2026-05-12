@@ -1186,6 +1186,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-table-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTableGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'spring-wire-gauge-converter': dynamic(() => import('@/components/tools/unit-converters/SpringWireGaugeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'decimal-time-converter': dynamic(() => import('@/components/tools/date-time-tools/DecimalTimeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 88
+  'buck-build-generator': dynamic(() => import('@/components/tools/developer-tools/BuckBuildGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pants-build-generator': dynamic(() => import('@/components/tools/developer-tools/PantsBuildGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-ascii-table': dynamic(() => import('@/components/tools/text-tools/TextToAsciiTable'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-markdown-table': dynamic(() => import('@/components/tools/text-tools/TextToMarkdownTable'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pendulum-calculator': dynamic(() => import('@/components/tools/math-calculators/PendulumCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wave-speed-calculator': dynamic(() => import('@/components/tools/math-calculators/WaveSpeedCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-mushroom': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromMushroom'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-checkbox-generator': dynamic(() => import('@/components/tools/image-color-tools/CssCheckboxGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'hydraulic-cylinder-calculator': dynamic(() => import('@/components/tools/unit-converters/HydraulicCylinderCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'network-time-protocol-viewer': dynamic(() => import('@/components/tools/date-time-tools/NetworkTimeProtocolViewer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
