@@ -651,6 +651,15 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'analogous-color-generator': dynamic(() => import('@/components/tools/image-color-tools/AnalogousColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'triadic-color-generator': dynamic(() => import('@/components/tools/image-color-tools/TriadicColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'unix-to-date': dynamic(() => import('@/components/tools/date-time-tools/UnixToDate'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 40 new unique tools
+  'java-class-generator': dynamic(() => import('@/components/tools/developer-tools/JavaClassGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ruby-hash-generator': dynamic(() => import('@/components/tools/developer-tools/RubyHashGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-wide-spacing': dynamic(() => import('@/components/tools/text-tools/TextToWideSpacing'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sum-calculator': dynamic(() => import('@/components/tools/math-calculators/SumCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'product-calculator': dynamic(() => import('@/components/tools/math-calculators/ProductCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'split-complementary-color': dynamic(() => import('@/components/tools/image-color-tools/SplitComplementaryColor'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'tetradic-color-generator': dynamic(() => import('@/components/tools/image-color-tools/TetradicColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'date-format-converter': dynamic(() => import('@/components/tools/date-time-tools/DateFormatConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
