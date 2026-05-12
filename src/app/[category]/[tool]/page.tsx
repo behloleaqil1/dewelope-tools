@@ -1164,6 +1164,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-switch-toggle-generator': dynamic(() => import('@/components/tools/image-color-tools/CssSwitchToggleGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'fastener-torque-spec-lookup': dynamic(() => import('@/components/tools/unit-converters/FastenerTorqueSpecLookup'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'world-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/WorldCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 86
+  'cmake-generator': dynamic(() => import('@/components/tools/developer-tools/CmakeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'gradle-build-generator': dynamic(() => import('@/components/tools/developer-tools/GradleBuildGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-morse-code-table': dynamic(() => import('@/components/tools/text-tools/TextToMorseCodeTable'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-braille-numbers': dynamic(() => import('@/components/tools/text-tools/TextToBrailleNumbers'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'inclined-plane-calculator': dynamic(() => import('@/components/tools/math-calculators/InclinedPlaneCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'friction-force-calculator': dynamic(() => import('@/components/tools/math-calculators/FrictionForceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-bird': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromBird'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-input-field-generator': dynamic(() => import('@/components/tools/image-color-tools/CssInputFieldGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'rivet-size-converter': dynamic(() => import('@/components/tools/unit-converters/RivetSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'swatch-internet-time': dynamic(() => import('@/components/tools/date-time-tools/SwatchInternetTime'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
