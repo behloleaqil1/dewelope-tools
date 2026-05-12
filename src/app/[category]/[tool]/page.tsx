@@ -1304,6 +1304,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-accordion-generator': dynamic(() => import('@/components/tools/image-color-tools/CssAccordionGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'bpm-to-ms-converter': dynamic(() => import('@/components/tools/unit-converters/BpmToMsConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'half-life-calculator': dynamic(() => import('@/components/tools/date-time-tools/HalfLifeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'leiningen-project-generator': dynamic(() => import('@/components/tools/developer-tools/LeiningenProjectGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'rebar3-config-generator': dynamic(() => import('@/components/tools/developer-tools/Rebar3ConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-bold-sans-serif': dynamic(() => import('@/components/tools/text-tools/TextToBoldSansSerif'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-monospace-bold': dynamic(() => import('@/components/tools/text-tools/TextToMonospaceBold'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'radar-range-calculator': dynamic(() => import('@/components/tools/math-calculators/RadarRangeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'eirp-calculator': dynamic(() => import('@/components/tools/math-calculators/EirpCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-glass': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromGlass'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-tabs-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTabsGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'tempo-to-delay-calculator': dynamic(() => import('@/components/tools/unit-converters/TempoToDelayCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pendulum-clock-calculator': dynamic(() => import('@/components/tools/date-time-tools/PendulumClockCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
