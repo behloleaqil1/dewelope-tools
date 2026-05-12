@@ -1055,6 +1055,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-wave-generator': dynamic(() => import('@/components/tools/image-color-tools/CssWaveGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'drill-bit-size-converter': dynamic(() => import('@/components/tools/unit-converters/DrillBitSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'japanese-era-converter': dynamic(() => import('@/components/tools/date-time-tools/JapaneseEraConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'v-lang-struct-generator': dynamic(() => import('@/components/tools/developer-tools/VLangStructGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nim-type-generator': dynamic(() => import('@/components/tools/developer-tools/NimTypeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-porta-cipher': dynamic(() => import('@/components/tools/text-tools/TextToPortaCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-homophonic-cipher': dynamic(() => import('@/components/tools/text-tools/TextToHomophonicCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cycle-time-calculator': dynamic(() => import('@/components/tools/math-calculators/CycleTimeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'throughput-calculator': dynamic(() => import('@/components/tools/math-calculators/ThroughputCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-gemstone': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromGemstone'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-divider-generator': dynamic(() => import('@/components/tools/image-color-tools/CssDividerGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sandpaper-grit-converter': dynamic(() => import('@/components/tools/unit-converters/SandpaperGritConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'roman-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/RomanCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
