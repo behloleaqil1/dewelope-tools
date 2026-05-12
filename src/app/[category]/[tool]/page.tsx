@@ -806,6 +806,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'art-deco-color-generator': dynamic(() => import('@/components/tools/image-color-tools/ArtDecoColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'minimalist-color-generator': dynamic(() => import('@/components/tools/image-color-tools/MinimalistColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'clothing-measurement-converter': dynamic(() => import('@/components/tools/unit-converters/ClothingMeasurementConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 53
+  'redis-command-builder': dynamic(() => import('@/components/tools/developer-tools/RedisCommandBuilder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'elasticsearch-query-builder': dynamic(() => import('@/components/tools/developer-tools/ElasticsearchQueryBuilder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-title-case-ap': dynamic(() => import('@/components/tools/text-tools/TextToTitleCaseAp'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-sentence-boundaries': dynamic(() => import('@/components/tools/text-tools/TextToSentenceBoundaries'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'series-convergence-checker': dynamic(() => import('@/components/tools/math-calculators/SeriesConvergenceChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'complex-number-calculator': dynamic(() => import('@/components/tools/math-calculators/ComplexNumberCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'bohemian-color-generator': dynamic(() => import('@/components/tools/image-color-tools/BohemianColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'industrial-color-generator': dynamic(() => import('@/components/tools/image-color-tools/IndustrialColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'time-elapsed-since-event': dynamic(() => import('@/components/tools/date-time-tools/TimeElapsedSinceEvent'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
