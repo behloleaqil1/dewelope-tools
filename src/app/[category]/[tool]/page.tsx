@@ -629,6 +629,11 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'speed-unit-converter': dynamic(() => import('@/components/tools/unit-converters/SpeedUnitConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'electric-energy-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricEnergyConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'time-until-event': dynamic(() => import('@/components/tools/date-time-tools/TimeUntilEvent'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 37
+  'css-specificity-calculator': dynamic(() => import('@/components/tools/developer-tools/CssSpecificityCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'csv-to-tsv': dynamic(() => import('@/components/tools/text-tools/CsvToTsv'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'tsv-to-csv': dynamic(() => import('@/components/tools/text-tools/TsvToCsv'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nth-root-calculator': dynamic(() => import('@/components/tools/math-calculators/NthRootCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
