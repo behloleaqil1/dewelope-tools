@@ -1250,6 +1250,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-navbar-generator': dynamic(() => import('@/components/tools/image-color-tools/CssNavbarGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'solar-panel-output-calculator': dynamic(() => import('@/components/tools/unit-converters/SolarPanelOutputCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'time-dilation-calculator': dynamic(() => import('@/components/tools/date-time-tools/TimeDilationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 94
+  'mix-exs-generator': dynamic(() => import('@/components/tools/developer-tools/MixExsGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'stack-yaml-generator': dynamic(() => import('@/components/tools/developer-tools/StackYamlGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-braille-art': dynamic(() => import('@/components/tools/text-tools/TextToBrailleArt'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-fullwidth-numbers': dynamic(() => import('@/components/tools/text-tools/TextToFullwidthNumbers'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wheatstone-bridge-calculator': dynamic(() => import('@/components/tools/math-calculators/WheatStoneBridgeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'battery-life-calculator': dynamic(() => import('@/components/tools/math-calculators/BatteryLifeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-wood': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromWood'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-footer-generator': dynamic(() => import('@/components/tools/image-color-tools/CssFooterGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wind-speed-converter': dynamic(() => import('@/components/tools/unit-converters/WindSpeedConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'earth-age-calculator': dynamic(() => import('@/components/tools/date-time-tools/EarthAgeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
