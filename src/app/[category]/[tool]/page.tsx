@@ -1142,6 +1142,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-avatar-generator': dynamic(() => import('@/components/tools/image-color-tools/CssAvatarGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'o-ring-size-converter': dynamic(() => import('@/components/tools/unit-converters/ORingSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'stardate-calculator': dynamic(() => import('@/components/tools/date-time-tools/StardateCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 84
+  'chef-recipe-generator': dynamic(() => import('@/components/tools/developer-tools/ChefRecipeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'salt-state-generator': dynamic(() => import('@/components/tools/developer-tools/SaltStateGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-null-cipher': dynamic(() => import('@/components/tools/text-tools/TextToNullCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-reverse-cipher': dynamic(() => import('@/components/tools/text-tools/TextToReverseCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'torque-wrench-calculator': dynamic(() => import('@/components/tools/math-calculators/TorqueWrenchCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'gear-ratio-calculator': dynamic(() => import('@/components/tools/math-calculators/GearRatioCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-crystal': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromCrystal'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-progress-bar-generator': dynamic(() => import('@/components/tools/image-color-tools/CssProgressBarGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'chain-size-converter': dynamic(() => import('@/components/tools/unit-converters/ChainSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'dreamspell-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/DreamspellCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
