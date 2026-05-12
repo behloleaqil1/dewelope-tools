@@ -956,6 +956,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'neon-gradient-generator': dynamic(() => import('@/components/tools/image-color-tools/NeonGradientGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'needle-gauge-converter': dynamic(() => import('@/components/tools/unit-converters/NeedleGaugeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'human-era-calendar': dynamic(() => import('@/components/tools/date-time-tools/HumanEraCalendar'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 67
+  'web-component-generator': dynamic(() => import('@/components/tools/developer-tools/WebComponentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'lit-element-generator': dynamic(() => import('@/components/tools/developer-tools/LitElementGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-morse-international-v2': dynamic(() => import('@/components/tools/text-tools/TextToMorseInternationalV2'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-tap-code': dynamic(() => import('@/components/tools/text-tools/TextToTapCode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'box-plot-calculator': dynamic(() => import('@/components/tools/math-calculators/BoxPlotCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'stem-leaf-plot-generator': dynamic(() => import('@/components/tools/math-calculators/StemLeafPlotGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-blindness-safe-palette': dynamic(() => import('@/components/tools/image-color-tools/ColorBlindnessSafePalette'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'gradient-mesh-generator': dynamic(() => import('@/components/tools/image-color-tools/GradientMeshGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'bolt-size-converter': dynamic(() => import('@/components/tools/unit-converters/BoltSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'mayan-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/MayanCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
