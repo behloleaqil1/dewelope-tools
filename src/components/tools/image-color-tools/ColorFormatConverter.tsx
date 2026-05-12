@@ -11,31 +11,38 @@ export default function ColorFormatConverter({ toolId, toolName }: { toolId: str
 
   const convert = () => {
     let r = 0, g = 0, b = 0;
-    const hex = input.trim();
-    const hexMatch = hex.match(/^#?([0-9a-f]{6})$/i);
-    const rgbMatch = hex.match(/rgb\((\d+),\s*(\d+),\s*(\d+)\)/);
-    if (hexMatch) { r = parseInt(hexMatch[1].slice(0, 2), 16); g = parseInt(hexMatch[1].slice(2, 4), 16); b = parseInt(hexMatch[1].slice(4, 6), 16); }
-    else if (rgbMatch) { r = parseInt(rgbMatch[1]); g = parseInt(rgbMatch[2]); b = parseInt(rgbMatch[3]); }
-    else { setOutput('Enter a valid hex (#RRGGBB) or rgb(r,g,b) color.'); return; }
-    const hexStr = `#${r.toString(16).padStart(2, '0')}${g.toString(16).padStart(2, '0')}${b.toString(16).padStart(2, '0')}`;
-    const max = Math.max(r, g, b) / 255, min = Math.min(r, g, b) / 255;
+    const hex = input.trim().replace('#', '');
+    if (/^[0-9a-fA-F]{6}$/.test(hex)) {
+      r = parseInt(hex.slice(0, 2), 16); g = parseInt(hex.slice(2, 4), 16); b = parseInt(hex.slice(4, 6), 16);
+    } else if (/^[0-9a-fA-F]{3}$/.test(hex)) {
+      r = parseInt(hex[0] + hex[0], 16); g = parseInt(hex[1] + hex[1], 16); b = parseInt(hex[2] + hex[2], 16);
+    } else { setOutput('Enter a valid hex color (e.g. #3498db).'); return; }
+    const rn = r / 255, gn = g / 255, bn = b / 255;
+    const max = Math.max(rn, gn, bn), min = Math.min(rn, gn, bn);
     const l = (max + min) / 2;
-    const d = max - min;
-    const s = d === 0 ? 0 : d / (1 - Math.abs(2 * l - 1));
-    let h = 0;
-    if (d !== 0) { if (max === r / 255) h = ((g / 255 - b / 255) / d) % 6; else if (max === g / 255) h = (b / 255 - r / 255) / d + 2; else h = (r / 255 - g / 255) / d + 4; h = Math.round(h * 60); if (h < 0) h += 360; }
-    setOutput(`HEX: ${hexStr}\nRGB: rgb(${r}, ${g}, ${b})\nHSL: hsl(${h}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)\nRGBA: rgba(${r}, ${g}, ${b}, 1)\nCSS: ${hexStr}`);
+    let h = 0, s = 0;
+    if (max !== min) {
+      const d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      if (max === rn) h = ((gn - bn) / d + (gn < bn ? 6 : 0)) * 60;
+      else if (max === gn) h = ((bn - rn) / d + 2) * 60;
+      else h = ((rn - gn) / d + 4) * 60;
+    }
+    setOutput(`HEX: #${hex.toUpperCase()}\nRGB: rgb(${r}, ${g}, ${b})\nHSL: hsl(${Math.round(h)}, ${Math.round(s * 100)}%, ${Math.round(l * 100)}%)\nRGBA: rgba(${r}, ${g}, ${b}, 1)`);
   };
 
   return (
     <div className="space-y-4" data-tool-id={toolId}>
       <InputArea>
-        <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">Color (hex or rgb)</label>
-        <input id={`${toolId}-input`} value={input} onChange={(e) => setInput(e.target.value)} placeholder="#3498db or rgb(52,152,219)" aria-label={`Input for ${toolName}`} className="input-field" />
+        <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">Hex Color</label>
+        <div className="flex gap-2">
+          <input id={`${toolId}-input`} value={input} onChange={(e) => setInput(e.target.value)} placeholder="#3498db" aria-label={`Input for ${toolName}`} className="input-field" />
+          <input type="color" value={input.startsWith('#') ? input : `#${input}`} onChange={(e) => setInput(e.target.value)} className="h-10 w-14 rounded border" aria-label="Color picker" />
+        </div>
       </InputArea>
       <button onClick={convert} className="btn-primary">Convert</button>
       <OutputArea hasContent={!!output}>
-        {output && (<div className="space-y-2"><div className="w-full h-12 rounded" style={{ backgroundColor: input.startsWith('#') ? input : '' }} /><pre className="whitespace-pre-wrap text-sm font-mono text-gray-800">{output}</pre><CopyToClipboard text={output} /></div>)}
+        {output && (<div className="space-y-2"><pre className="whitespace-pre-wrap text-sm font-mono text-gray-800">{output}</pre><CopyToClipboard text={output} /></div>)}
       </OutputArea>
     </div>
   );

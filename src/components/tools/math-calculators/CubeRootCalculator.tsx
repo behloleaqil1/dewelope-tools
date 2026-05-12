@@ -14,7 +14,7 @@ export default function CubeRootCalculator({ toolId, toolName }: { toolId: strin
     if (isNaN(num)) { setOutput('Please enter a valid number.'); return; }
     const result = Math.cbrt(num);
     const isPerfect = Number.isInteger(result);
-    setOutput(`∛${num} = ${result}\n\nPerfect cube: ${isPerfect ? 'Yes' : 'No'}\nDecimal: ${result.toFixed(10)}\nVerification: ${result.toFixed(6)}³ = ${(result * result * result).toFixed(6)}`);
+    setOutput(`∛${num} = ${result}\n${isPerfect ? '✓ Perfect cube' : '○ Not a perfect cube'}`);
   };
 
   return (
@@ -23,7 +23,7 @@ export default function CubeRootCalculator({ toolId, toolName }: { toolId: strin
         <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">Number</label>
         <input id={`${toolId}-input`} type="text" inputMode="decimal" value={input} onChange={(e) => setInput(e.target.value)} placeholder="e.g. 27" aria-label={`Input for ${toolName}`} className="input-field" />
       </InputArea>
-      <button onClick={calculate} className="btn-primary">Calculate</button>
+      <button onClick={calculate} className="btn-primary">Calculate Cube Root</button>
       <OutputArea hasContent={!!output}>
         {output && (<div className="space-y-2"><pre className="whitespace-pre-wrap text-sm font-mono text-gray-800">{output}</pre><CopyToClipboard text={output} /></div>)}
       </OutputArea>

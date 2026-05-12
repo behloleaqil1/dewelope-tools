@@ -13,7 +13,7 @@ export default function AbsoluteValueCalculator({ toolId, toolName }: { toolId: 
     const num = parseFloat(input);
     if (isNaN(num)) { setOutput('Please enter a valid number.'); return; }
     const result = Math.abs(num);
-    setOutput(`|${num}| = ${result}\n\nExplanation: The absolute value is the distance from zero.\n${num >= 0 ? `${num} is already non-negative, so |${num}| = ${num}` : `${num} is negative, so |${num}| = ${-num}`}`);
+    setOutput(`|${num}| = ${result}`);
   };
 
   return (
@@ -22,7 +22,7 @@ export default function AbsoluteValueCalculator({ toolId, toolName }: { toolId: 
         <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">Number</label>
         <input id={`${toolId}-input`} type="text" inputMode="decimal" value={input} onChange={(e) => setInput(e.target.value)} placeholder="e.g. -42" aria-label={`Input for ${toolName}`} className="input-field" />
       </InputArea>
-      <button onClick={calculate} className="btn-primary">Calculate</button>
+      <button onClick={calculate} className="btn-primary">Calculate Absolute Value</button>
       <OutputArea hasContent={!!output}>
         {output && (<div className="space-y-2"><pre className="whitespace-pre-wrap text-sm font-mono text-gray-800">{output}</pre><CopyToClipboard text={output} /></div>)}
       </OutputArea>

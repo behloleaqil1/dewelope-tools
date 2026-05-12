@@ -12,27 +12,22 @@ export default function DotenvValidator({ toolId, toolName }: { toolId: string; 
   const validate = () => {
     if (!input.trim()) { setOutput(''); return; }
     const lines = input.split('\n');
-    const issues: string[] = [];
-    let validCount = 0;
+    const errors: string[] = [];
     lines.forEach((line, i) => {
       const trimmed = line.trim();
       if (!trimmed || trimmed.startsWith('#')) return;
-      if (!trimmed.includes('=')) { issues.push(`Line ${i + 1}: Missing '=' separator`); return; }
-      const key = trimmed.split('=')[0].trim();
-      if (!/^[A-Za-z_][A-Za-z0-9_]*$/.test(key)) { issues.push(`Line ${i + 1}: Invalid key "${key}"`); return; }
-      validCount++;
+      if (!/^[A-Za-z_][A-Za-z0-9_]*=/.test(trimmed)) {
+        errors.push(`Line ${i + 1}: Invalid syntax - "${trimmed.substring(0, 30)}"`);
+      }
     });
-    const result = issues.length === 0
-      ? `✓ Valid .env file with ${validCount} variable(s). No issues found.`
-      : `Found ${issues.length} issue(s):\n\n${issues.join('\n')}\n\nValid variables: ${validCount}`;
-    setOutput(result);
+    setOutput(errors.length === 0 ? '✓ Valid .env file syntax. No issues found.' : `Found ${errors.length} issue(s):\n\n${errors.join('\n')}`);
   };
 
   return (
     <div className="space-y-4" data-tool-id={toolId}>
       <InputArea>
-        <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">.env Content</label>
-        <textarea id={`${toolId}-input`} value={input} onChange={(e) => setInput(e.target.value)} placeholder="DB_HOST=localhost\nDB_PORT=5432" aria-label={`Input for ${toolName}`} className="input-field h-40 resize-y font-mono" />
+        <label htmlFor={`${toolId}-input`} className="block text-sm font-medium text-gray-700 mb-1">Paste .env content</label>
+        <textarea id={`${toolId}-input`} value={input} onChange={(e) => setInput(e.target.value)} placeholder="KEY=value&#10;DB_HOST=localhost" aria-label={`Input for ${toolName}`} className="input-field h-40 resize-y font-mono" />
       </InputArea>
       <button onClick={validate} className="btn-primary">Validate</button>
       <OutputArea hasContent={!!output}>

@@ -614,6 +614,21 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'glove-size-converter': dynamic(() => import('@/components/tools/unit-converters/GloveSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'favicon-size-reference': dynamic(() => import('@/components/tools/image-color-tools/FaviconSizeReference'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'time-zone-map-viewer': dynamic(() => import('@/components/tools/date-time-tools/TimeZoneMapViewer'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 45
+  'dotenv-generator': dynamic(() => import('@/components/tools/developer-tools/DotenvGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sql-create-table-generator': dynamic(() => import('@/components/tools/developer-tools/SqlCreateTableGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'php-array-to-json': dynamic(() => import('@/components/tools/developer-tools/PhpArrayToJson'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-dot-notation': dynamic(() => import('@/components/tools/text-tools/TextToDotNotation'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-character-frequency': dynamic(() => import('@/components/tools/text-tools/TextCharacterFrequency'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'remove-html-comments': dynamic(() => import('@/components/tools/text-tools/RemoveHtmlComments'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cube-calculator': dynamic(() => import('@/components/tools/math-calculators/CubeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'percentage-to-fraction': dynamic(() => import('@/components/tools/math-calculators/PercentageToFraction'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fraction-to-decimal': dynamic(() => import('@/components/tools/math-calculators/FractionToDecimal'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-lighten-darken': dynamic(() => import('@/components/tools/image-color-tools/ColorLightenDarken'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'image-aspect-ratio-finder': dynamic(() => import('@/components/tools/image-color-tools/ImageAspectRatioFinder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speed-unit-converter': dynamic(() => import('@/components/tools/unit-converters/SpeedUnitConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'electric-energy-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricEnergyConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'time-until-event': dynamic(() => import('@/components/tools/date-time-tools/TimeUntilEvent'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
