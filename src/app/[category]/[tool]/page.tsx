@@ -1044,6 +1044,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-blob-generator': dynamic(() => import('@/components/tools/image-color-tools/CssBlobGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'crochet-hook-size-converter': dynamic(() => import('@/components/tools/unit-converters/CrochetHookSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'indian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/IndianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 75
+  'ocaml-type-generator': dynamic(() => import('@/components/tools/developer-tools/OcamlTypeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'zig-struct-generator': dynamic(() => import('@/components/tools/developer-tools/ZigStructGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-trifid-cipher': dynamic(() => import('@/components/tools/text-tools/TextToTrifidCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-adfgvx-cipher': dynamic(() => import('@/components/tools/text-tools/TextToAdfgvxCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'oee-calculator': dynamic(() => import('@/components/tools/math-calculators/OeeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'takt-time-calculator': dynamic(() => import('@/components/tools/math-calculators/TaktTimeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-country': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromCountry'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-wave-generator': dynamic(() => import('@/components/tools/image-color-tools/CssWaveGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'drill-bit-size-converter': dynamic(() => import('@/components/tools/unit-converters/DrillBitSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'japanese-era-converter': dynamic(() => import('@/components/tools/date-time-tools/JapaneseEraConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
