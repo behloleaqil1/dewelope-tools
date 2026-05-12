@@ -1022,6 +1022,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-pattern-generator': dynamic(() => import('@/components/tools/image-color-tools/CssPatternGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'sewing-needle-size-converter': dynamic(() => import('@/components/tools/unit-converters/SewingNeedleSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'thai-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/ThaiCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 73
+  'reason-react-generator': dynamic(() => import('@/components/tools/developer-tools/ReasonReactGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'purescript-module-generator': dynamic(() => import('@/components/tools/developer-tools/PurescriptModuleGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-autokey-cipher': dynamic(() => import('@/components/tools/text-tools/TextToAutokeyCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-running-key-cipher': dynamic(() => import('@/components/tools/text-tools/TextToRunningKeyCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'process-sigma-calculator': dynamic(() => import('@/components/tools/math-calculators/ProcessSigmaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'monte-carlo-simulator': dynamic(() => import('@/components/tools/math-calculators/MonteCarloSimulator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-decade': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromDecade'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-shape-generator': dynamic(() => import('@/components/tools/image-color-tools/CssShapeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'knitting-needle-size-converter': dynamic(() => import('@/components/tools/unit-converters/KnittingNeedleSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'coptic-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/CopticCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
