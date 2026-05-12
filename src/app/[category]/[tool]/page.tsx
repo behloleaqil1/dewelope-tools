@@ -1239,6 +1239,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-pagination-generator': dynamic(() => import('@/components/tools/image-color-tools/CssPaginationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'electrical-wire-ampacity': dynamic(() => import('@/components/tools/unit-converters/ElectricalWireAmpacity'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'atomic-clock-display': dynamic(() => import('@/components/tools/date-time-tools/AtomicClockDisplay'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 93
+  'composer-json-generator': dynamic(() => import('@/components/tools/developer-tools/ComposerJsonGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'gemfile-generator': dynamic(() => import('@/components/tools/developer-tools/GemfileGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-dingbats': dynamic(() => import('@/components/tools/text-tools/TextToDingbats'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-box-drawing': dynamic(() => import('@/components/tools/text-tools/TextToBoxDrawing'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'voltage-divider-calculator': dynamic(() => import('@/components/tools/math-calculators/VoltageDividerCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'power-supply-calculator': dynamic(() => import('@/components/tools/math-calculators/PowerSupplyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-fabric': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromFabric'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-navbar-generator': dynamic(() => import('@/components/tools/image-color-tools/CssNavbarGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'solar-panel-output-calculator': dynamic(() => import('@/components/tools/unit-converters/SolarPanelOutputCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'time-dilation-calculator': dynamic(() => import('@/components/tools/date-time-tools/TimeDilationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
