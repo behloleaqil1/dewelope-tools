@@ -1011,6 +1011,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-gradient-animator': dynamic(() => import('@/components/tools/image-color-tools/CssGradientAnimator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'hvac-duct-size-converter': dynamic(() => import('@/components/tools/unit-converters/HvacDuctSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'ethiopian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/EthiopianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 72
+  'hyperapp-component-generator': dynamic(() => import('@/components/tools/developer-tools/HyperappComponentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'elm-module-generator': dynamic(() => import('@/components/tools/developer-tools/ElmModuleGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-polybius-square': dynamic(() => import('@/components/tools/text-tools/TextToPolybiusSquare'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-gronsfeld-cipher': dynamic(() => import('@/components/tools/text-tools/TextToGronsfeldCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fishbone-diagram-generator': dynamic(() => import('@/components/tools/math-calculators/FishboneDiagramGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'decision-matrix-calculator': dynamic(() => import('@/components/tools/math-calculators/DecisionMatrixCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-season': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromSeason'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-pattern-generator': dynamic(() => import('@/components/tools/image-color-tools/CssPatternGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sewing-needle-size-converter': dynamic(() => import('@/components/tools/unit-converters/SewingNeedleSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'thai-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/ThaiCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
