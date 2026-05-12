@@ -858,6 +858,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'mid-century-color-generator': dynamic(() => import('@/components/tools/image-color-tools/MidCenturyColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'steampunk-color-generator': dynamic(() => import('@/components/tools/image-color-tools/SteampunkColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'golden-hour-calculator': dynamic(() => import('@/components/tools/date-time-tools/GoldenHourCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 58
+  'yup-schema-generator': dynamic(() => import('@/components/tools/developer-tools/YupSchemaGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'joi-schema-generator': dynamic(() => import('@/components/tools/developer-tools/JoiSchemaGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-old-english': dynamic(() => import('@/components/tools/text-tools/TextToOldEnglish'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-parenthesized': dynamic(() => import('@/components/tools/text-tools/TextToParenthesized'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'bayes-theorem-calculator': dynamic(() => import('@/components/tools/math-calculators/BayesTheoremCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'normal-distribution-calculator': dynamic(() => import('@/components/tools/math-calculators/NormalDistributionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'vaporwave-color-generator': dynamic(() => import('@/components/tools/image-color-tools/VaporwaveColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cottagecore-color-generator': dynamic(() => import('@/components/tools/image-color-tools/CottagecoreColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'equinox-solstice-calculator': dynamic(() => import('@/components/tools/date-time-tools/EquinoxSolsticeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
