@@ -1065,6 +1065,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-divider-generator': dynamic(() => import('@/components/tools/image-color-tools/CssDividerGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'sandpaper-grit-converter': dynamic(() => import('@/components/tools/unit-converters/SandpaperGritConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'roman-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/RomanCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'crystal-struct-generator': dynamic(() => import('@/components/tools/developer-tools/CrystalStructGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'julia-struct-generator': dynamic(() => import('@/components/tools/developer-tools/JuliaStructGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-nihilist-cipher': dynamic(() => import('@/components/tools/text-tools/TextToNihilistCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-straddling-checkerboard': dynamic(() => import('@/components/tools/text-tools/TextToStraddlingCheckerboard'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'lead-time-calculator': dynamic(() => import('@/components/tools/math-calculators/LeadTimeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'kanban-wip-calculator': dynamic(() => import('@/components/tools/math-calculators/KanbanWipCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-food': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromFood'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-arrow-generator': dynamic(() => import('@/components/tools/image-color-tools/CssArrowGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wire-diameter-converter': dynamic(() => import('@/components/tools/unit-converters/WireDiameterConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'french-republican-calendar': dynamic(() => import('@/components/tools/date-time-tools/FrenchRepublicanCalendar'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
