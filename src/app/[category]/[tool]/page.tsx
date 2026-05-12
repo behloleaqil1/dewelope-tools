@@ -989,6 +989,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'claymorphism-generator': dynamic(() => import('@/components/tools/image-color-tools/ClaymorphismGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'pipe-size-converter': dynamic(() => import('@/components/tools/unit-converters/PipeSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'islamic-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/IslamicCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 70
+  'marko-component-generator': dynamic(() => import('@/components/tools/developer-tools/MarkoComponentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'riot-component-generator': dynamic(() => import('@/components/tools/developer-tools/RiotComponentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-beaufort-cipher': dynamic(() => import('@/components/tools/text-tools/TextToBeaufortCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-affine-cipher': dynamic(() => import('@/components/tools/text-tools/TextToAffineCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pareto-chart-calculator': dynamic(() => import('@/components/tools/math-calculators/ParetoChartCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'control-chart-calculator': dynamic(() => import('@/components/tools/math-calculators/ControlChartCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'morphism-comparison-tool': dynamic(() => import('@/components/tools/image-color-tools/MorphismComparisonTool'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-accessibility-checker': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteAccessibilityChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'electrical-conduit-size-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricalConduitSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'persian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/PersianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
