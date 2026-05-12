@@ -743,6 +743,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'ocean-color-generator': dynamic(() => import('@/components/tools/image-color-tools/OceanColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'astronomical-time-converter': dynamic(() => import('@/components/tools/unit-converters/AstronomicalTimeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'payroll-date-calculator': dynamic(() => import('@/components/tools/date-time-tools/PayrollDateCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 47
+  'ansible-playbook-generator': dynamic(() => import('@/components/tools/developer-tools/AnsiblePlaybookGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'makefile-generator': dynamic(() => import('@/components/tools/developer-tools/MakefileGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-phonetic-spelling': dynamic(() => import('@/components/tools/text-tools/TextToPhoneticSpelling'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-obfuscator': dynamic(() => import('@/components/tools/text-tools/TextObfuscator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'linear-equation-solver': dynamic(() => import('@/components/tools/math-calculators/LinearEquationSolver'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'binomial-coefficient-calculator': dynamic(() => import('@/components/tools/math-calculators/BinomialCoefficientCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'forest-color-generator': dynamic(() => import('@/components/tools/image-color-tools/ForestColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sunset-color-generator': dynamic(() => import('@/components/tools/image-color-tools/SunsetColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fiscal-year-calculator': dynamic(() => import('@/components/tools/date-time-tools/FiscalYearCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
