@@ -837,6 +837,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'gothic-color-generator': dynamic(() => import('@/components/tools/image-color-tools/GothicColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'screen-size-converter': dynamic(() => import('@/components/tools/unit-converters/ScreenSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'birthday-paradox-calculator': dynamic(() => import('@/components/tools/date-time-tools/BirthdayParadoxCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 56
+  'typeorm-entity-generator': dynamic(() => import('@/components/tools/developer-tools/TypeormEntityGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'mongoose-schema-generator': dynamic(() => import('@/components/tools/developer-tools/MongooseSchemaGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-double-struck-numbers': dynamic(() => import('@/components/tools/text-tools/TextToDoubleStruckNumbers'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-fraktur': dynamic(() => import('@/components/tools/text-tools/TextToFraktur'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'chi-square-calculator': dynamic(() => import('@/components/tools/math-calculators/ChiSquareCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'correlation-calculator': dynamic(() => import('@/components/tools/math-calculators/CorrelationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'bauhaus-color-generator': dynamic(() => import('@/components/tools/image-color-tools/BauhausColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pop-art-color-generator': dynamic(() => import('@/components/tools/image-color-tools/PopArtColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'aspect-ratio-converter': dynamic(() => import('@/components/tools/unit-converters/AspectRatioConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'time-zone-converter-batch': dynamic(() => import('@/components/tools/date-time-tools/TimeZoneConverterBatch'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
