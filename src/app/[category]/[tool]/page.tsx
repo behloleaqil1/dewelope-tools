@@ -1121,6 +1121,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-button-generator': dynamic(() => import('@/components/tools/image-color-tools/CssButtonGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'thread-pitch-converter': dynamic(() => import('@/components/tools/unit-converters/ThreadPitchConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'balinese-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/BalineseCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'spss-syntax-generator': dynamic(() => import('@/components/tools/developer-tools/SpssSyntaxGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ansible-role-generator': dynamic(() => import('@/components/tools/developer-tools/AnsibleRoleGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-caesar-box-cipher': dynamic(() => import('@/components/tools/text-tools/TextToCaesarBoxCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-skip-cipher': dynamic(() => import('@/components/tools/text-tools/TextToSkipCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'spring-constant-calculator': dynamic(() => import('@/components/tools/math-calculators/SpringConstantCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'moment-of-inertia-calculator': dynamic(() => import('@/components/tools/math-calculators/MomentOfInertiaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-ocean-depth': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromOceanDepth'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-badge-generator': dynamic(() => import('@/components/tools/image-color-tools/CssBadgeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'bearing-size-converter': dynamic(() => import('@/components/tools/unit-converters/BearingSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'discordian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/DiscordianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
