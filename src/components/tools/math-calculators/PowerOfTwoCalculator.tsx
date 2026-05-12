@@ -13,7 +13,6 @@ export default function PowerOfTwoCalculator({ toolId, toolName }: { toolId: str
     const exp = parseInt(input);
     if (isNaN(exp) || exp < 0 || exp > 1023) { setOutput('Enter a valid exponent (0-1023).'); return; }
     const result = BigInt(2) ** BigInt(exp);
-    const _isPowerOf2 = (n: number) => n > 0 && (n & (n - 1)) === 0;
     setOutput(`2^${exp} = ${result.toString()}\n\nBinary: 1${'0'.repeat(exp)}\nDigits: ${result.toString().length}`);
   };
 

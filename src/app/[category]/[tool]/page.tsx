@@ -660,6 +660,38 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'split-complementary-color': dynamic(() => import('@/components/tools/image-color-tools/SplitComplementaryColor'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'tetradic-color-generator': dynamic(() => import('@/components/tools/image-color-tools/TetradicColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'date-format-converter': dynamic(() => import('@/components/tools/date-time-tools/DateFormatConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Mega Batch - Developer Tools
+  'css-media-query-generator': dynamic(() => import('@/components/tools/developer-tools/CssMediaQueryGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'html-link-generator': dynamic(() => import('@/components/tools/developer-tools/HtmlLinkGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'json-to-php-array': dynamic(() => import('@/components/tools/developer-tools/JsonToPhpArray'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'curl-to-fetch': dynamic(() => import('@/components/tools/developer-tools/CurlToFetch'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'npm-package-json-validator': dynamic(() => import('@/components/tools/developer-tools/NpmPackageJsonValidator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'gitignore-generator': dynamic(() => import('@/components/tools/developer-tools/GitignoreGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Mega Batch - Text Tools
+  'text-to-array': dynamic(() => import('@/components/tools/text-tools/TextToArray'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'json-string-escape': dynamic(() => import('@/components/tools/text-tools/JsonStringEscape'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'csv-to-markdown-table': dynamic(() => import('@/components/tools/text-tools/CsvToMarkdownTable'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Mega Batch - Math Calculators
+  'mean-median-mode-calculator': dynamic(() => import('@/components/tools/math-calculators/MeanMedianModeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'hex-arithmetic-calculator': dynamic(() => import('@/components/tools/math-calculators/HexArithmeticCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'binary-addition-calculator': dynamic(() => import('@/components/tools/math-calculators/BinaryAdditionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'decimal-to-fraction': dynamic(() => import('@/components/tools/math-calculators/DecimalToFraction'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'power-of-two-calculator': dynamic(() => import('@/components/tools/math-calculators/PowerOfTwoCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Mega Batch - Image and Color Tools
+  'css-color-name-list': dynamic(() => import('@/components/tools/image-color-tools/CssColorNameList'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Mega Batch - Unit Converters
+  // Mega Batch - Date and Time Tools
+  // Batch 41
+  'scala-case-class-generator': dynamic(() => import('@/components/tools/developer-tools/ScalaCaseClassGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'elixir-struct-generator': dynamic(() => import('@/components/tools/developer-tools/ElixirStructGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-wave-case': dynamic(() => import('@/components/tools/text-tools/TextToWaveCase'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-backwards-words': dynamic(() => import('@/components/tools/text-tools/TextToBackwardsWords'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'harmonic-mean-calculator': dynamic(() => import('@/components/tools/math-calculators/HarmonicMeanCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'geometric-mean-calculator': dynamic(() => import('@/components/tools/math-calculators/GeometricMeanCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'monochromatic-palette': dynamic(() => import('@/components/tools/image-color-tools/MonochromaticPalette'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'square-color-scheme': dynamic(() => import('@/components/tools/image-color-tools/SquareColorScheme'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cooking-weight-converter': dynamic(() => import('@/components/tools/unit-converters/CookingWeightConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'time-until-calculator': dynamic(() => import('@/components/tools/date-time-tools/TimeUntilCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });

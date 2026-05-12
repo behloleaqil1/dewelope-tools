@@ -15,7 +15,6 @@ export default function TextCharacterReplacer({ toolId, toolName }: { toolId: st
     if (!input) { setOutput(''); return; }
     if (!find) { setOutput(input); return; }
     const result = input.split(find).join(replace);
-    const _count = (input.length - result.length + replace.length * (input.split(find).length - 1)) / find.length;
     setOutput(`Replaced ${Math.max(0, input.split(find).length - 1)} occurrence(s):\n\n${result}`);
   };
 
