@@ -1207,6 +1207,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-radio-button-generator': dynamic(() => import('@/components/tools/image-color-tools/CssRadioButtonGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'pneumatic-cylinder-calculator': dynamic(() => import('@/components/tools/unit-converters/PneumaticCylinderCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'tai-time-converter': dynamic(() => import('@/components/tools/date-time-tools/TaiTimeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'xmake-generator': dynamic(() => import('@/components/tools/developer-tools/XmakeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'zig-build-generator': dynamic(() => import('@/components/tools/developer-tools/ZigBuildGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-morse-prosigns': dynamic(() => import('@/components/tools/text-tools/TextToMorseProsigns'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-binary-visual-blocks': dynamic(() => import('@/components/tools/text-tools/TextToBinaryVisualBlocks'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ohms-law-calculator': dynamic(() => import('@/components/tools/math-calculators/OhmsLawCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'capacitor-charge-calculator': dynamic(() => import('@/components/tools/math-calculators/CapacitorChargeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-spice': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromSpice'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-select-dropdown-generator': dynamic(() => import('@/components/tools/image-color-tools/CssSelectDropdownGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'air-compressor-cfm-calculator': dynamic(() => import('@/components/tools/unit-converters/AirCompressorCfmCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'gps-time-converter': dynamic(() => import('@/components/tools/date-time-tools/GpsTimeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
