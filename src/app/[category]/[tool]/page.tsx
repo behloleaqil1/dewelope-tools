@@ -1075,6 +1075,22 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-arrow-generator': dynamic(() => import('@/components/tools/image-color-tools/CssArrowGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'wire-diameter-converter': dynamic(() => import('@/components/tools/unit-converters/WireDiameterConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'french-republican-calendar': dynamic(() => import('@/components/tools/date-time-tools/FrenchRepublicanCalendar'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 78 - Milestone: 1000+ tools!
+  'ada-record-generator': dynamic(() => import('@/components/tools/developer-tools/AdaRecordGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fortran-type-generator': dynamic(() => import('@/components/tools/developer-tools/FortranTypeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cobol-copybook-generator': dynamic(() => import('@/components/tools/developer-tools/CobolCopybookGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-book-cipher': dynamic(() => import('@/components/tools/text-tools/TextToBookCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-grille-cipher': dynamic(() => import('@/components/tools/text-tools/TextToGrilleCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-scytale-cipher': dynamic(() => import('@/components/tools/text-tools/TextToScytaleCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'value-stream-calculator': dynamic(() => import('@/components/tools/math-calculators/ValueStreamCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'inventory-turnover-calculator': dynamic(() => import('@/components/tools/math-calculators/InventoryTurnoverCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'safety-stock-calculator': dynamic(() => import('@/components/tools/math-calculators/SafetyStockCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-mineral': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromMineral'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-loader-generator': dynamic(() => import('@/components/tools/image-color-tools/CssLoaderGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sheet-metal-gauge-converter': dynamic(() => import('@/components/tools/unit-converters/SheetMetalGaugeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'timber-board-feet-calculator': dynamic(() => import('@/components/tools/unit-converters/TimberBoardFeetCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'aztec-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/AztecCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'unix-cron-next-run': dynamic(() => import('@/components/tools/date-time-tools/UnixCronNextRun'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
