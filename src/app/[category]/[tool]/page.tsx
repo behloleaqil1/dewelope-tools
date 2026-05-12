@@ -890,6 +890,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'brutalist-color-generator': dynamic(() => import('@/components/tools/image-color-tools/BrutalistColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'watch-band-size-converter': dynamic(() => import('@/components/tools/unit-converters/WatchBandSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'lunar-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/LunarCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 61
+  'express-middleware-generator': dynamic(() => import('@/components/tools/developer-tools/ExpressMiddlewareGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nestjs-controller-generator': dynamic(() => import('@/components/tools/developer-tools/NestjsControllerGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-small-caps-bold': dynamic(() => import('@/components/tools/text-tools/TextToSmallCapsBold'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-inverted-case': dynamic(() => import('@/components/tools/text-tools/TextToInvertedCase'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'hypergeometric-calculator': dynamic(() => import('@/components/tools/math-calculators/HypergeometricCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'moving-average-calculator': dynamic(() => import('@/components/tools/math-calculators/MovingAverageCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'y2k-color-generator': dynamic(() => import('@/components/tools/image-color-tools/Y2kColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'dark-academia-color-generator': dynamic(() => import('@/components/tools/image-color-tools/DarkAcademiaColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'helmet-size-converter': dynamic(() => import('@/components/tools/unit-converters/HelmetSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'mercury-retrograde-checker': dynamic(() => import('@/components/tools/date-time-tools/MercuryRetrogradeChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
