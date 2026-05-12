@@ -912,6 +912,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'coastal-color-generator': dynamic(() => import('@/components/tools/image-color-tools/CoastalColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'bicycle-frame-size-converter': dynamic(() => import('@/components/tools/unit-converters/BicycleFrameSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'solar-eclipse-calculator': dynamic(() => import('@/components/tools/date-time-tools/SolarEclipseCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 63
+  'remix-loader-generator': dynamic(() => import('@/components/tools/developer-tools/RemixLoaderGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nuxt-api-generator': dynamic(() => import('@/components/tools/developer-tools/NuxtApiGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-morse-light': dynamic(() => import('@/components/tools/text-tools/TextToMorseLight'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-medieval-unicode': dynamic(() => import('@/components/tools/text-tools/TextToMedievalUnicode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'mann-whitney-calculator': dynamic(() => import('@/components/tools/math-calculators/MannWhitneyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'effect-size-calculator': dynamic(() => import('@/components/tools/math-calculators/EffectSizeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'art-nouveau-color-generator': dynamic(() => import('@/components/tools/image-color-tools/ArtNouveauColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pixel-art-color-generator': dynamic(() => import('@/components/tools/image-color-tools/PixelArtColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ski-boot-size-converter': dynamic(() => import('@/components/tools/unit-converters/SkiBootSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'planetary-alignment-checker': dynamic(() => import('@/components/tools/date-time-tools/PlanetaryAlignmentChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
