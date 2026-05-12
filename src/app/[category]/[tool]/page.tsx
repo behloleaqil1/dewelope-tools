@@ -1131,6 +1131,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-badge-generator': dynamic(() => import('@/components/tools/image-color-tools/CssBadgeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'bearing-size-converter': dynamic(() => import('@/components/tools/unit-converters/BearingSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'discordian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/DiscordianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 83
+  'stata-code-generator': dynamic(() => import('@/components/tools/developer-tools/StataCodeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'puppet-manifest-generator': dynamic(() => import('@/components/tools/developer-tools/PuppetManifestGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-route-cipher': dynamic(() => import('@/components/tools/text-tools/TextToRouteCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-turning-grille': dynamic(() => import('@/components/tools/text-tools/TextToTurningGrille'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'beam-deflection-calculator': dynamic(() => import('@/components/tools/math-calculators/BeamDeflectionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fluid-flow-calculator': dynamic(() => import('@/components/tools/math-calculators/FluidFlowCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-constellation': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromConstellation'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-avatar-generator': dynamic(() => import('@/components/tools/image-color-tools/CssAvatarGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'o-ring-size-converter': dynamic(() => import('@/components/tools/unit-converters/ORingSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'stardate-calculator': dynamic(() => import('@/components/tools/date-time-tools/StardateCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
