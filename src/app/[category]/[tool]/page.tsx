@@ -1294,6 +1294,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-modal-generator': dynamic(() => import('@/components/tools/image-color-tools/CssModalGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'musical-interval-calculator': dynamic(() => import('@/components/tools/unit-converters/MusicalIntervalCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'orbital-period-calculator': dynamic(() => import('@/components/tools/date-time-tools/OrbitalPeriodCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'conan-profile-generator': dynamic(() => import('@/components/tools/developer-tools/ConanProfileGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sbt-build-generator': dynamic(() => import('@/components/tools/developer-tools/SbtBuildGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-bold-italic-unicode': dynamic(() => import('@/components/tools/text-tools/TextToBoldItalicUnicode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-sans-serif-italic': dynamic(() => import('@/components/tools/text-tools/TextToSansSerifItalic'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'free-space-path-loss': dynamic(() => import('@/components/tools/math-calculators/FreeSpacePathLoss'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'noise-figure-calculator': dynamic(() => import('@/components/tools/math-calculators/NoiseFigureCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-ceramic': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromCeramic'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-accordion-generator': dynamic(() => import('@/components/tools/image-color-tools/CssAccordionGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'bpm-to-ms-converter': dynamic(() => import('@/components/tools/unit-converters/BpmToMsConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'half-life-calculator': dynamic(() => import('@/components/tools/date-time-tools/HalfLifeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
