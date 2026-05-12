@@ -1283,6 +1283,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-hero-section-generator': dynamic(() => import('@/components/tools/image-color-tools/CssHeroSectionGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'sound-frequency-to-note': dynamic(() => import('@/components/tools/unit-converters/SoundFrequencyToNote'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'cosmic-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/CosmicCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 97
+  'pub-yaml-generator': dynamic(() => import('@/components/tools/developer-tools/PubYamlGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'vcpkg-json-generator': dynamic(() => import('@/components/tools/developer-tools/VcpkgJsonGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-negative-squared': dynamic(() => import('@/components/tools/text-tools/TextToNegativeSquared'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-tag-unicode': dynamic(() => import('@/components/tools/text-tools/TextToTagUnicode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'link-budget-calculator': dynamic(() => import('@/components/tools/math-calculators/LinkBudgetCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wavelength-frequency-converter': dynamic(() => import('@/components/tools/math-calculators/WavelengthFrequencyConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-leather': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromLeather'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-modal-generator': dynamic(() => import('@/components/tools/image-color-tools/CssModalGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'musical-interval-calculator': dynamic(() => import('@/components/tools/unit-converters/MusicalIntervalCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'orbital-period-calculator': dynamic(() => import('@/components/tools/date-time-tools/OrbitalPeriodCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
