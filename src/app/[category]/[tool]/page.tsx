@@ -1314,6 +1314,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-tabs-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTabsGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'tempo-to-delay-calculator': dynamic(() => import('@/components/tools/unit-converters/TempoToDelayCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'pendulum-clock-calculator': dynamic(() => import('@/components/tools/date-time-tools/PendulumClockCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'opam-file-generator': dynamic(() => import('@/components/tools/developer-tools/OpamFileGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'hex-pm-generator': dynamic(() => import('@/components/tools/developer-tools/HexPmGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-bold-fraktur': dynamic(() => import('@/components/tools/text-tools/TextToBoldFraktur'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-double-struck-italic': dynamic(() => import('@/components/tools/text-tools/TextToDoubleStruckItalic'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'friis-transmission-calculator': dynamic(() => import('@/components/tools/math-calculators/FriisTransmissionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'skin-depth-calculator': dynamic(() => import('@/components/tools/math-calculators/SkinDepthCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-candy-bar': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromCandyBar'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-stepper-generator': dynamic(() => import('@/components/tools/image-color-tools/CssStepperGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'note-to-frequency-converter': dynamic(() => import('@/components/tools/unit-converters/NoteToFrequencyConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sundial-time-calculator': dynamic(() => import('@/components/tools/date-time-tools/SundialTimeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
