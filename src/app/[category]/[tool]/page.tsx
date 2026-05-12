@@ -764,6 +764,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'spring-color-generator': dynamic(() => import('@/components/tools/image-color-tools/SpringColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'metric-prefix-converter': dynamic(() => import('@/components/tools/unit-converters/MetricPrefixConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'academic-year-calculator': dynamic(() => import('@/components/tools/date-time-tools/AcademicYearCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 49
+  'cloudformation-template-generator': dynamic(() => import('@/components/tools/developer-tools/CloudFormationTemplateGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'systemd-unit-generator': dynamic(() => import('@/components/tools/developer-tools/SystemdUnitGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-morse-international': dynamic(() => import('@/components/tools/text-tools/TextToMorseInternational'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-statistics-advanced': dynamic(() => import('@/components/tools/text-tools/TextStatisticsAdvanced'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'geometric-sequence-sum': dynamic(() => import('@/components/tools/math-calculators/GeometricSequenceSum'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'number-factorization': dynamic(() => import('@/components/tools/math-calculators/NumberFactorization'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'winter-color-generator': dynamic(() => import('@/components/tools/image-color-tools/WinterColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'tropical-color-generator': dynamic(() => import('@/components/tools/image-color-tools/TropicalColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'scientific-unit-converter': dynamic(() => import('@/components/tools/unit-converters/ScientificUnitConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'semester-countdown': dynamic(() => import('@/components/tools/date-time-tools/SemesterCountdown'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
