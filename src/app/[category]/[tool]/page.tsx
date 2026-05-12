@@ -848,6 +848,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'pop-art-color-generator': dynamic(() => import('@/components/tools/image-color-tools/PopArtColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'aspect-ratio-converter': dynamic(() => import('@/components/tools/unit-converters/AspectRatioConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'time-zone-converter-batch': dynamic(() => import('@/components/tools/date-time-tools/TimeZoneConverterBatch'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 57
+  'knex-migration-generator': dynamic(() => import('@/components/tools/developer-tools/KnexMigrationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'zod-schema-generator': dynamic(() => import('@/components/tools/developer-tools/ZodSchemaGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-script-unicode': dynamic(() => import('@/components/tools/text-tools/TextToScriptUnicode'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-sans-serif-bold': dynamic(() => import('@/components/tools/text-tools/TextToSansSerifBold'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'regression-calculator': dynamic(() => import('@/components/tools/math-calculators/RegressionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'confidence-interval-calculator': dynamic(() => import('@/components/tools/math-calculators/ConfidenceIntervalCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'mid-century-color-generator': dynamic(() => import('@/components/tools/image-color-tools/MidCenturyColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'steampunk-color-generator': dynamic(() => import('@/components/tools/image-color-tools/SteampunkColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'golden-hour-calculator': dynamic(() => import('@/components/tools/date-time-tools/GoldenHourCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
