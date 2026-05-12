@@ -702,6 +702,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'cool-color-generator': dynamic(() => import('@/components/tools/image-color-tools/CoolColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'baking-conversion-calculator': dynamic(() => import('@/components/tools/unit-converters/BakingConversionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'age-on-other-planets': dynamic(() => import('@/components/tools/date-time-tools/AgeOnOtherPlanets'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 43
+  'protobuf-to-json': dynamic(() => import('@/components/tools/developer-tools/ProtobufToJson'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'graphql-schema-generator': dynamic(() => import('@/components/tools/developer-tools/GraphqlSchemaGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-frequency-analysis': dynamic(() => import('@/components/tools/text-tools/TextFrequencyAnalysis'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'matrix-determinant-calculator': dynamic(() => import('@/components/tools/math-calculators/MatrixDeterminantCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'vector-magnitude-calculator': dynamic(() => import('@/components/tools/math-calculators/VectorMagnitudeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pastel-color-generator': dynamic(() => import('@/components/tools/image-color-tools/PastelColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'neon-color-generator': dynamic(() => import('@/components/tools/image-color-tools/NeonColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'astronomical-distance-calculator': dynamic(() => import('@/components/tools/unit-converters/AstronomicalDistanceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'timezone-list-generator': dynamic(() => import('@/components/tools/date-time-tools/TimezoneListGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
