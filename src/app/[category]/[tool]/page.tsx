@@ -1000,6 +1000,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'color-palette-accessibility-checker': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteAccessibilityChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'electrical-conduit-size-converter': dynamic(() => import('@/components/tools/unit-converters/ElectricalConduitSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'persian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/PersianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 71
+  'inferno-component-generator': dynamic(() => import('@/components/tools/developer-tools/InfernoComponentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cycle-component-generator': dynamic(() => import('@/components/tools/developer-tools/CycleComponentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-hill-cipher': dynamic(() => import('@/components/tools/text-tools/TextToHillCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-bacon-cipher': dynamic(() => import('@/components/tools/text-tools/TextToBaconCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'run-chart-calculator': dynamic(() => import('@/components/tools/math-calculators/RunChartCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'capability-index-calculator': dynamic(() => import('@/components/tools/math-calculators/CapabilityIndexCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-mood': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromMood'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-gradient-animator': dynamic(() => import('@/components/tools/image-color-tools/CssGradientAnimator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'hvac-duct-size-converter': dynamic(() => import('@/components/tools/unit-converters/HvacDuctSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ethiopian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/EthiopianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
