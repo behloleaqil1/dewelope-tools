@@ -945,6 +945,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'aurora-borealis-color-generator': dynamic(() => import('@/components/tools/image-color-tools/AuroraBorealisColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'yarn-weight-converter': dynamic(() => import('@/components/tools/unit-converters/YarnWeightConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'numerology-calculator': dynamic(() => import('@/components/tools/date-time-tools/NumerologyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 66
+  'alpine-js-snippet-generator': dynamic(() => import('@/components/tools/developer-tools/AlpineJsSnippetGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'stimulus-controller-generator': dynamic(() => import('@/components/tools/developer-tools/StimulusControllerGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-morse-sound-pattern': dynamic(() => import('@/components/tools/text-tools/TextToMorseSoundPattern'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-binary-tree': dynamic(() => import('@/components/tools/text-tools/TextToBinaryTree'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'quartile-calculator': dynamic(() => import('@/components/tools/math-calculators/QuartileCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'outlier-detector': dynamic(() => import('@/components/tools/math-calculators/OutlierDetector'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'watercolor-palette-generator': dynamic(() => import('@/components/tools/image-color-tools/WatercolorPaletteGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'neon-gradient-generator': dynamic(() => import('@/components/tools/image-color-tools/NeonGradientGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'needle-gauge-converter': dynamic(() => import('@/components/tools/unit-converters/NeedleGaugeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'human-era-calendar': dynamic(() => import('@/components/tools/date-time-tools/HumanEraCalendar'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
