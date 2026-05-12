@@ -1217,6 +1217,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-select-dropdown-generator': dynamic(() => import('@/components/tools/image-color-tools/CssSelectDropdownGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'air-compressor-cfm-calculator': dynamic(() => import('@/components/tools/unit-converters/AirCompressorCfmCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'gps-time-converter': dynamic(() => import('@/components/tools/date-time-tools/GpsTimeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 91
+  'cargo-toml-generator': dynamic(() => import('@/components/tools/developer-tools/CargoTomlGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'go-mod-generator': dynamic(() => import('@/components/tools/developer-tools/GoModGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-wingdings-3': dynamic(() => import('@/components/tools/text-tools/TextToWingdings3'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-math-symbols': dynamic(() => import('@/components/tools/text-tools/TextToMathSymbols'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'inductor-calculator': dynamic(() => import('@/components/tools/math-calculators/InductorCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'transformer-calculator': dynamic(() => import('@/components/tools/math-calculators/TransformerCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-tea': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromTea'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-breadcrumb-generator': dynamic(() => import('@/components/tools/image-color-tools/CssBreadcrumbGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'motor-hp-to-kw-converter': dynamic(() => import('@/components/tools/unit-converters/MotorHpToKwConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'julian-day-calculator': dynamic(() => import('@/components/tools/date-time-tools/JulianDayCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
