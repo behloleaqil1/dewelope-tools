@@ -826,6 +826,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'scandinavian-color-generator': dynamic(() => import('@/components/tools/image-color-tools/ScandinavianColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'japanese-color-generator': dynamic(() => import('@/components/tools/image-color-tools/JapaneseColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'countdown-to-new-year': dynamic(() => import('@/components/tools/date-time-tools/CountdownToNewYear'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 55
+  'sequelize-model-generator': dynamic(() => import('@/components/tools/developer-tools/SequelizeModelGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'drizzle-schema-generator': dynamic(() => import('@/components/tools/developer-tools/DrizzleSchemaGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-pig-latin-sentence': dynamic(() => import('@/components/tools/text-tools/TextToPigLatinSentence'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-reverse-each-line': dynamic(() => import('@/components/tools/text-tools/TextToReverseEachLine'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'probability-calculator': dynamic(() => import('@/components/tools/math-calculators/ProbabilityCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'expected-value-calculator': dynamic(() => import('@/components/tools/math-calculators/ExpectedValueCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'mediterranean-color-generator': dynamic(() => import('@/components/tools/image-color-tools/MediterraneanColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'gothic-color-generator': dynamic(() => import('@/components/tools/image-color-tools/GothicColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'screen-size-converter': dynamic(() => import('@/components/tools/unit-converters/ScreenSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'birthday-paradox-calculator': dynamic(() => import('@/components/tools/date-time-tools/BirthdayParadoxCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
