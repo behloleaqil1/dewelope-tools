@@ -1261,6 +1261,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-footer-generator': dynamic(() => import('@/components/tools/image-color-tools/CssFooterGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'wind-speed-converter': dynamic(() => import('@/components/tools/unit-converters/WindSpeedConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'earth-age-calculator': dynamic(() => import('@/components/tools/date-time-tools/EarthAgeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 95
+  'cabal-file-generator': dynamic(() => import('@/components/tools/developer-tools/CabalFileGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'dub-json-generator': dynamic(() => import('@/components/tools/developer-tools/DubJsonGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-superscript-numbers': dynamic(() => import('@/components/tools/text-tools/TextToSuperscriptNumbers'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-subscript-numbers': dynamic(() => import('@/components/tools/text-tools/TextToSubscriptNumbers'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'rc-filter-calculator': dynamic(() => import('@/components/tools/math-calculators/RcFilterCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'decibel-calculator': dynamic(() => import('@/components/tools/math-calculators/DecibelCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-stone': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromStone'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-sidebar-generator': dynamic(() => import('@/components/tools/image-color-tools/CssSidebarGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'earthquake-magnitude-converter': dynamic(() => import('@/components/tools/unit-converters/EarthquakeMagnitudeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'light-travel-time-calculator': dynamic(() => import('@/components/tools/date-time-tools/LightTravelTimeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
