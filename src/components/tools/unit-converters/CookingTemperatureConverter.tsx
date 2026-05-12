@@ -6,91 +6,100 @@ import OutputArea from '@/components/tools/OutputArea';
 import CopyToClipboard from '@/components/tools/CopyToClipboard';
 
 /**
- * CookingTemperatureConverter - Convert between Celsius, Fahrenheit with common cooking presets (Gas Mark).
+ * CookingTemperatureConverter - Converts oven temperatures between Fahrenheit, Celsius, and Gas Mark.
+ * Includes common oven temperature presets for quick reference.
  */
 export default function CookingTemperatureConverter({ toolId, toolName }: { toolId: string; toolName: string }) {
   const [value, setValue] = useState('');
-  const [fromUnit, setFromUnit] = useState<'celsius' | 'fahrenheit' | 'gas'>('celsius');
-  const [error, setError] = useState('');
-  const [result, setResult] = useState<{ celsius: number; fahrenheit: number; gas: string; description: string } | null>(null);
+  const [fromUnit, setFromUnit] = useState('fahrenheit');
+  const [result, setResult] = useState<{ fahrenheit: string; celsius: string; gasMark: string; description: string } | null>(null);
+  const [error, setError] = useState<string | undefined>();
 
-  const gasMarkToCelsius: Record<string, number> = {
-    '1/4': 110, '1/2': 130, '1': 140, '2': 150, '3': 170, '4': 180,
-    '5': 190, '6': 200, '7': 220, '8': 230, '9': 240, '10': 260,
-  };
+  const GAS_MARKS: { mark: number; fahrenheit: number }[] = [
+    { mark: 0.25, fahrenheit: 225 },
+    { mark: 0.5, fahrenheit: 250 },
+    { mark: 1, fahrenheit: 275 },
+    { mark: 2, fahrenheit: 300 },
+    { mark: 3, fahrenheit: 325 },
+    { mark: 4, fahrenheit: 350 },
+    { mark: 5, fahrenheit: 375 },
+    { mark: 6, fahrenheit: 400 },
+    { mark: 7, fahrenheit: 425 },
+    { mark: 8, fahrenheit: 450 },
+    { mark: 9, fahrenheit: 475 },
+    { mark: 10, fahrenheit: 500 },
+  ];
 
-  const celsiusToGasMark = (c: number): string => {
-    if (c < 110) return 'Below 1/4';
-    if (c <= 120) return '1/4';
-    if (c <= 135) return '1/2';
-    if (c <= 145) return '1';
-    if (c <= 160) return '2';
-    if (c <= 175) return '3';
-    if (c <= 185) return '4';
-    if (c <= 195) return '5';
-    if (c <= 210) return '6';
-    if (c <= 225) return '7';
-    if (c <= 235) return '8';
-    if (c <= 250) return '9';
-    if (c <= 270) return '10';
-    return 'Above 10';
-  };
-
-  const getDescription = (c: number): string => {
-    if (c < 150) return 'Very Cool / Very Slow';
-    if (c < 170) return 'Cool / Slow';
-    if (c < 190) return 'Moderate';
-    if (c < 210) return 'Moderately Hot';
-    if (c < 230) return 'Hot';
-    if (c < 250) return 'Very Hot';
+  function getDescription(f: number): string {
+    if (f <= 250) return 'Very Low / Slow';
+    if (f <= 300) return 'Low / Slow';
+    if (f <= 350) return 'Moderate';
+    if (f <= 400) return 'Moderately Hot';
+    if (f <= 450) return 'Hot';
+    if (f <= 500) return 'Very Hot';
     return 'Extremely Hot';
-  };
+  }
 
-  const convert = () => {
-    setError('');
+  function fahrenheitToGasMark(f: number): string {
+    if (f < 225) return '< ¼';
+    if (f > 500) return '> 10';
+    // Find closest gas mark
+    let closest = GAS_MARKS[0];
+    let minDiff = Math.abs(f - GAS_MARKS[0].fahrenheit);
+    for (const gm of GAS_MARKS) {
+      const diff = Math.abs(f - gm.fahrenheit);
+      if (diff < minDiff) {
+        minDiff = diff;
+        closest = gm;
+      }
+    }
+    return closest.mark.toString();
+  }
+
+  function gasMarkToFahrenheit(mark: number): number {
+    const entry = GAS_MARKS.find((gm) => gm.mark === mark);
+    if (entry) return entry.fahrenheit;
+    // Interpolate
+    if (mark < 0.25) return 225;
+    if (mark > 10) return 500;
+    // Linear approximation
+    return Math.round(250 + (mark - 0.5) * 25);
+  }
+
+  function convert() {
+    setError(undefined);
     setResult(null);
 
-    if (!value.trim()) {
-      setError('Please enter a value');
+    const num = parseFloat(value);
+    if (!value.trim() || isNaN(num)) {
+      setError('Please enter a valid number');
       return;
     }
 
-    let celsius: number;
+    let fahrenheit: number;
 
-    if (fromUnit === 'gas') {
-      const gasVal = value.trim();
-      const mapped = gasMarkToCelsius[gasVal];
-      if (mapped === undefined) {
-        setError('Gas Mark must be 1/4, 1/2, or 1-10');
-        return;
-      }
-      celsius = mapped;
+    if (fromUnit === 'fahrenheit') {
+      fahrenheit = num;
+    } else if (fromUnit === 'celsius') {
+      fahrenheit = (num * 9) / 5 + 32;
     } else {
-      const num = parseFloat(value);
-      if (isNaN(num)) {
-        setError('Please enter a valid number');
-        return;
-      }
-      celsius = fromUnit === 'fahrenheit' ? (num - 32) * 5 / 9 : num;
+      // gas mark
+      fahrenheit = gasMarkToFahrenheit(num);
     }
 
-    const fahrenheit = celsius * 9 / 5 + 32;
-    const gas = celsiusToGasMark(celsius);
-    const description = getDescription(celsius);
+    const celsius = ((fahrenheit - 32) * 5) / 9;
+    const gasMark = fahrenheitToGasMark(fahrenheit);
 
-    setResult({ celsius, fahrenheit, gas, description });
-  };
-
-  const presets = [
-    { label: 'Low & Slow (150°C)', c: 150 },
-    { label: 'Moderate (180°C)', c: 180 },
-    { label: 'Hot (200°C)', c: 200 },
-    { label: 'Very Hot (220°C)', c: 220 },
-    { label: 'Pizza (250°C)', c: 250 },
-  ];
+    setResult({
+      fahrenheit: Math.round(fahrenheit).toString(),
+      celsius: Math.round(celsius).toString(),
+      gasMark,
+      description: getDescription(fahrenheit),
+    });
+  }
 
   const copyText = result
-    ? `${result.celsius.toFixed(0)}°C = ${result.fahrenheit.toFixed(0)}°F = Gas Mark ${result.gas}\nDescription: ${result.description}`
+    ? `${result.fahrenheit}°F = ${result.celsius}°C = Gas Mark ${result.gasMark} (${result.description})`
     : '';
 
   return (
@@ -99,40 +108,33 @@ export default function CookingTemperatureConverter({ toolId, toolName }: { tool
         <label htmlFor={`${toolId}-value`} className="block text-sm font-medium text-gray-700 mb-1">
           Temperature Value
         </label>
-        <div className="flex gap-2">
-          <input
-            id={`${toolId}-value`}
-            type="text"
-            inputMode="decimal"
-            value={value}
-            onChange={(e) => { setValue(e.target.value); if (error) setError(''); }}
-            placeholder={fromUnit === 'gas' ? 'e.g. 6' : 'e.g. 180'}
-            aria-label={`Temperature value for ${toolName}`}
-            className="input-field flex-1"
-          />
-          <select value={fromUnit} onChange={(e) => setFromUnit(e.target.value as typeof fromUnit)} className="input-field w-36" aria-label="Temperature unit">
-            <option value="celsius">Celsius (°C)</option>
-            <option value="fahrenheit">Fahrenheit (°F)</option>
-            <option value="gas">Gas Mark</option>
-          </select>
-        </div>
+        <input
+          id={`${toolId}-value`}
+          type="text"
+          inputMode="decimal"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+          placeholder="e.g. 350"
+          aria-label={`Temperature value for ${toolName}`}
+          className="input-field"
+        />
         <div className="mt-3">
-          <label className="block text-xs text-gray-500 mb-1">Quick Presets</label>
-          <div className="flex flex-wrap gap-2">
-            {presets.map((p) => (
-              <button
-                key={p.c}
-                onClick={() => { setValue(String(p.c)); setFromUnit('celsius'); }}
-                className="text-xs px-2 py-1 bg-gray-100 hover:bg-gray-200 rounded border border-gray-300 text-gray-700"
-              >
-                {p.label}
-              </button>
-            ))}
-          </div>
+          <label htmlFor={`${toolId}-unit`} className="block text-xs text-gray-500 mb-1">From Unit</label>
+          <select
+            id={`${toolId}-unit`}
+            value={fromUnit}
+            onChange={(e) => setFromUnit(e.target.value)}
+            aria-label="Temperature unit"
+            className="input-field text-sm"
+          >
+            <option value="fahrenheit">Fahrenheit (°F)</option>
+            <option value="celsius">Celsius (°C)</option>
+            <option value="gasmark">Gas Mark</option>
+          </select>
         </div>
       </InputArea>
 
-      <button onClick={convert} aria-label="Convert temperature" className="btn-primary">
+      <button onClick={convert} aria-label="Convert cooking temperature" className="btn-primary">
         Convert
       </button>
 
@@ -140,21 +142,21 @@ export default function CookingTemperatureConverter({ toolId, toolName }: { tool
         {result && (
           <div className="space-y-3">
             <div className="grid grid-cols-3 gap-3">
-              <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center">
-                <div className="text-xl font-bold text-blue-600">{result.celsius.toFixed(0)}°C</div>
-                <div className="text-xs text-gray-500 mt-1">Celsius</div>
-              </div>
-              <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center">
-                <div className="text-xl font-bold text-orange-600">{result.fahrenheit.toFixed(0)}°F</div>
+              <div className="bg-gray-50 p-3 rounded-lg border border-gray-200 text-center">
+                <div className="text-xl font-bold text-blue-600 font-mono">{result.fahrenheit}°F</div>
                 <div className="text-xs text-gray-500 mt-1">Fahrenheit</div>
               </div>
-              <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center">
-                <div className="text-xl font-bold text-purple-600">Gas {result.gas}</div>
+              <div className="bg-gray-50 p-3 rounded-lg border border-gray-200 text-center">
+                <div className="text-xl font-bold text-green-600 font-mono">{result.celsius}°C</div>
+                <div className="text-xs text-gray-500 mt-1">Celsius</div>
+              </div>
+              <div className="bg-gray-50 p-3 rounded-lg border border-gray-200 text-center">
+                <div className="text-xl font-bold text-orange-600 font-mono">{result.gasMark}</div>
                 <div className="text-xs text-gray-500 mt-1">Gas Mark</div>
               </div>
             </div>
             <div className="bg-gray-50 p-3 rounded-lg border border-gray-200 text-center">
-              <span className="text-sm text-gray-700 font-medium">{result.description}</span>
+              <span className="text-sm font-medium text-gray-700">{result.description}</span>
             </div>
             <CopyToClipboard text={copyText} />
           </div>

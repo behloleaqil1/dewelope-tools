@@ -712,6 +712,15 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'neon-color-generator': dynamic(() => import('@/components/tools/image-color-tools/NeonColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'astronomical-distance-calculator': dynamic(() => import('@/components/tools/unit-converters/AstronomicalDistanceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'timezone-list-generator': dynamic(() => import('@/components/tools/date-time-tools/TimezoneListGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 44
+  'openapi-to-typescript': dynamic(() => import('@/components/tools/developer-tools/OpenApiToTypescript'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'dockerfile-generator': dynamic(() => import('@/components/tools/developer-tools/DockerfileGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-ngram-generator': dynamic(() => import('@/components/tools/text-tools/TextNgramGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'matrix-transpose-calculator': dynamic(() => import('@/components/tools/math-calculators/MatrixTransposeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'vector-addition-calculator': dynamic(() => import('@/components/tools/math-calculators/VectorAdditionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'earth-tone-generator': dynamic(() => import('@/components/tools/image-color-tools/EarthToneGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'jewel-tone-generator': dynamic(() => import('@/components/tools/image-color-tools/JewelToneGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'iso-week-calculator': dynamic(() => import('@/components/tools/date-time-tools/IsoWeekCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
