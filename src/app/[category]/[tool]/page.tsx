@@ -934,6 +934,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'cyberpunk-neon-generator': dynamic(() => import('@/components/tools/image-color-tools/CyberpunkNeonGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'fishing-line-weight-converter': dynamic(() => import('@/components/tools/unit-converters/FishingLineWeightConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'biorhythm-calculator': dynamic(() => import('@/components/tools/date-time-tools/BiorhythmCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 65
+  'qwik-component-generator': dynamic(() => import('@/components/tools/developer-tools/QwikComponentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'htmx-snippet-generator': dynamic(() => import('@/components/tools/developer-tools/HtmxSnippetGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-phonetic-nato-sentence': dynamic(() => import('@/components/tools/text-tools/TextToPhoneticNatoSentence'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-invisible-characters': dynamic(() => import('@/components/tools/text-tools/TextToInvisibleCharacters'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'spearman-correlation-calculator': dynamic(() => import('@/components/tools/math-calculators/SpearmanCorrelationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'percentile-calculator': dynamic(() => import('@/components/tools/math-calculators/PercentileCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'tropical-sunset-color-generator': dynamic(() => import('@/components/tools/image-color-tools/TropicalSunsetColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'aurora-borealis-color-generator': dynamic(() => import('@/components/tools/image-color-tools/AuroraBorealisColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'yarn-weight-converter': dynamic(() => import('@/components/tools/unit-converters/YarnWeightConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'numerology-calculator': dynamic(() => import('@/components/tools/date-time-tools/NumerologyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
