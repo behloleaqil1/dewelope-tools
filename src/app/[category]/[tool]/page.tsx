@@ -868,6 +868,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'vaporwave-color-generator': dynamic(() => import('@/components/tools/image-color-tools/VaporwaveColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'cottagecore-color-generator': dynamic(() => import('@/components/tools/image-color-tools/CottagecoreColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'equinox-solstice-calculator': dynamic(() => import('@/components/tools/date-time-tools/EquinoxSolsticeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 59
+  'ajv-schema-generator': dynamic(() => import('@/components/tools/developer-tools/AjvSchemaGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'swagger-to-curl': dynamic(() => import('@/components/tools/developer-tools/SwaggerToCurl'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-wingdings-2': dynamic(() => import('@/components/tools/text-tools/TextToWingdings2'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-regional-indicators': dynamic(() => import('@/components/tools/text-tools/TextToRegionalIndicators'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'poisson-distribution-calculator': dynamic(() => import('@/components/tools/math-calculators/PoissonDistributionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'exponential-growth-calculator': dynamic(() => import('@/components/tools/math-calculators/ExponentialGrowthCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'synthwave-color-generator': dynamic(() => import('@/components/tools/image-color-tools/SynthwaveColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'rustic-color-generator': dynamic(() => import('@/components/tools/image-color-tools/RusticColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'belt-size-converter': dynamic(() => import('@/components/tools/unit-converters/BeltSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'dst-transition-checker': dynamic(() => import('@/components/tools/date-time-tools/DstTransitionChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
