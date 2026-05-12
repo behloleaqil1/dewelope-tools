@@ -1091,6 +1091,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'timber-board-feet-calculator': dynamic(() => import('@/components/tools/unit-converters/TimberBoardFeetCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'aztec-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/AztecCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'unix-cron-next-run': dynamic(() => import('@/components/tools/date-time-tools/UnixCronNextRun'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pascal-record-generator': dynamic(() => import('@/components/tools/developer-tools/PascalRecordGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'lua-table-generator': dynamic(() => import('@/components/tools/developer-tools/LuaTableGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-enigma-cipher': dynamic(() => import('@/components/tools/text-tools/TextToEnigmaCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-one-time-pad': dynamic(() => import('@/components/tools/text-tools/TextToOneTimePad'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'abc-analysis-calculator': dynamic(() => import('@/components/tools/math-calculators/AbcAnalysisCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'economic-order-quantity': dynamic(() => import('@/components/tools/math-calculators/EconomicOrderQuantity'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-planet': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromPlanet'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-tooltip-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTooltipGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'battery-capacity-converter': dynamic(() => import('@/components/tools/unit-converters/BatteryCapacityConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'bengali-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/BengaliCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
