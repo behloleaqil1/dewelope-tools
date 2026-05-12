@@ -1175,6 +1175,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-input-field-generator': dynamic(() => import('@/components/tools/image-color-tools/CssInputFieldGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'rivet-size-converter': dynamic(() => import('@/components/tools/unit-converters/RivetSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'swatch-internet-time': dynamic(() => import('@/components/tools/date-time-tools/SwatchInternetTime'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 87
+  'meson-build-generator': dynamic(() => import('@/components/tools/developer-tools/MesonBuildGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'scons-build-generator': dynamic(() => import('@/components/tools/developer-tools/SconsBuildGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-flag-semaphore-visual': dynamic(() => import('@/components/tools/text-tools/TextToFlagSemaphoreVisual'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-binary-coded-decimal': dynamic(() => import('@/components/tools/text-tools/TextToBinaryCodedDecimal'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'projectile-motion-calculator': dynamic(() => import('@/components/tools/math-calculators/ProjectileMotionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'centripetal-force-calculator': dynamic(() => import('@/components/tools/math-calculators/CentripetalForceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-insect': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromInsect'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-table-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTableGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'spring-wire-gauge-converter': dynamic(() => import('@/components/tools/unit-converters/SpringWireGaugeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'decimal-time-converter': dynamic(() => import('@/components/tools/date-time-tools/DecimalTimeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
