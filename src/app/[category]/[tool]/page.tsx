@@ -692,6 +692,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'square-color-scheme': dynamic(() => import('@/components/tools/image-color-tools/SquareColorScheme'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'cooking-weight-converter': dynamic(() => import('@/components/tools/unit-converters/CookingWeightConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'time-until-calculator': dynamic(() => import('@/components/tools/date-time-tools/TimeUntilCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 42 (new unique)
+  'haskell-type-generator': dynamic(() => import('@/components/tools/developer-tools/HaskellTypeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-morse-visual': dynamic(() => import('@/components/tools/text-tools/TextToMorseVisual'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-entropy-calculator': dynamic(() => import('@/components/tools/text-tools/TextEntropyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cross-product-calculator': dynamic(() => import('@/components/tools/math-calculators/CrossProductCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'dot-product-calculator': dynamic(() => import('@/components/tools/math-calculators/DotProductCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'warm-color-generator': dynamic(() => import('@/components/tools/image-color-tools/WarmColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cool-color-generator': dynamic(() => import('@/components/tools/image-color-tools/CoolColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'baking-conversion-calculator': dynamic(() => import('@/components/tools/unit-converters/BakingConversionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'age-on-other-planets': dynamic(() => import('@/components/tools/date-time-tools/AgeOnOtherPlanets'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
