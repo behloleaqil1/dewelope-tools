@@ -1033,6 +1033,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-shape-generator': dynamic(() => import('@/components/tools/image-color-tools/CssShapeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'knitting-needle-size-converter': dynamic(() => import('@/components/tools/unit-converters/KnittingNeedleSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'coptic-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/CopticCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 74
+  'clojure-map-generator': dynamic(() => import('@/components/tools/developer-tools/ClojureMapGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fsharp-record-generator': dynamic(() => import('@/components/tools/developer-tools/FsharpRecordGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-four-square-cipher': dynamic(() => import('@/components/tools/text-tools/TextToFourSquareCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-bifid-cipher': dynamic(() => import('@/components/tools/text-tools/TextToBifidCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'six-sigma-yield-calculator': dynamic(() => import('@/components/tools/math-calculators/SixSigmaYieldCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'reliability-calculator': dynamic(() => import('@/components/tools/math-calculators/ReliabilityCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-art-movement': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromArtMovement'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-blob-generator': dynamic(() => import('@/components/tools/image-color-tools/CssBlobGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'crochet-hook-size-converter': dynamic(() => import('@/components/tools/unit-converters/CrochetHookSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'indian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/IndianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
