@@ -5,83 +5,118 @@ import InputArea from '@/components/tools/InputArea';
 import OutputArea from '@/components/tools/OutputArea';
 import CopyToClipboard from '@/components/tools/CopyToClipboard';
 
+// Hat size conversion table (approximate)
+// US sizes are in 1/8 increments, UK same as US, EU is cm circumference
+const HAT_SIZES: { us: string; uk: string; eu: number; cm: number }[] = [
+  { us: '6 3/4', uk: '6 3/4', eu: 54, cm: 54 },
+  { us: '6 7/8', uk: '6 7/8', eu: 55, cm: 55 },
+  { us: '7', uk: '6 7/8', eu: 56, cm: 56 },
+  { us: '7 1/8', uk: '7', eu: 57, cm: 57 },
+  { us: '7 1/4', uk: '7 1/8', eu: 58, cm: 58 },
+  { us: '7 3/8', uk: '7 1/4', eu: 59, cm: 59 },
+  { us: '7 1/2', uk: '7 3/8', eu: 60, cm: 60 },
+  { us: '7 5/8', uk: '7 1/2', eu: 61, cm: 61 },
+  { us: '7 3/4', uk: '7 5/8', eu: 62, cm: 62 },
+  { us: '7 7/8', uk: '7 3/4', eu: 63, cm: 63 },
+  { us: '8', uk: '7 7/8', eu: 64, cm: 64 },
+  { us: '8 1/8', uk: '8', eu: 65, cm: 65 },
+];
+
 /**
- * HatSizeConverter - Convert between US, UK, EU hat sizes and head circumference.
- * Provides a reference table and bidirectional conversion.
+ * HatSizeConverter - Convert hat sizes between US, UK, EU, and cm.
  */
 export default function HatSizeConverter({ toolId, toolName }: { toolId: string; toolName: string }) {
-  const [circumference, setCircumference] = useState('');
-  const [unit, setUnit] = useState<'cm' | 'inches'>('cm');
-  const [result, setResult] = useState<{ us: string; uk: string; eu: number; cm: number; inches: number } | null>(null);
+  const [value, setValue] = useState('');
+  const [fromSystem, setFromSystem] = useState('cm');
+  const [error, setError] = useState('');
+  const [result, setResult] = useState<{ us: string; uk: string; eu: string; cm: string } | null>(null);
 
-  const sizeChart = [
-    { us: '6 5/8', uk: '6 1/2', eu: 53, cm: 53, inches: 20.9 },
-    { us: '6 3/4', uk: '6 5/8', eu: 54, cm: 54, inches: 21.3 },
-    { us: '6 7/8', uk: '6 3/4', eu: 55, cm: 55, inches: 21.7 },
-    { us: '7', uk: '6 7/8', eu: 56, cm: 56, inches: 22.0 },
-    { us: '7 1/8', uk: '7', eu: 57, cm: 57, inches: 22.4 },
-    { us: '7 1/4', uk: '7 1/8', eu: 58, cm: 58, inches: 22.8 },
-    { us: '7 3/8', uk: '7 1/4', eu: 59, cm: 59, inches: 23.2 },
-    { us: '7 1/2', uk: '7 3/8', eu: 60, cm: 60, inches: 23.6 },
-    { us: '7 5/8', uk: '7 1/2', eu: 61, cm: 61, inches: 24.0 },
-    { us: '7 3/4', uk: '7 5/8', eu: 62, cm: 62, inches: 24.4 },
-    { us: '7 7/8', uk: '7 3/4', eu: 63, cm: 63, inches: 24.8 },
-    { us: '8', uk: '7 7/8', eu: 64, cm: 64, inches: 25.2 },
+  const systems = [
+    { value: 'us', label: 'US' },
+    { value: 'uk', label: 'UK' },
+    { value: 'eu', label: 'EU (cm circumference)' },
+    { value: 'cm', label: 'Head Circumference (cm)' },
   ];
 
-  const convert = () => {
-    const val = parseFloat(circumference);
-    if (isNaN(val) || val <= 0) return;
+  function convert() {
+    setError('');
+    setResult(null);
 
-    const cm = unit === 'cm' ? val : val * 2.54;
-
-    // Find closest size
-    let closest = sizeChart[0];
-    let minDiff = Math.abs(cm - closest.cm);
-    for (const size of sizeChart) {
-      const diff = Math.abs(cm - size.cm);
-      if (diff < minDiff) {
-        minDiff = diff;
-        closest = size;
-      }
+    if (!value.trim()) {
+      setError('Enter a hat size value');
+      return;
     }
 
-    setResult({
-      us: closest.us,
-      uk: closest.uk,
-      eu: closest.eu,
-      cm: closest.cm,
-      inches: closest.inches,
-    });
-  };
+    if (fromSystem === 'cm' || fromSystem === 'eu') {
+      const num = parseFloat(value);
+      if (isNaN(num) || num <= 0) {
+        setError('Enter a valid positive number');
+        return;
+      }
+
+      // Find closest match
+      let closest = HAT_SIZES[0];
+      let minDiff = Math.abs(num - closest.cm);
+      for (const size of HAT_SIZES) {
+        const diff = Math.abs(num - size.cm);
+        if (diff < minDiff) {
+          minDiff = diff;
+          closest = size;
+        }
+      }
+
+      setResult({ us: closest.us, uk: closest.uk, eu: String(closest.eu), cm: String(closest.cm) });
+    } else {
+      // US or UK - match string
+      const normalized = value.trim().toLowerCase();
+      const match = HAT_SIZES.find((s) => {
+        if (fromSystem === 'us') return s.us.toLowerCase() === normalized;
+        return s.uk.toLowerCase() === normalized;
+      });
+
+      if (!match) {
+        // Try numeric approximation
+        const num = parseFloat(value);
+        if (isNaN(num)) {
+          setError('Enter a valid hat size (e.g. 7 1/4)');
+          return;
+        }
+        // Convert US numeric to cm: approximate formula
+        const approxCm = Math.round(num * 8 + 1);
+        let closest = HAT_SIZES[0];
+        let minDiff = Math.abs(approxCm - closest.cm);
+        for (const size of HAT_SIZES) {
+          const diff = Math.abs(approxCm - size.cm);
+          if (diff < minDiff) {
+            minDiff = diff;
+            closest = size;
+          }
+        }
+        setResult({ us: closest.us, uk: closest.uk, eu: String(closest.eu), cm: String(closest.cm) });
+      } else {
+        setResult({ us: match.us, uk: match.uk, eu: String(match.eu), cm: String(match.cm) });
+      }
+    }
+  }
 
   const copyText = result
-    ? `Hat Size Conversion:\nHead Circumference: ${result.cm} cm (${result.inches}" )\nUS Size: ${result.us}\nUK Size: ${result.uk}\nEU Size: ${result.eu}`
+    ? `US: ${result.us}\nUK: ${result.uk}\nEU: ${result.eu}\nCircumference: ${result.cm} cm`
     : '';
 
   return (
     <div className="space-y-4" data-tool-id={toolId}>
-      <InputArea>
-        <label htmlFor={`${toolId}-circ`} className="block text-sm font-medium text-gray-700 mb-1">
-          Head Circumference
-        </label>
-        <div className="flex gap-3">
-          <input
-            id={`${toolId}-circ`}
-            type="text"
-            inputMode="decimal"
-            value={circumference}
-            onChange={(e) => setCircumference(e.target.value)}
-            placeholder={unit === 'cm' ? 'e.g. 57' : 'e.g. 22.4'}
-            aria-label={`Head circumference for ${toolName}`}
-            className="input-field flex-1"
-          />
-          <select value={unit} onChange={(e) => setUnit(e.target.value as 'cm' | 'inches')} aria-label={`Unit for ${toolName}`} className="input-field w-28">
-            <option value="cm">cm</option>
-            <option value="inches">inches</option>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <InputArea error={error}>
+          <label htmlFor={`${toolId}-value`} className="block text-sm font-medium text-gray-700 mb-1">Hat Size</label>
+          <input id={`${toolId}-value`} type="text" value={value} onChange={(e) => setValue(e.target.value)} placeholder={fromSystem === 'cm' || fromSystem === 'eu' ? 'e.g. 58' : 'e.g. 7 1/4'} aria-label={`Hat size for ${toolName}`} className="input-field" />
+        </InputArea>
+        <InputArea>
+          <label htmlFor={`${toolId}-system`} className="block text-sm font-medium text-gray-700 mb-1">From System</label>
+          <select id={`${toolId}-system`} value={fromSystem} onChange={(e) => setFromSystem(e.target.value)} aria-label={`Size system for ${toolName}`} className="input-field">
+            {systems.map((s) => <option key={s.value} value={s.value}>{s.label}</option>)}
           </select>
-        </div>
-      </InputArea>
+        </InputArea>
+      </div>
 
       <button onClick={convert} aria-label="Convert hat size" className="btn-primary">
         Convert
@@ -90,56 +125,28 @@ export default function HatSizeConverter({ toolId, toolName }: { toolId: string;
       <OutputArea hasContent={result !== null}>
         {result && (
           <div className="space-y-3">
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center">
-                <div className="text-xl font-bold text-gray-800">{result.us}</div>
-                <div className="text-xs text-gray-500 mt-1">US Size</div>
+                <div className="text-xl font-bold text-blue-600">{result.us}</div>
+                <div className="text-xs text-gray-500 mt-1">US</div>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center">
-                <div className="text-xl font-bold text-gray-800">{result.uk}</div>
-                <div className="text-xs text-gray-500 mt-1">UK Size</div>
+                <div className="text-xl font-bold text-green-600">{result.uk}</div>
+                <div className="text-xs text-gray-500 mt-1">UK</div>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center">
-                <div className="text-xl font-bold text-gray-800">{result.eu}</div>
-                <div className="text-xs text-gray-500 mt-1">EU Size</div>
+                <div className="text-xl font-bold text-purple-600">{result.eu}</div>
+                <div className="text-xs text-gray-500 mt-1">EU</div>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg border border-gray-200 text-center">
-                <div className="text-xl font-bold text-gray-800">{result.cm} cm</div>
-                <div className="text-xs text-gray-500 mt-1">{result.inches}&quot;</div>
+                <div className="text-xl font-bold text-gray-700">{result.cm} cm</div>
+                <div className="text-xs text-gray-500 mt-1">Circumference</div>
               </div>
             </div>
             <CopyToClipboard text={copyText} />
           </div>
         )}
       </OutputArea>
-
-      <div className="mt-4">
-        <p className="text-sm font-medium text-gray-700 mb-2">Size Reference Chart</p>
-        <div className="overflow-x-auto">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="border-b border-gray-200">
-                <th className="text-left py-2 px-2 font-medium text-gray-700">US</th>
-                <th className="text-left py-2 px-2 font-medium text-gray-700">UK</th>
-                <th className="text-center py-2 px-2 font-medium text-gray-700">EU</th>
-                <th className="text-center py-2 px-2 font-medium text-gray-700">cm</th>
-                <th className="text-center py-2 px-2 font-medium text-gray-700">inches</th>
-              </tr>
-            </thead>
-            <tbody>
-              {sizeChart.map((s, i) => (
-                <tr key={i} className="border-b border-gray-100 hover:bg-gray-50">
-                  <td className="py-1.5 px-2">{s.us}</td>
-                  <td className="py-1.5 px-2">{s.uk}</td>
-                  <td className="text-center py-1.5 px-2">{s.eu}</td>
-                  <td className="text-center py-1.5 px-2 font-mono">{s.cm}</td>
-                  <td className="text-center py-1.5 px-2 font-mono">{s.inches}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
     </div>
   );
 }

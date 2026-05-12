@@ -816,6 +816,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'bohemian-color-generator': dynamic(() => import('@/components/tools/image-color-tools/BohemianColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'industrial-color-generator': dynamic(() => import('@/components/tools/image-color-tools/IndustrialColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'time-elapsed-since-event': dynamic(() => import('@/components/tools/date-time-tools/TimeElapsedSinceEvent'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 54
+  'mongodb-query-builder': dynamic(() => import('@/components/tools/developer-tools/MongodbQueryBuilder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'prisma-schema-generator': dynamic(() => import('@/components/tools/developer-tools/PrismaSchemaGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-emoji-sentiment': dynamic(() => import('@/components/tools/text-tools/TextToEmojiSentiment'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-hashtags': dynamic(() => import('@/components/tools/text-tools/TextToHashtags'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'polar-to-cartesian': dynamic(() => import('@/components/tools/math-calculators/PolarToCartesian'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'statistical-z-score': dynamic(() => import('@/components/tools/math-calculators/StatisticalZScore'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'scandinavian-color-generator': dynamic(() => import('@/components/tools/image-color-tools/ScandinavianColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'japanese-color-generator': dynamic(() => import('@/components/tools/image-color-tools/JapaneseColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'countdown-to-new-year': dynamic(() => import('@/components/tools/date-time-tools/CountdownToNewYear'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
