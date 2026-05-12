@@ -967,6 +967,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'gradient-mesh-generator': dynamic(() => import('@/components/tools/image-color-tools/GradientMeshGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'bolt-size-converter': dynamic(() => import('@/components/tools/unit-converters/BoltSizeConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'mayan-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/MayanCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 68
+  'stencil-component-generator': dynamic(() => import('@/components/tools/developer-tools/StencilComponentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'preact-component-generator': dynamic(() => import('@/components/tools/developer-tools/PreactComponentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-pigpen-cipher': dynamic(() => import('@/components/tools/text-tools/TextToPigpenCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-playfair-cipher': dynamic(() => import('@/components/tools/text-tools/TextToPlayfairCipher'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'frequency-distribution-table': dynamic(() => import('@/components/tools/math-calculators/FrequencyDistributionTable'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cumulative-frequency-calculator': dynamic(() => import('@/components/tools/math-calculators/CumulativeFrequencyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'duotone-color-generator': dynamic(() => import('@/components/tools/image-color-tools/DuotoneColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'glassmorphism-generator': dynamic(() => import('@/components/tools/image-color-tools/GlassmorphismGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'lumber-dimension-converter': dynamic(() => import('@/components/tools/unit-converters/LumberDimensionConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'hebrew-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/HebrewCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
