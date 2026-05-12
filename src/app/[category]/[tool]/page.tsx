@@ -775,6 +775,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'tropical-color-generator': dynamic(() => import('@/components/tools/image-color-tools/TropicalColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'scientific-unit-converter': dynamic(() => import('@/components/tools/unit-converters/ScientificUnitConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'semester-countdown': dynamic(() => import('@/components/tools/date-time-tools/SemesterCountdown'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 50
+  'vagrant-file-generator': dynamic(() => import('@/components/tools/developer-tools/VagrantFileGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'apache-vhost-generator': dynamic(() => import('@/components/tools/developer-tools/ApacheVhostGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-reverse-words-order': dynamic(() => import('@/components/tools/text-tools/TextToReverseWordsOrder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-alternating-words': dynamic(() => import('@/components/tools/text-tools/TextToAlternatingWords'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'taylor-series-calculator': dynamic(() => import('@/components/tools/math-calculators/TaylorSeriesCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'number-to-binary-visual': dynamic(() => import('@/components/tools/math-calculators/NumberToBinaryVisual'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'desert-color-generator': dynamic(() => import('@/components/tools/image-color-tools/DesertColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'galaxy-color-generator': dynamic(() => import('@/components/tools/image-color-tools/GalaxyColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'daylight-hours-calculator': dynamic(() => import('@/components/tools/date-time-tools/DaylightHoursCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
