@@ -785,6 +785,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'desert-color-generator': dynamic(() => import('@/components/tools/image-color-tools/DesertColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'galaxy-color-generator': dynamic(() => import('@/components/tools/image-color-tools/GalaxyColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'daylight-hours-calculator': dynamic(() => import('@/components/tools/date-time-tools/DaylightHoursCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 51
+  'pm2-config-generator': dynamic(() => import('@/components/tools/developer-tools/Pm2ConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'traefik-config-generator': dynamic(() => import('@/components/tools/developer-tools/TraefikConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-pig-latin-words': dynamic(() => import('@/components/tools/text-tools/TextToPigLatinWords'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-double-dutch': dynamic(() => import('@/components/tools/text-tools/TextToDoubleDutch'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'summation-calculator': dynamic(() => import('@/components/tools/math-calculators/SummationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'integration-calculator': dynamic(() => import('@/components/tools/math-calculators/IntegrationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'candy-color-generator': dynamic(() => import('@/components/tools/image-color-tools/CandyColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nordic-color-generator': dynamic(() => import('@/components/tools/image-color-tools/NordicColorGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'shoe-size-width-converter': dynamic(() => import('@/components/tools/unit-converters/ShoeSizeWidthConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'school-year-progress': dynamic(() => import('@/components/tools/date-time-tools/SchoolYearProgress'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
