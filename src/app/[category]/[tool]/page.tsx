@@ -1468,6 +1468,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-spinner-generator': dynamic(() => import('@/components/tools/image-color-tools/CssSpinnerGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-crossover-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerCrossoverCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'liturgical-calendar-calculator': dynamic(() => import('@/components/tools/date-time-tools/LiturgicalCalendarCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 115
+  'sox-command-generator': dynamic(() => import('@/components/tools/developer-tools/SoxCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'yt-dlp-command-generator': dynamic(() => import('@/components/tools/developer-tools/YtDlpCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-inverted-breve': dynamic(() => import('@/components/tools/text-tools/TextToCombiningInvertedBreve'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-double-grave': dynamic(() => import('@/components/tools/text-tools/TextToCombiningDoubleGrave'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'boost-converter-calculator': dynamic(() => import('@/components/tools/math-calculators/BoostConverterCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'flyback-converter-calculator': dynamic(() => import('@/components/tools/math-calculators/FlybackConverterCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-glacier': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromGlacier'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-pulse-animation-generator': dynamic(() => import('@/components/tools/image-color-tools/CssPulseAnimationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-baffle-step-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerBaffleStepCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'anno-mundi-calculator': dynamic(() => import('@/components/tools/date-time-tools/AnnoMundiCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
