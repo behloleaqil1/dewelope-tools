@@ -1489,6 +1489,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-typing-animation-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTypingAnimationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-port-tuning-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerPortTuningCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'byzantine-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/ByzantineCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 117
+  'gpg-command-generator': dynamic(() => import('@/components/tools/developer-tools/GpgCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ssh-config-generator': dynamic(() => import('@/components/tools/developer-tools/SshConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-zigzag-above': dynamic(() => import('@/components/tools/text-tools/TextToCombiningZigzagAbove'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-x-below': dynamic(() => import('@/components/tools/text-tools/TextToCombiningXBelow'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'zeta-converter-calculator': dynamic(() => import('@/components/tools/math-calculators/ZetaConverterCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'charge-pump-calculator': dynamic(() => import('@/components/tools/math-calculators/ChargePumpCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-reef-zone': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromReefZone'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-flip-card-generator': dynamic(() => import('@/components/tools/image-color-tools/CssFlipCardGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-thiele-small-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerThieleSmallCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'vikram-samvat-converter': dynamic(() => import('@/components/tools/date-time-tools/VikramSamvatConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
