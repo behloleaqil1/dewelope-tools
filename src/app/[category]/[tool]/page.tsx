@@ -1397,6 +1397,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-testimonial-card-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTestimonialCardGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'amplifier-gain-calculator': dynamic(() => import('@/components/tools/unit-converters/AmplifierGainCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'callippic-cycle-calculator': dynamic(() => import('@/components/tools/date-time-tools/CallippicCycleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'swagger-yaml-generator': dynamic(() => import('@/components/tools/developer-tools/SwaggerYamlGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'postman-collection-generator': dynamic(() => import('@/components/tools/developer-tools/PostmanCollectionGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-breve': dynamic(() => import('@/components/tools/text-tools/TextToCombiningBreve'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-macron': dynamic(() => import('@/components/tools/text-tools/TextToCombiningMacron'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'mixer-calculator': dynamic(() => import('@/components/tools/math-calculators/MixerCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'filter-bandwidth-calculator': dynamic(() => import('@/components/tools/math-calculators/FilterBandwidthCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-coral-reef': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromCoralReef'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-feature-card-generator': dynamic(() => import('@/components/tools/image-color-tools/CssFeatureCardGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-box-volume-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerBoxVolumeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'olympiad-calculator': dynamic(() => import('@/components/tools/date-time-tools/OlympiadCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
