@@ -1510,6 +1510,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-marquee-generator': dynamic(() => import('@/components/tools/image-color-tools/CssMarqueeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-impedance-curve-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerImpedanceCurveCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'saka-era-calculator': dynamic(() => import('@/components/tools/date-time-tools/SakaEraCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ufw-rule-generator': dynamic(() => import('@/components/tools/developer-tools/UfwRuleGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fail2ban-config-generator': dynamic(() => import('@/components/tools/developer-tools/Fail2banConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-right-half-ring': dynamic(() => import('@/components/tools/text-tools/TextToCombiningRightHalfRing'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-plus-sign-below': dynamic(() => import('@/components/tools/text-tools/TextToCombiningPlusSignBelow'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'linear-regulator-calculator': dynamic(() => import('@/components/tools/math-calculators/LinearRegulatorCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'mosfet-gate-driver-calculator': dynamic(() => import('@/components/tools/math-calculators/MosfetGateDriverCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-kelp-forest': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromKelpForest'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-gradient-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssGradientTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-diffraction-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerDiffractionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'kali-yuga-calculator': dynamic(() => import('@/components/tools/date-time-tools/KaliYugaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
