@@ -1733,6 +1733,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-text-shadow-3d-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTextShadow3dGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-power-compression-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerPowerCompressionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'odia-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/OdiaCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'commitlint-config-generator': dynamic(() => import('@/components/tools/developer-tools/CommitlintConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'semantic-release-config-generator': dynamic(() => import('@/components/tools/developer-tools/SemanticReleaseConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-latin-small-letter-u': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLatinSmallLetterU'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-latin-small-letter-c': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLatinSmallLetterC'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'lte-throughput-calculator': dynamic(() => import('@/components/tools/math-calculators/LteThroughputCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'satellite-link-margin-calculator': dynamic(() => import('@/components/tools/math-calculators/SatelliteLinkMarginCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-fish-market': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromFishMarket'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-text-gradient-animation-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTextGradientAnimationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-thermal-model-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerThermalModelCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'gujarati-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/GujaratiCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
