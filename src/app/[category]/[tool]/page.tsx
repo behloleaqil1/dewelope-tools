@@ -1479,6 +1479,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-pulse-animation-generator': dynamic(() => import('@/components/tools/image-color-tools/CssPulseAnimationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-baffle-step-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerBaffleStepCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'anno-mundi-calculator': dynamic(() => import('@/components/tools/date-time-tools/AnnoMundiCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ghostscript-command-generator': dynamic(() => import('@/components/tools/developer-tools/GhostscriptCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'openssl-command-generator': dynamic(() => import('@/components/tools/developer-tools/OpensslCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-bridge-above': dynamic(() => import('@/components/tools/text-tools/TextToCombiningBridgeAbove'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-not-tilde': dynamic(() => import('@/components/tools/text-tools/TextToCombiningNotTilde'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cuk-converter-calculator': dynamic(() => import('@/components/tools/math-calculators/CukConverterCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sepic-converter-calculator': dynamic(() => import('@/components/tools/math-calculators/SepicConverterCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-canyon': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromCanyon'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-typing-animation-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTypingAnimationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-port-tuning-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerPortTuningCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'byzantine-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/ByzantineCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
