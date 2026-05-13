@@ -1500,6 +1500,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-flip-card-generator': dynamic(() => import('@/components/tools/image-color-tools/CssFlipCardGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-thiele-small-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerThieleSmallCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'vikram-samvat-converter': dynamic(() => import('@/components/tools/date-time-tools/VikramSamvatConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'certbot-command-generator': dynamic(() => import('@/components/tools/developer-tools/CertbotCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'iptables-rule-generator': dynamic(() => import('@/components/tools/developer-tools/IptablesRuleGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-seagull-above': dynamic(() => import('@/components/tools/text-tools/TextToCombiningSeagullAbove'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-left-half-ring': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLeftHalfRing'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ldo-regulator-calculator': dynamic(() => import('@/components/tools/math-calculators/LdoRegulatorCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'switching-regulator-efficiency': dynamic(() => import('@/components/tools/math-calculators/SwitchingRegulatorEfficiency'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-tide-pool': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromTidePool'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-marquee-generator': dynamic(() => import('@/components/tools/image-color-tools/CssMarqueeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-impedance-curve-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerImpedanceCurveCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'saka-era-calculator': dynamic(() => import('@/components/tools/date-time-tools/SakaEraCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
