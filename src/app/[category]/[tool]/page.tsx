@@ -1377,6 +1377,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-dropdown-menu-generator': dynamic(() => import('@/components/tools/image-color-tools/CssDropdownMenuGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-impedance-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerImpedanceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'metonic-cycle-calculator': dynamic(() => import('@/components/tools/date-time-tools/MetonicCycleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sphinx-conf-generator': dynamic(() => import('@/components/tools/developer-tools/SphinxConfGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'typedoc-config-generator': dynamic(() => import('@/components/tools/developer-tools/TypedocConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-dots': dynamic(() => import('@/components/tools/text-tools/TextToCombiningDots'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-ring': dynamic(() => import('@/components/tools/text-tools/TextToCombiningRing'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'propagation-delay-calculator': dynamic(() => import('@/components/tools/math-calculators/PropagationDelayCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'thermal-noise-calculator': dynamic(() => import('@/components/tools/math-calculators/ThermalNoiseCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-volcano': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromVolcano'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-pricing-table-generator': dynamic(() => import('@/components/tools/image-color-tools/CssPricingTableGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'crossover-frequency-calculator': dynamic(() => import('@/components/tools/unit-converters/CrossoverFrequencyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'saros-cycle-calculator': dynamic(() => import('@/components/tools/date-time-tools/SarosCycleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
