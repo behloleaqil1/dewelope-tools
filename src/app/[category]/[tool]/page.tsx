@@ -1387,6 +1387,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-pricing-table-generator': dynamic(() => import('@/components/tools/image-color-tools/CssPricingTableGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'crossover-frequency-calculator': dynamic(() => import('@/components/tools/unit-converters/CrossoverFrequencyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'saros-cycle-calculator': dynamic(() => import('@/components/tools/date-time-tools/SarosCycleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'jsdoc-config-generator': dynamic(() => import('@/components/tools/developer-tools/JsdocConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'doxygen-config-generator': dynamic(() => import('@/components/tools/developer-tools/DoxygenConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-cedilla': dynamic(() => import('@/components/tools/text-tools/TextToCombiningCedilla'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-horn': dynamic(() => import('@/components/tools/text-tools/TextToCombiningHorn'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'noise-temperature-calculator': dynamic(() => import('@/components/tools/math-calculators/NoiseTemperatureCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'intermodulation-calculator': dynamic(() => import('@/components/tools/math-calculators/IntermodulationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-cave': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromCave'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-testimonial-card-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTestimonialCardGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'amplifier-gain-calculator': dynamic(() => import('@/components/tools/unit-converters/AmplifierGainCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'callippic-cycle-calculator': dynamic(() => import('@/components/tools/date-time-tools/CallippicCycleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
