@@ -1671,6 +1671,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-aurora-effect-generator': dynamic(() => import('@/components/tools/image-color-tools/CssAuroraEffectGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-rms-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerRmsCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'swahili-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/SwahiliCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 135
+  'calico-network-policy-generator': dynamic(() => import('@/components/tools/developer-tools/CalicoNetworkPolicyGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'open-policy-agent-generator': dynamic(() => import('@/components/tools/developer-tools/OpenPolicyAgentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-enclosing-upward-arrow': dynamic(() => import('@/components/tools/text-tools/TextToCombiningEnclosingUpwardArrow'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-reversed-comma': dynamic(() => import('@/components/tools/text-tools/TextToCombiningReversedComma'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fiber-optic-loss-calculator': dynamic(() => import('@/components/tools/math-calculators/FiberOpticLossCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'network-latency-calculator': dynamic(() => import('@/components/tools/math-calculators/NetworkLatencyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-vineyard': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromVineyard'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-wave-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssWaveTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-sd-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerSdCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'amharic-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/AmharicCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
