@@ -1601,6 +1601,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-gradient-border-generator': dynamic(() => import('@/components/tools/image-color-tools/CssGradientBorderGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-xmax-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerXmaxCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'juche-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/JucheCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nomad-job-generator': dynamic(() => import('@/components/tools/developer-tools/NomadJobGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'packer-template-generator': dynamic(() => import('@/components/tools/developer-tools/PackerTemplateGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-enclosing-screen': dynamic(() => import('@/components/tools/text-tools/TextToCombiningEnclosingScreen'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-enclosing-keycap': dynamic(() => import('@/components/tools/text-tools/TextToCombiningEnclosingKeycap'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pcb-stackup-calculator': dynamic(() => import('@/components/tools/math-calculators/PcbStackupCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'power-integrity-calculator': dynamic(() => import('@/components/tools/math-calculators/PowerIntegrityCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-alpine-meadow': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromAlpineMeadow'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-text-mask-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTextMaskGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-vas-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerVasCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nanakshahi-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/NanakshahiCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
