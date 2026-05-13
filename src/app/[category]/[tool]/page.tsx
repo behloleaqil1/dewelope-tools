@@ -1346,6 +1346,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-toast-notification-generator': dynamic(() => import('@/components/tools/image-color-tools/CssToastNotificationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'audio-bit-depth-converter': dynamic(() => import('@/components/tools/unit-converters/AudioBitDepthConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'hourglass-calculator': dynamic(() => import('@/components/tools/date-time-tools/HourglassCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'mint-json-generator': dynamic(() => import('@/components/tools/developer-tools/MintJsonGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'docusaurus-config-generator': dynamic(() => import('@/components/tools/developer-tools/DocusaurusConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-double-underline': dynamic(() => import('@/components/tools/text-tools/TextToDoubleUnderline'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-enclosing-circle': dynamic(() => import('@/components/tools/text-tools/TextToEnclosingCircle'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'return-loss-calculator': dynamic(() => import('@/components/tools/math-calculators/ReturnLossCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cable-attenuation-calculator': dynamic(() => import('@/components/tools/math-calculators/CableAttenuationCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-aurora-type': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromAuroraType'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-skeleton-loader-generator': dynamic(() => import('@/components/tools/image-color-tools/CssSkeletonLoaderGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'audio-loudness-converter': dynamic(() => import('@/components/tools/unit-converters/AudioLoudnessConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'candle-burn-time-calculator': dynamic(() => import('@/components/tools/date-time-tools/CandleBurnTimeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
