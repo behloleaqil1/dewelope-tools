@@ -1417,6 +1417,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-stats-card-generator': dynamic(() => import('@/components/tools/image-color-tools/CssStatsCardGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-sensitivity-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerSensitivityCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'indiction-cycle-calculator': dynamic(() => import('@/components/tools/date-time-tools/IndictionCycleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'hoppscotch-collection-generator': dynamic(() => import('@/components/tools/developer-tools/HoppscotchCollectionGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'thunder-client-generator': dynamic(() => import('@/components/tools/developer-tools/ThunderClientGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-grave': dynamic(() => import('@/components/tools/text-tools/TextToCombiningGrave'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-circumflex': dynamic(() => import('@/components/tools/text-tools/TextToCombiningCircumflex'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pll-calculator': dynamic(() => import('@/components/tools/math-calculators/PllCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sampling-rate-calculator': dynamic(() => import('@/components/tools/math-calculators/SamplingRateCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-forest-type': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromForestType'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-profile-card-generator': dynamic(() => import('@/components/tools/image-color-tools/CssProfileCardGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-wire-gauge-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerWireGaugeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'egyptian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/EgyptianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
