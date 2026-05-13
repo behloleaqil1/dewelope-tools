@@ -1571,6 +1571,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-emboss-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssEmbossTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-group-delay-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerGroupDelayCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'assyrian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/AssyrianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'kafka-config-generator': dynamic(() => import('@/components/tools/developer-tools/KafkaConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'elasticsearch-mapping-generator': dynamic(() => import('@/components/tools/developer-tools/ElasticsearchMappingGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-double-ring-below': dynamic(() => import('@/components/tools/text-tools/TextToCombiningDoubleRingBelow'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-asterisk-below': dynamic(() => import('@/components/tools/text-tools/TextToCombiningAsteriskBelow'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pcb-differential-pair-calculator': dynamic(() => import('@/components/tools/math-calculators/PcbDifferentialPairCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'crystal-oscillator-calculator': dynamic(() => import('@/components/tools/math-calculators/CrystalOscillatorCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-steppe': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromSteppe'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-outline-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssOutlineTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-cabinet-bracing-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerCabinetBracingCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'berber-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/BerberCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
