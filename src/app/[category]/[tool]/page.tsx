@@ -1407,6 +1407,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-feature-card-generator': dynamic(() => import('@/components/tools/image-color-tools/CssFeatureCardGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-box-volume-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerBoxVolumeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'olympiad-calculator': dynamic(() => import('@/components/tools/date-time-tools/OlympiadCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'insomnia-collection-generator': dynamic(() => import('@/components/tools/developer-tools/InsomniaCollectionGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'bruno-collection-generator': dynamic(() => import('@/components/tools/developer-tools/BrunoCollectionGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-diaeresis': dynamic(() => import('@/components/tools/text-tools/TextToCombiningDiaeresis'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-acute': dynamic(() => import('@/components/tools/text-tools/TextToCombiningAcute'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'oscillator-frequency-calculator': dynamic(() => import('@/components/tools/math-calculators/OscillatorFrequencyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'power-density-calculator': dynamic(() => import('@/components/tools/math-calculators/PowerDensityCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-desert-type': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromDesertType'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-stats-card-generator': dynamic(() => import('@/components/tools/image-color-tools/CssStatsCardGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-sensitivity-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerSensitivityCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'indiction-cycle-calculator': dynamic(() => import('@/components/tools/date-time-tools/IndictionCycleCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
