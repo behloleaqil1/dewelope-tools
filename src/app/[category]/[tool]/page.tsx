@@ -1561,6 +1561,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-retro-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssRetroTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-power-handling-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerPowerHandlingCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'zoroastrian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/ZoroastrianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'memcached-config-generator': dynamic(() => import('@/components/tools/developer-tools/MemcachedConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'rabbitmq-config-generator': dynamic(() => import('@/components/tools/developer-tools/RabbitmqConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-fermata': dynamic(() => import('@/components/tools/text-tools/TextToCombiningFermata'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-chandrabindu': dynamic(() => import('@/components/tools/text-tools/TextToCombiningChandrabindu'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pcb-thermal-relief-calculator': dynamic(() => import('@/components/tools/math-calculators/PcbThermalReliefCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'esd-protection-calculator': dynamic(() => import('@/components/tools/math-calculators/EsdProtectionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-wetland': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromWetland'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-emboss-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssEmbossTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-group-delay-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerGroupDelayCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'assyrian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/AssyrianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
