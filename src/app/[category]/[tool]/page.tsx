@@ -1427,6 +1427,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-profile-card-generator': dynamic(() => import('@/components/tools/image-color-tools/CssProfileCardGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-wire-gauge-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerWireGaugeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'egyptian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/EgyptianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'httpie-command-generator': dynamic(() => import('@/components/tools/developer-tools/HttpieCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wget-command-generator': dynamic(() => import('@/components/tools/developer-tools/WgetCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-caron': dynamic(() => import('@/components/tools/text-tools/TextToCombiningCaron'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-ogonek': dynamic(() => import('@/components/tools/text-tools/TextToCombiningOgonek'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'adc-resolution-calculator': dynamic(() => import('@/components/tools/math-calculators/AdcResolutionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'dac-output-calculator': dynamic(() => import('@/components/tools/math-calculators/DacOutputCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-mountain-type': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromMountainType'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-notification-badge-generator': dynamic(() => import('@/components/tools/image-color-tools/CssNotificationBadgeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'room-acoustics-calculator': dynamic(() => import('@/components/tools/unit-converters/RoomAcousticsCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'roman-ab-urbe-condita': dynamic(() => import('@/components/tools/date-time-tools/RomanAbUrbCondita'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
