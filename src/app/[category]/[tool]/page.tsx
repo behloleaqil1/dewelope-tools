@@ -1631,6 +1631,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-morphing-shape-generator': dynamic(() => import('@/components/tools/image-color-tools/CssMorphingShapeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-qts-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerQtsCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'akan-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/AkanCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'argocd-application-generator': dynamic(() => import('@/components/tools/developer-tools/ArgoCdApplicationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'flux-kustomization-generator': dynamic(() => import('@/components/tools/developer-tools/FluxKustomizationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-double-breve': dynamic(() => import('@/components/tools/text-tools/TextToCombiningDoubleBreve'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-double-macron': dynamic(() => import('@/components/tools/text-tools/TextToCombiningDoubleMacron'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pcie-link-speed-calculator': dynamic(() => import('@/components/tools/math-calculators/PcieLinkSpeedCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'usb-power-delivery-calculator': dynamic(() => import('@/components/tools/math-calculators/UsbPowerDeliveryCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-lavender-field': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromLavenderField'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-particle-effect-generator': dynamic(() => import('@/components/tools/image-color-tools/CssParticleEffectGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-bl-product-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerBlProductCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'igbo-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/IgboCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
