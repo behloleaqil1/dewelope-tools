@@ -1621,6 +1621,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-frosted-glass-generator': dynamic(() => import('@/components/tools/image-color-tools/CssFrostedGlassGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-fs-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerFsCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'thai-solar-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/ThaiSolarCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pulumi-config-generator': dynamic(() => import('@/components/tools/developer-tools/PulumiConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'crossplane-manifest-generator': dynamic(() => import('@/components/tools/developer-tools/CrossplaneManifestGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-enclosing-triangle': dynamic(() => import('@/components/tools/text-tools/TextToCombiningEnclosingTriangle'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-enclosing-backslash': dynamic(() => import('@/components/tools/text-tools/TextToCombiningEnclosingBackslash'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'serdes-link-budget-calculator': dynamic(() => import('@/components/tools/math-calculators/SerdesLinkBudgetCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'clock-jitter-calculator': dynamic(() => import('@/components/tools/math-calculators/ClockJitterCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-cherry-blossom': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromCherryBlossom'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-morphing-shape-generator': dynamic(() => import('@/components/tools/image-color-tools/CssMorphingShapeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-qts-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerQtsCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'akan-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/AkanCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
