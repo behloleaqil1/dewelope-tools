@@ -1530,6 +1530,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-glassmorphism-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssGlassmorphismTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-horn-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerHornCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'maya-long-count-today': dynamic(() => import('@/components/tools/date-time-tools/MayaLongCountToday'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'openvpn-config-generator': dynamic(() => import('@/components/tools/developer-tools/OpenvpnConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'logrotate-config-generator': dynamic(() => import('@/components/tools/developer-tools/LogrotateConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-retroflex-hook': dynamic(() => import('@/components/tools/text-tools/TextToCombiningRetroflexHook'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-vertical-line-above': dynamic(() => import('@/components/tools/text-tools/TextToCombiningVerticalLineAbove'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'gate-driver-bootstrap-calculator': dynamic(() => import('@/components/tools/math-calculators/GateDriverBootstrapCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pcb-trace-width-calculator': dynamic(() => import('@/components/tools/math-calculators/PcbTraceWidthCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-savanna': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromSavanna'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-neon-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssNeonTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-efficiency-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerEfficiencyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'thai-lunar-calendar': dynamic(() => import('@/components/tools/date-time-tools/ThaiLunarCalendar'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
