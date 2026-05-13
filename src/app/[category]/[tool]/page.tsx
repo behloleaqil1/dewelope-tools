@@ -1723,6 +1723,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-text-reveal-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTextRevealGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-sensitivity-spl-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerSensitivitySplCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'telugu-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/TeluguCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pre-commit-config-generator': dynamic(() => import('@/components/tools/developer-tools/PreCommitConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'husky-config-generator': dynamic(() => import('@/components/tools/developer-tools/HuskyConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-latin-small-letter-i': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLatinSmallLetterI'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-latin-small-letter-o': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLatinSmallLetterO'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  '5g-nr-throughput-calculator': dynamic(() => import('@/components/tools/math-calculators/FiveGNrThroughputCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'satellite-footprint-calculator': dynamic(() => import('@/components/tools/math-calculators/SatelliteFootprintCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-flower-market': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromFlowerMarket'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-text-shadow-3d-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTextShadow3dGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-power-compression-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerPowerCompressionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'odia-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/OdiaCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
