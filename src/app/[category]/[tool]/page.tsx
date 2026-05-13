@@ -1591,6 +1591,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-shadow-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssShadowTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-waveguide-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerWaveguideCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'minguo-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/MinguoCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'etcd-config-generator': dynamic(() => import('@/components/tools/developer-tools/EtcdConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'vault-policy-generator': dynamic(() => import('@/components/tools/developer-tools/VaultPolicyGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-long-solidus': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLongSolidus'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-short-solidus': dynamic(() => import('@/components/tools/text-tools/TextToCombiningShortSolidus'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pcb-return-path-calculator': dynamic(() => import('@/components/tools/math-calculators/PcbReturnPathCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'power-plane-capacitance-calculator': dynamic(() => import('@/components/tools/math-calculators/PowerPlaneCapacitanceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-chaparral': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromChaparral'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-gradient-border-generator': dynamic(() => import('@/components/tools/image-color-tools/CssGradientBorderGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-xmax-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerXmaxCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'juche-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/JucheCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
