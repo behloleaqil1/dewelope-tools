@@ -1356,6 +1356,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-skeleton-loader-generator': dynamic(() => import('@/components/tools/image-color-tools/CssSkeletonLoaderGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'audio-loudness-converter': dynamic(() => import('@/components/tools/unit-converters/AudioLoudnessConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'candle-burn-time-calculator': dynamic(() => import('@/components/tools/date-time-tools/CandleBurnTimeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 104
+  'vitepress-config-generator': dynamic(() => import('@/components/tools/developer-tools/VitepressConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nextra-config-generator': dynamic(() => import('@/components/tools/developer-tools/NextraConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-x-above': dynamic(() => import('@/components/tools/text-tools/TextToCombiningXAbove'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-tilde': dynamic(() => import('@/components/tools/text-tools/TextToCombiningTilde'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'antenna-beamwidth-calculator': dynamic(() => import('@/components/tools/math-calculators/AntennaBeamwidthCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'fresnel-zone-calculator': dynamic(() => import('@/components/tools/math-calculators/FresnelZoneCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-sunrise-type': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromSunriseType'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-chip-tag-generator': dynamic(() => import('@/components/tools/image-color-tools/CssChipTagGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'audio-frequency-band-converter': dynamic(() => import('@/components/tools/unit-converters/AudioFrequencyBandConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'incense-burn-time-calculator': dynamic(() => import('@/components/tools/date-time-tools/IncenseBurnTimeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
