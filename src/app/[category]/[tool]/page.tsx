@@ -1713,6 +1713,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-glitch-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssGlitchTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-eta-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerEtaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'kannada-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/KannadaCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'codecov-config-generator': dynamic(() => import('@/components/tools/developer-tools/CodecovConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'coveralls-config-generator': dynamic(() => import('@/components/tools/developer-tools/CoverallsConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-latin-small-letter-a': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLatinSmallLetterA'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-latin-small-letter-e': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLatinSmallLetterE'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'matter-protocol-calculator': dynamic(() => import('@/components/tools/math-calculators/MatterProtocolCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'satellite-orbit-calculator': dynamic(() => import('@/components/tools/math-calculators/SatelliteOrbitCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-spice-market': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromSpiceMarket'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-text-reveal-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTextRevealGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-sensitivity-spl-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerSensitivitySplCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'telugu-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/TeluguCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
