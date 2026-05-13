@@ -1753,6 +1753,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-text-stroke-animation-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTextStrokeAnimationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-impedance-peak-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerImpedancePeakCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'marathi-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/MarathiCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'readme-generator': dynamic(() => import('@/components/tools/developer-tools/ReadmeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'contributing-guide-generator': dynamic(() => import('@/components/tools/developer-tools/ContributingGuideGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-latin-small-letter-m': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLatinSmallLetterM'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-latin-small-letter-r': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLatinSmallLetterR'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wifi-channel-overlap-calculator': dynamic(() => import('@/components/tools/math-calculators/WifiChannelOverlapCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'antenna-downtilt-calculator': dynamic(() => import('@/components/tools/math-calculators/AntennaDowntiltCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-bazaar': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromBazaar'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-text-clip-animation-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTextClipAnimationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-voice-coil-temperature': dynamic(() => import('@/components/tools/unit-converters/SpeakerVoiceCoilTemperature'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'punjabi-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/PunjabiCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
