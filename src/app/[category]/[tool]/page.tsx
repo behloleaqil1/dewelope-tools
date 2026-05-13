@@ -1682,6 +1682,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-wave-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssWaveTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-sd-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerSdCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'amharic-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/AmharicCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'falco-rules-generator': dynamic(() => import('@/components/tools/developer-tools/FalcoRulesGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'trivy-config-generator': dynamic(() => import('@/components/tools/developer-tools/TrivyConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-cyrillic-titlo': dynamic(() => import('@/components/tools/text-tools/TextToCombiningCyrillicTitlo'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-cyrillic-palatalization': dynamic(() => import('@/components/tools/text-tools/TextToCombiningCyrillicPalatalization'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wifi-link-budget-calculator': dynamic(() => import('@/components/tools/math-calculators/WifiLinkBudgetCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'bluetooth-range-calculator': dynamic(() => import('@/components/tools/math-calculators/BluetoothRangeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-olive-grove': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromOliveGrove'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-bounce-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssBounceTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-le-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerLeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'tamil-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/TamilCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
