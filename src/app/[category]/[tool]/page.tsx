@@ -1520,6 +1520,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-gradient-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssGradientTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-diffraction-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerDiffractionCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'kali-yuga-calculator': dynamic(() => import('@/components/tools/date-time-tools/KaliYugaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nftables-rule-generator': dynamic(() => import('@/components/tools/developer-tools/NftablesRuleGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wireguard-config-generator': dynamic(() => import('@/components/tools/developer-tools/WireguardConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-minus-below': dynamic(() => import('@/components/tools/text-tools/TextToCombiningMinusBelow'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-palatalized-hook': dynamic(() => import('@/components/tools/text-tools/TextToCombiningPalatalizedHook'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'igbt-switching-loss-calculator': dynamic(() => import('@/components/tools/math-calculators/IgbtSwitchingLossCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'snubber-circuit-calculator': dynamic(() => import('@/components/tools/math-calculators/SnubberCircuitCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-mangrove': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromMangrove'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-glassmorphism-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssGlassmorphismTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-horn-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerHornCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'maya-long-count-today': dynamic(() => import('@/components/tools/date-time-tools/MayaLongCountToday'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
