@@ -1641,6 +1641,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-particle-effect-generator': dynamic(() => import('@/components/tools/image-color-tools/CssParticleEffectGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-bl-product-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerBlProductCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'igbo-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/IgboCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'tekton-pipeline-generator': dynamic(() => import('@/components/tools/developer-tools/TektonPipelineGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'keda-scaledobject-generator': dynamic(() => import('@/components/tools/developer-tools/KedaScaledObjectGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-double-inverted-breve': dynamic(() => import('@/components/tools/text-tools/TextToCombiningDoubleInvertedBreve'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-ligature-left-half': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLigatureLeftHalf'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ddr-memory-bandwidth-calculator': dynamic(() => import('@/components/tools/math-calculators/DdrMemoryBandwidthCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ethernet-throughput-calculator': dynamic(() => import('@/components/tools/math-calculators/EthernetThroughputCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-tulip-field': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromTulipField'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-confetti-generator': dynamic(() => import('@/components/tools/image-color-tools/CssConfettiGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-mms-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerMmsCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'yoruba-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/YorubaCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
