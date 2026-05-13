@@ -1743,6 +1743,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-text-gradient-animation-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTextGradientAnimationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-thermal-model-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerThermalModelCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'gujarati-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/GujaratiCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'changelog-generator': dynamic(() => import('@/components/tools/developer-tools/ChangelogGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'license-file-generator': dynamic(() => import('@/components/tools/developer-tools/LicenseFileGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-latin-small-letter-d': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLatinSmallLetterD'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-latin-small-letter-h': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLatinSmallLetterH'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'wifi-6e-channel-calculator': dynamic(() => import('@/components/tools/math-calculators/Wifi6eChannelCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'radio-horizon-calculator': dynamic(() => import('@/components/tools/math-calculators/RadioHorizonCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-night-market': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromNightMarket'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-text-stroke-animation-generator': dynamic(() => import('@/components/tools/image-color-tools/CssTextStrokeAnimationGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-impedance-peak-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerImpedancePeakCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'marathi-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/MarathiCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
