@@ -1540,6 +1540,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-neon-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssNeonTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-efficiency-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerEfficiencyCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'thai-lunar-calendar': dynamic(() => import('@/components/tools/date-time-tools/ThaiLunarCalendar'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'stunnel-config-generator': dynamic(() => import('@/components/tools/developer-tools/StunnelConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'squid-proxy-config-generator': dynamic(() => import('@/components/tools/developer-tools/SquidProxyConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-double-vertical-line': dynamic(() => import('@/components/tools/text-tools/TextToCombiningDoubleVerticalLine'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-left-angle-above': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLeftAngleAbove'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pcb-via-current-calculator': dynamic(() => import('@/components/tools/math-calculators/PcbViaCurrentCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'thermal-via-calculator': dynamic(() => import('@/components/tools/math-calculators/ThermalViaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-tundra': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromTundra'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-3d-text-generator': dynamic(() => import('@/components/tools/image-color-tools/Css3dTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-directivity-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerDirectivityCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'burmese-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/BurmeseCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
