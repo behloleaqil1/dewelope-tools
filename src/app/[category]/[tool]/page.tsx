@@ -1437,6 +1437,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-notification-badge-generator': dynamic(() => import('@/components/tools/image-color-tools/CssNotificationBadgeGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'room-acoustics-calculator': dynamic(() => import('@/components/tools/unit-converters/RoomAcousticsCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'roman-ab-urbe-condita': dynamic(() => import('@/components/tools/date-time-tools/RomanAbUrbCondita'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'aria2-command-generator': dynamic(() => import('@/components/tools/developer-tools/Aria2CommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'rsync-command-generator': dynamic(() => import('@/components/tools/developer-tools/RsyncCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-double-acute': dynamic(() => import('@/components/tools/text-tools/TextToCombiningDoubleAcute'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-dot-above': dynamic(() => import('@/components/tools/text-tools/TextToCombiningDotAbove'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'timer-555-calculator': dynamic(() => import('@/components/tools/math-calculators/Timer555Calculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'op-amp-gain-calculator': dynamic(() => import('@/components/tools/math-calculators/OpAmpGainCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-river-type': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromRiverType'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-social-icons-generator': dynamic(() => import('@/components/tools/image-color-tools/CssSocialIconsGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'room-mode-calculator': dynamic(() => import('@/components/tools/unit-converters/RoomModeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'anno-domini-calculator': dynamic(() => import('@/components/tools/date-time-tools/AnnoDominiCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
