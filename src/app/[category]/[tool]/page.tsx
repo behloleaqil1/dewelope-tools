@@ -1703,6 +1703,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-shake-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssShakeTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-re-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerReCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'malayalam-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/MalayalamCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'dependabot-config-generator': dynamic(() => import('@/components/tools/developer-tools/DependabotConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'renovate-config-generator': dynamic(() => import('@/components/tools/developer-tools/RenovateConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-cyrillic-vzmet': dynamic(() => import('@/components/tools/text-tools/TextToCombiningCyrillicVzmet'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-million-sign': dynamic(() => import('@/components/tools/text-tools/TextToCombiningMillionSign'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nfc-range-calculator': dynamic(() => import('@/components/tools/math-calculators/NfcRangeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'uwb-range-calculator': dynamic(() => import('@/components/tools/math-calculators/UwbRangeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-herb-garden': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromHerbGarden'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-glitch-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssGlitchTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-eta-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerEtaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'kannada-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/KannadaCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
