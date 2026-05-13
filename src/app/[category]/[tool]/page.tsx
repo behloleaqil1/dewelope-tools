@@ -1550,6 +1550,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-3d-text-generator': dynamic(() => import('@/components/tools/image-color-tools/Css3dTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-directivity-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerDirectivityCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'burmese-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/BurmeseCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 123
+  'varnish-vcl-generator': dynamic(() => import('@/components/tools/developer-tools/VarnishVclGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'redis-conf-generator': dynamic(() => import('@/components/tools/developer-tools/RedisConfGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-right-arrowhead': dynamic(() => import('@/components/tools/text-tools/TextToCombiningRightArrowhead'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-left-arrowhead': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLeftArrowhead'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pcb-impedance-calculator': dynamic(() => import('@/components/tools/math-calculators/PcbImpedanceCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'emi-filter-calculator': dynamic(() => import('@/components/tools/math-calculators/EmiFilterCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-prairie': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromPrairie'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-retro-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssRetroTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-power-handling-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerPowerHandlingCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'zoroastrian-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/ZoroastrianCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
