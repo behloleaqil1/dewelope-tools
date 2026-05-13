@@ -1447,6 +1447,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-social-icons-generator': dynamic(() => import('@/components/tools/image-color-tools/CssSocialIconsGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'room-mode-calculator': dynamic(() => import('@/components/tools/unit-converters/RoomModeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'anno-domini-calculator': dynamic(() => import('@/components/tools/date-time-tools/AnnoDominiCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'scp-command-generator': dynamic(() => import('@/components/tools/developer-tools/ScpCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ffmpeg-command-generator': dynamic(() => import('@/components/tools/developer-tools/FfmpegCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-stroke': dynamic(() => import('@/components/tools/text-tools/TextToCombiningStroke'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-hook-above': dynamic(() => import('@/components/tools/text-tools/TextToCombiningHookAbove'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'schmitt-trigger-calculator': dynamic(() => import('@/components/tools/math-calculators/SchmittTriggerCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'current-divider-calculator': dynamic(() => import('@/components/tools/math-calculators/CurrentDividerCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-lake-type': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromLakeType'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-loading-dots-generator': dynamic(() => import('@/components/tools/image-color-tools/CssLoadingDotsGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-delay-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerDelayCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'regnal-year-calculator': dynamic(() => import('@/components/tools/date-time-tools/RegnalYearCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
