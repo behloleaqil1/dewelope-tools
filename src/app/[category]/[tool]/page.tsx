@@ -1651,6 +1651,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-confetti-generator': dynamic(() => import('@/components/tools/image-color-tools/CssConfettiGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-mms-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerMmsCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'yoruba-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/YorubaCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'istio-virtualservice-generator': dynamic(() => import('@/components/tools/developer-tools/IstioVirtualserviceGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'linkerd-service-profile-generator': dynamic(() => import('@/components/tools/developer-tools/LinkerdServiceProfileGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-ligature-right-half': dynamic(() => import('@/components/tools/text-tools/TextToCombiningLigatureRightHalf'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-double-tilde-below': dynamic(() => import('@/components/tools/text-tools/TextToCombiningDoubleTildeBelow'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'nvme-throughput-calculator': dynamic(() => import('@/components/tools/math-calculators/NvmeThroughputCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'raid-capacity-calculator': dynamic(() => import('@/components/tools/math-calculators/RaidCapacityCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-sunflower-field': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromSunflowerField'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-ripple-effect-generator': dynamic(() => import('@/components/tools/image-color-tools/CssRippleEffectGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-cms-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerCmsCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'hausa-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/HausaCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
