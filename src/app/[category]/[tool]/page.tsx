@@ -1457,6 +1457,17 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-loading-dots-generator': dynamic(() => import('@/components/tools/image-color-tools/CssLoadingDotsGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-delay-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerDelayCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'regnal-year-calculator': dynamic(() => import('@/components/tools/date-time-tools/RegnalYearCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 114
+  'imagemagick-command-generator': dynamic(() => import('@/components/tools/developer-tools/ImagemagickCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pandoc-command-generator': dynamic(() => import('@/components/tools/developer-tools/PandocCommandGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-comma-above': dynamic(() => import('@/components/tools/text-tools/TextToCombiningCommaAbove'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-turned-comma': dynamic(() => import('@/components/tools/text-tools/TextToCombiningTurnedComma'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'h-bridge-calculator': dynamic(() => import('@/components/tools/math-calculators/HBridgeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'buck-converter-calculator': dynamic(() => import('@/components/tools/math-calculators/BuckConverterCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-waterfall': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromWaterfall'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-spinner-generator': dynamic(() => import('@/components/tools/image-color-tools/CssSpinnerGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-crossover-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerCrossoverCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'liturgical-calendar-calculator': dynamic(() => import('@/components/tools/date-time-tools/LiturgicalCalendarCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
