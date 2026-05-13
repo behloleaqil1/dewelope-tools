@@ -1661,6 +1661,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-ripple-effect-generator': dynamic(() => import('@/components/tools/image-color-tools/CssRippleEffectGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-cms-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerCmsCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'hausa-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/HausaCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'envoy-filter-generator': dynamic(() => import('@/components/tools/developer-tools/EnvoyFilterGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cilium-network-policy-generator': dynamic(() => import('@/components/tools/developer-tools/CiliumNetworkPolicyGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-double-overline': dynamic(() => import('@/components/tools/text-tools/TextToCombiningDoubleOverline'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-annuity-symbol': dynamic(() => import('@/components/tools/text-tools/TextToCombiningAnnuitySymbol'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sata-throughput-calculator': dynamic(() => import('@/components/tools/math-calculators/SataThroughputCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'storage-iops-calculator': dynamic(() => import('@/components/tools/math-calculators/StorageIopsCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-rice-paddy': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromRicePaddy'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-aurora-effect-generator': dynamic(() => import('@/components/tools/image-color-tools/CssAuroraEffectGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-rms-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerRmsCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'swahili-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/SwahiliCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
