@@ -1581,6 +1581,16 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'css-outline-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssOutlineTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'speaker-cabinet-bracing-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerCabinetBracingCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'berber-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/BerberCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'zookeeper-config-generator': dynamic(() => import('@/components/tools/developer-tools/ZookeeperConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'consul-config-generator': dynamic(() => import('@/components/tools/developer-tools/ConsulConfigGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-double-tilde': dynamic(() => import('@/components/tools/text-tools/TextToCombiningDoubleTilde'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-combining-snake-below': dynamic(() => import('@/components/tools/text-tools/TextToCombiningSnakeBelow'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pcb-crosstalk-calculator': dynamic(() => import('@/components/tools/math-calculators/PcbCrosstalkCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'decoupling-capacitor-calculator': dynamic(() => import('@/components/tools/math-calculators/DecouplingCapacitorCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'color-palette-from-taiga': dynamic(() => import('@/components/tools/image-color-tools/ColorPaletteFromTaiga'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'css-shadow-text-generator': dynamic(() => import('@/components/tools/image-color-tools/CssShadowTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'speaker-waveguide-calculator': dynamic(() => import('@/components/tools/unit-converters/SpeakerWaveguideCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'minguo-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/MinguoCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
