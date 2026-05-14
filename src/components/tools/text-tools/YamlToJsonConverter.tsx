@@ -41,7 +41,6 @@ export default function YamlToJsonConverter({ toolId, toolName }: { toolId: stri
       for (const line of lines) {
         if (line.trim() === '' || line.trim().startsWith('#')) continue;
 
-        const indent = line.length - line.trimStart().length;
         const trimmed = line.trim();
 
         if (trimmed.startsWith('- ')) {
