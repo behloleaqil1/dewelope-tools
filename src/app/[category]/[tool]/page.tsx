@@ -2049,6 +2049,29 @@ const TOOL_COMPONENTS: Record<string, React.ComponentType<any>> = {
   'thai-buddhist-era-converter': dynamic(() => import('@/components/tools/date-time-tools/ThaiBuddhistEraConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'nepali-calendar-converter': dynamic(() => import('@/components/tools/date-time-tools/NepaliCalendarConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
   'bengali-date-converter': dynamic(() => import('@/components/tools/date-time-tools/BengaliDateConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 6 - Math Calculators (geometry, statistics)
+  'circle-area-calculator': dynamic(() => import('@/components/tools/math-calculators/CircleAreaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'sphere-volume-calculator': dynamic(() => import('@/components/tools/math-calculators/SphereVolumeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'cone-volume-calculator': dynamic(() => import('@/components/tools/math-calculators/ConeVolumeCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'pythagorean-theorem-calculator': dynamic(() => import('@/components/tools/math-calculators/PythagoreanTheoremCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'law-of-cosines-calculator': dynamic(() => import('@/components/tools/math-calculators/LawOfCosinesCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'law-of-sines-calculator': dynamic(() => import('@/components/tools/math-calculators/LawOfSinesCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'polygon-area-calculator': dynamic(() => import('@/components/tools/math-calculators/PolygonAreaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'ellipse-area-calculator': dynamic(() => import('@/components/tools/math-calculators/EllipseAreaCalculator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  // Batch 6 - Text Tools (markdown, content tools)
+  'markdown-link-checker': dynamic(() => import('@/components/tools/text-tools/MarkdownLinkChecker'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'markdown-toc-generator': dynamic(() => import('@/components/tools/text-tools/MarkdownTocGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'yaml-to-json-converter': dynamic(() => import('@/components/tools/text-tools/YamlToJsonConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'json-to-yaml-converter': dynamic(() => import('@/components/tools/text-tools/JsonToYamlConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'text-to-table-converter': dynamic(() => import('@/components/tools/text-tools/TextToTableConverter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'commit-message-formatter': dynamic(() => import('@/components/tools/text-tools/CommitMessageFormatter'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'readme-template-generator': dynamic(() => import('@/components/tools/text-tools/ReadmeTemplateGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'license-text-generator': dynamic(() => import('@/components/tools/text-tools/LicenseTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'code-comment-generator': dynamic(() => import('@/components/tools/text-tools/CodeCommentGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'jsdoc-generator': dynamic(() => import('@/components/tools/text-tools/JsdocGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'regex-pattern-library': dynamic(() => import('@/components/tools/text-tools/RegexPatternLibrary'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'email-template-builder': dynamic(() => import('@/components/tools/text-tools/EmailTemplateBuilder'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
+  'placeholder-text-generator': dynamic(() => import('@/components/tools/text-tools/PlaceholderTextGenerator'), { loading: () => <ToolLoadingSkeleton />, ssr: false }),
 };
 
 const FallbackComponent = dynamic(() => import('@/components/tools/ToolEnginePlaceholder'), { loading: () => <ToolLoadingSkeleton />, ssr: false });
