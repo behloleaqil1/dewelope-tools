@@ -2,10 +2,13 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import Link from 'next/link';
-import { searchTools } from '@/lib/search';
+import { searchTools, buildSearchIndex } from '@/lib/search';
 import { toolsRegistry } from '@/data/tools-registry';
 import { categories } from '@/data/categories';
 import type { SearchResult } from '@/types/search';
+
+// Pre-compute search index once at module level to avoid repeated toLowerCase() calls per keystroke
+const searchIndex = buildSearchIndex(toolsRegistry);
 
 /**
  * SearchBar component with debounced input and dropdown results.
@@ -25,7 +28,7 @@ export default function SearchBar() {
     }
 
     debounceRef.current = setTimeout(() => {
-      const searchResults = searchTools(value, toolsRegistry);
+      const searchResults = searchTools(value, toolsRegistry, searchIndex);
       setResults(searchResults);
       setIsOpen(value.length >= 2);
     }, 300);

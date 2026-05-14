@@ -5,7 +5,11 @@ import { categories, getCategoryBySlug } from '@/data/categories';
 import { getToolsByCategory } from '@/data/tools-registry';
 import Breadcrumbs from '@/components/navigation/Breadcrumbs';
 import AdUnit from '@/components/ads/AdUnit';
+import PaginatedToolList from '@/components/tools/PaginatedToolList';
 import { CategoryId } from '@/types';
+
+const TOOLS_PER_PAGE = 50;
+const PAGINATION_THRESHOLD = 200;
 
 interface CategoryPageProps {
   params: { category: string };
@@ -92,33 +96,37 @@ export default function CategoryPage({ params }: CategoryPageProps) {
       {/* Ad: top of category page */}
       <AdUnit position="leaderboard" size="responsive" className="mb-6" />
 
-      <section aria-label={`Tools in ${category.name}`}>
-        <h2 className="sr-only">Available Tools</h2>
-        <ul className="space-y-3">
-          {tools.map((tool) => (
-            <li key={tool.id}>
-              <Link
-                href={`/${category.slug}/${tool.slug}`}
-                className="card p-5 block group"
-              >
-                <article>
-                  <div className="flex items-center justify-between">
-                    <h3 className="text-base font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
-                      {tool.name}
-                    </h3>
-                    <svg className="w-4 h-4 text-gray-300 group-hover:text-indigo-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </div>
-                  <p className="text-sm text-gray-500 mt-1">
-                    {tool.shortDescription}
-                  </p>
-                </article>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </section>
+      {tools.length > PAGINATION_THRESHOLD ? (
+        <PaginatedToolList tools={tools} pageSize={TOOLS_PER_PAGE} />
+      ) : (
+        <section aria-label={`Tools in ${category.name}`}>
+          <h2 className="sr-only">Available Tools</h2>
+          <ul className="space-y-3">
+            {tools.map((tool) => (
+              <li key={tool.id}>
+                <Link
+                  href={`/${category.slug}/${tool.slug}`}
+                  className="card p-5 block group"
+                >
+                  <article>
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-base font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                        {tool.name}
+                      </h3>
+                      <svg className="w-4 h-4 text-gray-300 group-hover:text-indigo-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                    <p className="text-sm text-gray-500 mt-1">
+                      {tool.shortDescription}
+                    </p>
+                  </article>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       {/* Ad: bottom of category page */}
       <AdUnit position="in-content" size="responsive" className="mt-8" />
