@@ -32,8 +32,10 @@ jobs:
           NEXT_PUBLIC_SITE_URL: https://tools.dewelope.com
           NEXT_PUBLIC_ADSENSE_CLIENT_ID: ca-pub-7840391301182968
           NEXT_PUBLIC_GA_MEASUREMENT_ID: G-DPTBTSSFC3
-          # 2,000 dynamic imports overflow the default 2 GB Node heap on ubuntu-latest.
-          NODE_OPTIONS: --max-old-space-size=6144
+          # 2,000 dynamic imports need more than the default 2 GB heap; 5 GB is
+          # comfortably under the runner's 7 GB ceiling now that next.config.mjs
+          # forces a single-worker build (experimental.cpus = 1).
+          NODE_OPTIONS: --max-old-space-size=5120
         run: npm run build
 
       - uses: actions/upload-pages-artifact@v3
