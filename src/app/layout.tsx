@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './globals.css';
 import LayoutShell from '@/components/layout/LayoutShell';
+import Analytics from '@/components/analytics/Analytics';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
   },
   verification: {
-    google: 'GOOGLE_SEARCH_CONSOLE_VERIFICATION_CODE',
+    google: '_Jr4Hf9l0J4sGxD7QovaxAOXxshiWkHdhLG7bIf0Ob8',
     other: {
       'msvalidate.01': 'BING_WEBMASTER_VERIFICATION_CODE',
     },
@@ -68,6 +69,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Analytics />
         <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
