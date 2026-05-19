@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   verification: {
     google: '_Jr4Hf9l0J4sGxD7QovaxAOXxshiWkHdhLG7bIf0Ob8',
     other: {
-      'msvalidate.01': 'BING_WEBMASTER_VERIFICATION_CODE',
+      'msvalidate.01': '6DDB9E14B0A6606EAC82A6113404F384',
     },
   },
   icons: {
