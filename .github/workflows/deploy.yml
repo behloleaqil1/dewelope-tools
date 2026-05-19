@@ -31,6 +31,7 @@ jobs:
         env:
           NEXT_PUBLIC_SITE_URL: https://tools.dewelope.com
           NEXT_PUBLIC_ADSENSE_CLIENT_ID: ca-pub-7840391301182968
+          NEXT_PUBLIC_GA_MEASUREMENT_ID: G-DPTBTSSFC3
         run: npm run build
 
       - uses: actions/upload-pages-artifact@v3
