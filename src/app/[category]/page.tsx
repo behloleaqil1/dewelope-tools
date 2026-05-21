@@ -46,12 +46,12 @@ export function generateMetadata({ params }: CategoryPageProps): Metadata {
     description,
     keywords,
     alternates: {
-      canonical: `/${category.slug}`,
+      canonical: `/${category.slug}/`,
     },
     openGraph: {
       title,
       description,
-      url: `/${category.slug}`,
+      url: `/${category.slug}/`,
       siteName: 'DeWelope Tools',
       type: 'website',
     },

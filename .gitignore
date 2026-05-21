@@ -36,7 +36,21 @@ yarn-error.log*
 next-env.d.ts
 
 # IDE
-/.kiro/
-/.vscode/
-temp_auto_push.bat
-temp_interactive_push.bat
+.idea/
+.vscode/
+
+# Temp scripts
+add-howto.js
+batch*.txt
+batch*.js
+batch*.ts
+check-*.ts
+dedup-*.ts
+dedup-*.js
+find-*.ts
+fix-*.ts
+fix-*.js
+insert-*.js
+validate-*.ts
+validate-*.js
+verify-*.ts

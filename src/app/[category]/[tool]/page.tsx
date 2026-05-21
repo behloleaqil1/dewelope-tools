@@ -5,6 +5,7 @@ import { categories } from '@/data/categories';
 import { getAllTools, getToolBySlug } from '@/data/tools-registry';
 import { generateToolStructuredData } from '@/lib/seo/structured-data';
 import { generateHowToSchema } from '@/lib/seo/howto-schema';
+import { generateBreadcrumbSchema } from '@/lib/seo/breadcrumb-schema';
 import Breadcrumbs from '@/components/navigation/Breadcrumbs';
 import ToolPageShell from '@/components/tools/ToolPageShell';
 import RelatedTools from '@/components/seo/RelatedTools';
@@ -2169,11 +2170,11 @@ export function generateMetadata({ params }: ToolPageProps): Metadata {
     title: tool.metaTitle,
     description: tool.metaDescription,
     keywords: tool.keywords,
-    alternates: { canonical: `/${tool.category}/${tool.slug}` },
+    alternates: { canonical: `/${tool.category}/${tool.slug}/` },
     openGraph: {
       title: tool.metaTitle,
       description: tool.metaDescription,
-      url: `/${tool.category}/${tool.slug}`,
+      url: `/${tool.category}/${tool.slug}/`,
       siteName: 'DeWelope Tools',
       type: 'website',
     },
@@ -2195,6 +2196,7 @@ export default function ToolPage({ params }: ToolPageProps) {
   const ToolEngine = TOOL_COMPONENTS[tool.id] || FallbackComponent;
   const structuredData = generateToolStructuredData(tool);
   const howToSchema = generateHowToSchema(tool);
+  const breadcrumbSchema = generateBreadcrumbSchema(tool, category.name);
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -2211,6 +2213,12 @@ export default function ToolPage({ params }: ToolPageProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
         />
       )}
+
+      {/* JSON-LD BreadcrumbList structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
 
       <div className="flex flex-col lg:flex-row lg:gap-8">
         <article className="flex-1 min-w-0">
